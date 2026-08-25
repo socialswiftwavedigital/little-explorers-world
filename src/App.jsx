@@ -123,7 +123,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
 function TopBar() {
   return (
     <div className='top-bar'>
-      <span className='top-bar-tagline'>🌟 Islamabad&apos;s Favourite Kids Play Zone — Bahria Town Phase 4</span>
+      <span className='top-bar-tagline'>Islamabad&apos;s Favourite Kids Play Zone — Bahria Town Phase 4</span>
       <div className='top-bar-right'>
         <a className='top-bar-phone' href='tel:+923265652798'><FaPhone /> +92 326 5652798</a>
         <div className='top-bar-social'>
@@ -204,7 +204,7 @@ function Footer() {
           <h4>Opening Hours</h4>
           <p>Mon – Sun<br /><b>11:00 AM – 09:00 PM</b></p>
           <span className='pill'>Open 7 Days</span>
-          <a className='btn green footer-wa' href={WA} style={{ marginTop: '16px' }}>
+          <a className='btn pink footer-wa' href={WA} style={{ marginTop: '16px' }}>
             <FaWhatsapp /> WhatsApp Us
           </a>
         </div>
@@ -424,18 +424,30 @@ function Gallery({ full = false }) {
 function Home() {
   return (
     <>
+      {/* Hero */}
       <section className='hero'>
         <div className='hero-copy'>
           <div className='rainbow' />
+          <p className='hero-welcome'>Welcome to</p>
           <h1>
-            <span>Explore.</span><br />
-            <i>Play.</i> <b>Grow.</b><br />
-            <em>Repeat!</em>
+            <span>Little</span><br />
+            <i>Explorers</i> <b>World</b>
           </h1>
-          <p>A colourful indoor adventure for kids in Islamabad.</p>
+          <p className='hero-tagline'>A colourful indoor play adventure for kids in Islamabad.</p>
+          <h2 className='hero-sub'>
+            <span>Explore. Play.</span> <b>Grow.</b> <em>Repeat!</em>
+          </h2>
+          <p className='hero-desc'>Little Explorers World is a colourful indoor playground designed to spark imagination, build confidence and create unforgettable childhood memories.</p>
+          <ul className='feature-list'>
+            <li><FaCheck /> Fun & stimulating play zones</li>
+            <li><FaCheck /> Encourages active play & creativity</li>
+            <li><FaCheck /> Comfortable space for parents to relax</li>
+            <li><FaCheck /> Clean, secure & child-friendly facility</li>
+            <li><FaCheck /> Inclusive play spaces for all abilities</li>
+          </ul>
           <div className='actions'>
             <a className='btn green' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
-            <button onClick={() => go('/play-zones')}>Explore Play Zones <FaArrowRight /></button>
+            <button onClick={() => go('/about-us')}>Learn More <FaArrowRight /></button>
           </div>
           <div className='meta'>
             <span><FaMapMarkerAlt /> Bahria Town Phase 4</span>
@@ -447,20 +459,44 @@ function Home() {
           <label><FaStar /> Safe, clean & full of fun</label>
         </div>
       </section>
+
       <Stats />
-      <Trail />
+
+      {/* Zones Grid */}
+      <section className='zones-section reveal'>
+        <div className='section-head'>
+          <span className='eyebrow'>6 amazing play zones</span>
+          <h2>Endless Fun in <i>Every Zone</i></h2>
+          <p>Thoughtfully designed spaces that inspire imagination, movement and joy.</p>
+        </div>
+        <div className='zones-grid'>
+          {zones.map(([num, name, desc, Icon, img, color]) => (
+            <div key={num} className={`zone-card z-${color}`}>
+              <div className='zone-img-wrap'>
+                <img src={img} alt={name} loading='lazy' />
+                <span className='zone-num'>{num}</span>
+              </div>
+              <div className='zone-card-body'>
+                <Icon className='zone-icon' />
+                <h3>{name}</h3>
+                <p>{desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       <Pricing />
       <Trust />
       <Testimonials />
       <Gallery />
+
       <section className='cta reveal'>
-        <h2>Ready for an <i>Adventure</i> Today?</h2>
-        <p>Bring your little explorer to a world of play, learning and joy.</p>
-        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <a className='btn green' href={WA}><FaWhatsapp /> Book Your Visit</a>
-          <button className='btn' style={{ background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(8px)' }} onClick={() => go('/contact-us')}>
-            Get in Touch <FaArrowRight />
-          </button>
+        <h2>Ready To Explore <i>Every Zone?</i></h2>
+        <p>Create happy memories with your little ones at Little Explorers World.</p>
+        <div className='actions' style={{ justifyContent: 'center' }}>
+          <a className='btn green' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
+          <button onClick={() => go('/contact-us')}>Contact Us <FaArrowRight /></button>
         </div>
       </section>
     </>
