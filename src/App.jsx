@@ -241,46 +241,75 @@ function Trail() {
 /* ─── Pricing ─── */
 function Pricing() {
   return (
-    <section className='pricing reveal'>
-      <div className='price-card'>
+    <section className='pricing-wrap reveal'>
+      <div className='pricing-header'>
         <span className='eyebrow'>Simple & transparent</span>
-        <h2>Play Pricing</h2>
-        <p>Available for kids, 7 days a week.</p>
-        <div className='prices'>
-          <div>
-            <FaBaby />
-            <small>Kids Under 2 Years</small>
-            <strong>Rs. 1,199 <em>/ hour</em></strong>
-          </div>
-          <div>
-            <FaUsers />
-            <small>Kids Over 2 Years</small>
-            <strong>Rs. 1,999 <em>/ hour</em></strong>
-          </div>
-        </div>
-        <p>Additional 30 Minutes: Rs. 500</p>
-        <aside>
-          <span><FaShieldAlt /> Safety Supervision</span>
-          <span><FaSocks /> Socks Required</span>
-        </aside>
-        <a className='btn green' href={WA} style={{ marginTop: '20px', display: 'inline-flex' }}>
-          <FaWhatsapp /> Book Now
-        </a>
+        <h2>Play <i>Pricing</i></h2>
+        <p>Open 7 days a week — just show up and play!</p>
       </div>
-      <div className='party'>
-        <div>
-          <GiPartyPopper />
+
+      <div className='pricing-grid'>
+        {/* Play sessions card */}
+        <div className='price-card'>
+          <div className='price-card-top'>
+            <span className='price-label'>Play Sessions</span>
+            <span className='price-tag'><FaClock /> Daily 11AM – 9PM</span>
+          </div>
+
+          <div className='price-tiers'>
+            <div className='price-tier tier-green'>
+              <div className='tier-icon'><FaBaby /></div>
+              <div className='tier-info'>
+                <span>Kids Under 2 Years</span>
+                <strong>Rs. 1,199 <em>/hr</em></strong>
+              </div>
+            </div>
+            <div className='price-tier tier-purple'>
+              <div className='tier-icon'><FaUsers /></div>
+              <div className='tier-info'>
+                <span>Kids Over 2 Years</span>
+                <strong>Rs. 1,999 <em>/hr</em></strong>
+              </div>
+            </div>
+          </div>
+
+          <div className='price-note'>
+            <FaArrowRight /> Additional 30 Minutes: <strong>Rs. 500</strong>
+          </div>
+
+          <div className='price-includes'>
+            <span><FaShieldAlt /> Safety Supervision</span>
+            <span><FaSocks /> Socks Required</span>
+            <span><FaCheck /> All Play Zones</span>
+          </div>
+
+          <a className='btn green price-cta' href={WA}>
+            <FaWhatsapp /> Book a Play Session
+          </a>
+        </div>
+
+        {/* Birthday card */}
+        <div className='party-card'>
+          <div className='party-glow' />
+          <GiPartyPopper className='party-icon' />
           <h2>Make Birthdays<br /><i>Unforgettable!</i></h2>
           <p>Fun-filled packages with décor, games, food and memories that last a lifetime.</p>
-          <ul className='party-features'>
-            <li>✓ Dedicated play area</li>
-            <li>✓ Party decorations included</li>
-            <li>✓ Custom birthday cake</li>
-            <li>✓ Unlimited photo moments</li>
+          <ul className='party-list'>
+            <li><FaCheck /> Dedicated play area for your group</li>
+            <li><FaCheck /> Full balloon & banner decorations</li>
+            <li><FaCheck /> Custom birthday cake included</li>
+            <li><FaCheck /> Dedicated party host</li>
+            <li><FaCheck /> Goodie bags for all kids</li>
           </ul>
-          <a className='btn pink' href={WA}>Book a Birthday Party <FaArrowRight /></a>
+          <div className='party-actions'>
+            <a className='btn party-wa-btn' href={`${WA}?text=Hi!%20I%20want%20to%20book%20a%20birthday%20party.`}>
+              <FaWhatsapp /> Book on WhatsApp
+            </a>
+            <button className='party-link-btn' onClick={() => go('/birthday-parties')}>
+              View Packages <FaArrowRight />
+            </button>
+          </div>
         </div>
-        <img src={pics[3]} alt='Birthday party at Little Explorers' loading='lazy' />
       </div>
     </section>
   );
