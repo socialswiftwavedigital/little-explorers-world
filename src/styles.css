@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Roboto:wght@300;400;500&display=swap');
 
 /* ─── Variables ─── */
 :root {
@@ -20,10 +20,11 @@ body {
   min-width: 320px;
   background: var(--cream);
   color: var(--ink);
-  font-family: Nunito, sans-serif;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
 }
-h1, h2, h3, h4 { font-family: Fredoka, sans-serif; }
-p { line-height: 1.65; }
+h1, h2, h3, h4 { font-family: Fredoka, sans-serif; font-weight: 500; }
+p { line-height: 1.7; font-weight: 400; }
 a { text-decoration: none; color: inherit; }
 img { display: block; max-width: 100%; }
 button, input, select, textarea { font: inherit; }
@@ -50,7 +51,7 @@ header.scrolled {
 .logo img { width: 145px; transition: width .3s; }
 header.scrolled .logo img { width: 120px; }
 nav { display: flex; gap: 27px; margin: auto; }
-nav a { font: 600 15px Fredoka; position: relative; white-space: nowrap; }
+nav a { font: 500 15px Fredoka; position: relative; white-space: nowrap; }
 nav a::after {
   content: "";
   position: absolute;
@@ -75,7 +76,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
   justify-content: center;
   gap: 9px;
   color: #fff;
-  font: 600 15px Fredoka;
+  font: 500 15px Fredoka;
   cursor: pointer;
   box-shadow: 0 8px 20px #3e304e1a;
   transition: .25s;
@@ -101,16 +102,17 @@ nav a:hover::after, nav a.active::after { width: 100%; }
   justify-content: center;
 }
 .hero h1 {
-  font-size: clamp(60px, 6.2vw, 94px);
-  line-height: .9;
-  letter-spacing: -3px;
+  font-size: clamp(52px, 5.5vw, 82px);
+  line-height: .95;
+  letter-spacing: -1px;
   margin: 16px 0 28px;
+  font-weight: 600;
 }
 .hero h1 span { color: var(--purple); }
 .hero h1 i { color: var(--pink); font-style: normal; }
 .hero h1 b { color: var(--green); }
 .hero h1 em { color: var(--orange); font-style: normal; }
-.hero-copy > p { font: 500 22px Fredoka; max-width: 430px; }
+.hero-copy > p { font-size: 17px; max-width: 430px; font-weight: 400; color: #555; }
 .rainbow {
   width: 90px;
   height: 44px;
@@ -131,7 +133,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
 .actions button {
   border: 0;
   background: none;
-  font: 700 15px Fredoka;
+  font: 500 15px Fredoka;
   display: flex;
   gap: 9px;
   cursor: pointer;
@@ -188,7 +190,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
 }
 .stat-item strong {
   display: block;
-  font: 700 36px Fredoka;
+  font: 600 32px Fredoka;
   color: var(--ink);
   line-height: 1;
 }
@@ -201,8 +203,8 @@ nav a:hover::after, nav a.active::after { width: 100%; }
 
 /* ─── Eyebrow ─── */
 .eyebrow {
-  font: 700 13px Fredoka;
-  letter-spacing: .1em;
+  font: 500 12px Roboto;
+  letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--aqua);
 }
@@ -210,7 +212,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
 /* ─── Trail ─── */
 .trail-section { padding: 90px max(6vw, 38px); max-width: 1380px; margin: auto; }
 .heading { max-width: 440px; }
-.heading h2 { font-size: 48px; line-height: 1.05; margin: 13px 0; }
+.heading h2 { font-size: 40px; line-height: 1.1; margin: 13px 0; font-weight: 500; }
 .heading h2 i, .gallery h2 i { color: var(--pink); font-style: normal; }
 .trail { max-width: 1000px; margin: 10px 0 0 auto; position: relative; }
 .trail::before {
@@ -253,7 +255,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
 .stop .orange { background: var(--orange); }
 .zone-copy { padding: 20px; z-index: 2; }
 .zone-copy > svg { font-size: 33px; color: var(--purple); }
-.zone-copy h3 { font-size: 27px; margin: 9px 0 3px; }
+.zone-copy h3 { font-size: 23px; margin: 9px 0 3px; font-weight: 500; }
 .zone-copy p { margin: 0; }
 .stop > img {
   width: 100%;
@@ -285,7 +287,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
   background: #fff9f9;
   box-shadow: 0 12px 35px #4734520f;
 }
-.price-card h2, .party h2 { font-size: 36px; margin: 7px 0; }
+.price-card h2, .party h2 { font-size: 30px; margin: 7px 0; font-weight: 500; }
 .prices { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .prices > div {
   background: #eef8f6;
@@ -301,7 +303,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
 .prices > div:hover { transform: translateY(-4px); }
 .prices > div + div { background: #f3effb; border-color: #d4c8ed; }
 .prices svg { font-size: 32px; color: var(--pink); margin-bottom: 8px; }
-.prices strong { font: 700 23px Fredoka; margin-top: 7px; }
+.prices strong { font: 600 21px Fredoka; margin-top: 7px; }
 .prices em { font-size: 14px; font-style: normal; }
 .price-card > p { text-align: center; }
 .price-card aside {
@@ -320,7 +322,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
 
 /* ─── Trust ─── */
 .trust { padding: 70px max(6vw, 28px); background: #fff; border-block: 1px solid #dceceb; }
-.trust > h2 { text-align: center; color: var(--aqua); font-size: 38px; }
+.trust > h2 { text-align: center; color: var(--aqua); font-size: 32px; font-weight: 500; }
 .trust > h2 i { color: var(--ink); font-style: normal; }
 .trust > div {
   max-width: 1100px;
@@ -351,7 +353,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
   padding: 80px max(6vw, 28px);
   background: #f9f5ff;
 }
-.testimonials h2 { font-size: 42px; margin: 8px 0 36px; }
+.testimonials h2 { font-size: 34px; margin: 8px 0 36px; font-weight: 500; }
 .testimonials h2 i { color: var(--pink); font-style: normal; }
 .review-grid {
   max-width: 1100px;
@@ -376,7 +378,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
 
 /* ─── Gallery ─── */
 .gallery { text-align: center; padding: 90px max(6vw, 28px); }
-.gallery h2 { font-size: 42px; margin: 8px 0 28px; }
+.gallery h2 { font-size: 34px; margin: 8px 0 28px; font-weight: 500; }
 .gallery > div {
   max-width: 1200px;
   margin: 0 auto 30px;
@@ -493,7 +495,7 @@ nav a:hover::after, nav a.active::after { width: 100%; }
   background: var(--purple);
   color: #fff;
 }
-.cta h2 { font-size: 40px; margin: 0 0 12px; }
+.cta h2 { font-size: 34px; margin: 0 0 12px; font-weight: 500; }
 .cta h2 i { color: #ffd166; font-style: normal; }
 .cta p { margin: 0 0 24px; opacity: .9; }
 
@@ -560,7 +562,7 @@ footer { background: #f6f3fb; padding: 58px max(6vw, 28px) 20px; }
   grid-template-columns: 1.2fr .8fr .9fr 1.4fr .9fr;
   gap: 34px;
 }
-.footer-grid h4 { font-size: 18px; margin-bottom: 14px; }
+.footer-grid h4 { font-size: 15px; margin-bottom: 14px; font-weight: 500; letter-spacing: .03em; }
 .footer-grid > div > a { display: block; margin: 9px 0; font-size: 14px; transition: color .2s; }
 .footer-grid > div > a:hover { color: var(--purple); }
 .footer-grid p { font-size: 14px; }
@@ -603,7 +605,7 @@ footer { background: #f6f3fb; padding: 58px max(6vw, 28px) 20px; }
   overflow: hidden;
 }
 .page-hero > div { padding: 60px 60px 60px 0; }
-.page-hero h1 { font-size: clamp(50px, 5vw, 76px); line-height: 1; margin: 15px 0 22px; }
+.page-hero h1 { font-size: clamp(38px, 4vw, 60px); line-height: 1.05; margin: 15px 0 22px; font-weight: 500; }
 .page-hero p { font-size: 18px; }
 .page-hero > img {
   width: 100%;
@@ -621,7 +623,7 @@ footer { background: #f6f3fb; padding: 58px max(6vw, 28px) 20px; }
   grid-template-columns: 1fr 1.2fr;
   gap: 70px;
 }
-.story h2 { font-size: 44px; }
+.story h2 { font-size: 34px; font-weight: 500; }
 .values { display: grid; gap: 18px; }
 .values article, .partners article {
   background: #fff;
@@ -660,7 +662,7 @@ footer { background: #f6f3fb; padding: 58px max(6vw, 28px) 20px; }
 .contact .btn { display: inline-flex; }
 .contact form { background: #fff; padding: 36px; border-radius: 28px; box-shadow: var(--shadow); }
 .map-embed { border-radius: 16px; overflow: hidden; }
-label { display: block; font: 600 14px Fredoka; margin-bottom: 17px; }
+label { display: block; font: 500 14px Roboto; margin-bottom: 17px; }
 input, select, textarea {
   display: block;
   width: 100%;
