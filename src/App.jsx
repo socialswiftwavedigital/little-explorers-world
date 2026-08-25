@@ -23,7 +23,7 @@ const links = [
 const pageMeta = {
   '/': {
     title: 'Little Explorers World | Indoor Kids Play Zone Islamabad',
-    desc: 'A colourful indoor playground for kids aged 0–10 in Bahria Town Phase 4, Islamabad. 6 play zones, birthday parties & more.',
+    desc: 'A colourful indoor playground for kids aged 0–10 in Bahria Town Phase 4, Islamabad. 8 play zones, birthday parties & more.',
   },
   '/birthday-parties': {
     title: 'Birthday Parties in Islamabad | Little Explorers World',
@@ -35,7 +35,7 @@ const pageMeta = {
   },
   '/play-zones': {
     title: 'Play Zones & Pricing | Little Explorers World Islamabad',
-    desc: '6 amazing play zones for kids in Islamabad. Slides, ball pit, climbing wall, kinetic sand & more. Rs. 1,199–1,999/hr. Daily 11AM–9PM.',
+    desc: '8 amazing play zones for kids in Islamabad. Slides, ball pit, climbing wall, sensory room, kinetic sand, lego table & more. Rs. 1,199–1,999/hr. Daily 11AM–11PM.',
   },
   '/gallery': {
     title: 'Gallery | Little Explorers World Islamabad',
@@ -47,19 +47,21 @@ const pageMeta = {
   },
   '/contact-us': {
     title: 'Contact Us | Little Explorers World Islamabad',
-    desc: 'Visit Little Explorers World in Bahria Town Phase 4, Islamabad. Open daily 11AM–9PM. Call +92 326 5652798.',
+    desc: 'Visit Little Explorers World in Bahria Town Phase 4, Islamabad. Open daily 11AM–11PM. Call +92 326 5652798.',
   },
 };
 
 const pics = Array.from({ length: 10 }, (_, i) => `/assets/gallery-${i + 1}.jpg`);
 
 const zones = [
-  ['01', 'Slides & Climb', 'Zoom down, climb up, and enjoy endless giggles.', GiKidSlide, pics[0], 'gold'],
-  ['02', 'Ball Pit', 'Dive into a colourful world filled with fun and excitement.', FaBaby, pics[1], 'purple'],
-  ['03', 'Climbing Wall', 'Build strength, confidence and reach new heights.', GiMountainClimbing, pics[5], 'green'],
-  ['04', 'Play Area', 'Safe, cushioned play designed for little explorers.', MdOutlineToys, pics[2], 'pink'],
-  ['05', 'Pretend Play', 'Inspiring creativity through imaginative play.', FaPuzzlePiece, pics[3], 'aqua'],
-  ['06', 'Interactive Fun', 'Fun games that keep young minds active and curious.', FaStar, pics[4], 'orange'],
+  ['01', 'Slides & Climb', 'Zoom down slides, climb soft structures and build confidence.', GiKidSlide, pics[0], 'gold'],
+  ['02', 'Ball Pit', 'Dive into a sea of soft balls and enjoy endless bouncing fun.', FaBaby, pics[1], 'purple'],
+  ['03', 'Climbing Wall', 'Build strength, balance and confidence one hold at a time.', GiMountainClimbing, pics[5], 'green'],
+  ['04', 'Pretend Play', 'Imaginative play areas that spark creativity and social interaction.', FaPuzzlePiece, pics[3], 'pink'],
+  ['05', 'Sensory Room', 'A calm, soothing space that encourages sensory exploration and relaxation.', FaStar, pics[4], 'aqua'],
+  ['06', 'Lego Table', 'Build, create and imagine with colourful bricks at our Lego table.', MdOutlineToys, pics[2], 'orange'],
+  ['07', 'Kinetic Sand', 'Scoop, mould and squish in a messy-free, super satisfying way.', FaSocks, pics[6], 'pink'],
+  ['08', 'Latcher Table', 'Boost fine motor skills with hands-on latches, doors and locks.', FaShieldAlt, pics[7], 'aqua'],
 ];
 
 const stats = [
@@ -202,7 +204,7 @@ function Footer() {
         </div>
         <div>
           <h4>Opening Hours</h4>
-          <p>Mon – Sun<br /><b>11:00 AM – 09:00 PM</b></p>
+          <p>Mon – Sun<br /><b>11:00 AM – 11:00 PM</b></p>
           <span className='pill'>Open 7 Days</span>
           <a className='btn pink footer-wa' href={WA} style={{ marginTop: '16px' }}>
             <FaWhatsapp /> WhatsApp Us
@@ -438,7 +440,7 @@ function Home() {
           </div>
           <div className='meta'>
             <span><FaMapMarkerAlt /> Bahria Town Phase 4</span>
-            <span><FaClock /> Daily, 11 AM – 9 PM</span>
+            <span><FaClock /> Daily, 11 AM – 11 PM</span>
           </div>
         </div>
       </section>
@@ -551,6 +553,28 @@ function About() {
         </div>
       </section>
 
+      {/* What Makes Us Special */}
+      <section className='about-special reveal'>
+        <div className='section-head'>
+          <span className='eyebrow'>Why choose us</span>
+          <h2>What Makes Us <i>Special</i></h2>
+        </div>
+        <div className='about-special-grid'>
+          {[
+            [FaShieldAlt, 'Safe & Hygienic', 'Clean, secure and thoughtfully designed spaces where children can play comfortably.'],
+            [FaUsers, 'Inclusive for All', 'A welcoming environment created for children of all abilities and backgrounds.'],
+            [FaPuzzlePiece, 'Play with Purpose', 'Activities that encourage creativity, physical movement, learning and social development.'],
+            [FaClock, 'Parent-Friendly', 'A comfortable and supervised space where parents can relax while their children explore.'],
+          ].map(([Icon, title, text]) => (
+            <div className='about-special-card' key={title}>
+              <div className='about-special-icon'><Icon /></div>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Owner Message */}
       <section className='about-owners reveal'>
         <div className='about-owners-inner'>
@@ -587,12 +611,108 @@ function Zones() {
   return (
     <>
       <PageHero
-        kicker='Six zones. Endless possibilities.'
-        title='Every Visit Is a New Adventure'
+        kicker='Eight zones. Endless possibilities.'
+        title='Endless Fun in Every Zone'
         titleJsx={<><span>Endless</span> Fun<br />in Every <i>Zone</i></>}
-        text='Climb, slide, imagine, build and discover in spaces thoughtfully designed for little minds and bodies.'
+        text='Step into a world of fun, adventure, and discovery. Our indoor play centre provides a safe and stimulating environment where children can stay active, spark their imagination, build friendships, and create lasting memories through play.'
       />
-      <Trail />
+
+      {/* 8 Zones Grid */}
+      <section className='zones-section reveal'>
+        <div className='section-head'>
+          <span className='eyebrow'>8 amazing play zones</span>
+          <h2><span className='sparkle'>✦✦</span> Explore Every <i>Zone</i> <span className='sparkle'>✦✦</span></h2>
+          <p>Every area thoughtfully designed to support different stages of childhood development.</p>
+        </div>
+        <div className='zones-icon-grid zones-8'>
+          {zones.map(([num, name, desc, Icon, , color]) => (
+            <div key={num} className={`zone-icon-card z-${color}`}>
+              <div className='zone-circle'><Icon /></div>
+              <h3>{name}</h3>
+              <p>{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Zone Features */}
+      <section className='zone-features reveal'>
+        {[
+          [FaClock, 'Indoor & Weather Proof', 'Play comfortably, no matter the season'],
+          [FaUsers, 'Designed for Active Play', 'Encourages movement, balance and healthy development'],
+          [MdCleanHands, 'Clean & Supervised', 'Our team keeps every area safe and spotless'],
+          [FaStar, 'Great for Learning', 'Play that supports growth, creativity & confidence'],
+        ].map(([Icon, title, text]) => (
+          <div className='zone-feature-item' key={title}>
+            <Icon />
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </div>
+        ))}
+      </section>
+
+      {/* Zone Detail Sections */}
+      <section className='zone-details reveal'>
+        <article className='zone-detail-block'>
+          <div className='zone-detail-copy'>
+            <span className='eyebrow'>Ball Pit &amp; Slides</span>
+            <h2>Joyful Movement <i>&amp; Excitement</i></h2>
+            <p>Race down the slides into a sea of soft, colourful balls! This zone builds coordination, balance and brings every child pure joy.</p>
+            <a className='btn green' href={WA}><FaWhatsapp /> Plan Your Visit</a>
+          </div>
+          <div className='zone-detail-img'>
+            <img src={pics[0]} alt='Ball Pit and Slides at Little Explorers World' loading='lazy' />
+          </div>
+        </article>
+
+        <article className='zone-detail-block reverse'>
+          <div className='zone-detail-copy'>
+            <span className='eyebrow'>Pretend Play &amp; Lego Table</span>
+            <h2>Imagination, Creativity <i>&amp; Social Play</i></h2>
+            <p>From role-play adventures to building masterpieces, this zone inspires storytelling, teamwork and endless creativity.</p>
+            <a className='btn green' href={WA}><FaWhatsapp /> Plan Your Visit</a>
+          </div>
+          <div className='zone-detail-img'>
+            <img src={pics[3]} alt='Pretend Play and Lego Table at Little Explorers World' loading='lazy' />
+          </div>
+        </article>
+
+        <article className='zone-detail-block'>
+          <div className='zone-detail-copy'>
+            <span className='eyebrow'>Sensory Room &amp; Kinetic Sand</span>
+            <h2>Calm Exploration <i>&amp; Tactile Play</i></h2>
+            <p>Soothing lights, textures and hands-on play help children explore, relax and develop sensory awareness in a safe space.</p>
+            <a className='btn green' href={WA}><FaWhatsapp /> Plan Your Visit</a>
+          </div>
+          <div className='zone-detail-img'>
+            <img src={pics[4]} alt='Sensory Room and Kinetic Sand at Little Explorers World' loading='lazy' />
+          </div>
+        </article>
+      </section>
+
+      {/* Made for all abilities */}
+      <section className='zone-inclusive reveal'>
+        <div className='section-head'>
+          <span className='eyebrow'>For every child</span>
+          <h2>Made for Little Explorers <i>of All Abilities</i></h2>
+        </div>
+        <div className='zone-inclusive-grid'>
+          {[
+            [FaUsers, 'Inclusive Play', 'Welcoming environment for every child to play and thrive.'],
+            [FaShieldAlt, 'Safe Padded Setup', 'Soft, secure equipment for worry-free adventures.'],
+            [FaClock, 'Parent-Friendly', 'Relax in comfort while your little ones explore and have fun.'],
+            [FaBaby, 'For Every Age', 'Fun, engaging zones perfect for children aged 0–10.'],
+          ].map(([Icon, title, text]) => (
+            <div className='zone-incl-card' key={title}>
+              <Icon />
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <Gallery />
       <Pricing />
     </>
   );
@@ -630,22 +750,30 @@ function Partner() {
 /* ─── Contact ─── */
 function Contact() {
   const [success, setSuccess] = useState(false);
+  const [openFaq, setOpenFaq] = useState(null);
+
+  const faqs = [
+    ['What age group is Little Explorers suitable for?', 'Little Explorers is designed for children aged 0–10 years, with activities and play zones tailored to different age groups.'],
+    ['What are your ticket prices?', 'Kids under 2 years: Rs. 1,199/hr. Kids over 2 years: Rs. 1,999/hr. Additional 30 minutes: Rs. 500. All play zones are included in one ticket.'],
+    ['Do you host birthday parties and group bookings?', 'Yes! We offer fun-filled birthday party packages with décor, games, food and memories that last a lifetime. Contact us on WhatsApp to discuss your requirements and availability.'],
+  ];
+
   return (
     <>
       <PageHero
         kicker="We'd love to welcome you"
-        title='Plan Your Visit'
-        titleJsx={<><span>Plan</span> Your<br /><i>Visit</i></>}
-        text='Questions about play sessions, birthday parties or group bookings? Our friendly team is here to help.'
+        title='Get In Touch'
+        titleJsx={<><span>Get</span> In<br /><i>Touch</i></>}
+        text="At Little Explorers World, we believe every child's learning journey starts with curiosity and connection. Whether you're a parent looking for more information, interested in a play session, or want to book a birthday party — we're here to help."
         img={pics[3]}
       />
       <section className='contact reveal'>
         <div>
           <h2>Come say hello</h2>
-          <p><FaMapMarkerAlt /> Alpha Marina, Bahria Town Phase 4, Islamabad</p>
-          <p><FaClock /> Open daily: 11:00 AM – 09:00 PM</p>
-          <a href='tel:+923265652798'>+92 326 5652798</a>
-          <a href='mailto:Little.explorer904@gmail.com'>Little.explorer904@gmail.com</a>
+          <p><FaMapMarkerAlt /> 2nd Floor, Plaza No. 42, Alpha Marina, Marina Commercial, Corniche Road, Bahria Town Phase 4, Islamabad</p>
+          <p><FaClock /> Open daily: 11:00 AM – 11:00 PM (7 Days a Week)</p>
+          <a href='tel:+923265652798'><FaPhone /> +92 326 5652798</a>
+          <a href='mailto:little.explorer904@gmail.com'>little.explorer904@gmail.com</a>
           <a className='btn green' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
           <div className='map-embed'>
             <iframe
@@ -661,20 +789,33 @@ function Contact() {
         </div>
         <form onSubmit={e => { e.preventDefault(); setSuccess(true); }}>
           <label>Name<input required placeholder='Your name' /></label>
-          <label>Phone<input required placeholder='03XX XXXXXXX' /></label>
-          <label>How can we help?
-            <select>
-              <option>General enquiry</option>
-              <option>Play session</option>
-              <option>Birthday party</option>
-              <option>School / Group booking</option>
-              <option>Partnership</option>
-            </select>
-          </label>
+          <label>Email<input type='email' placeholder='your@email.com' /></label>
+          <label>Phone Number<input required placeholder='03XX XXXXXXX' /></label>
+          <label>Child&apos;s Age<input placeholder='e.g. 3 years' /></label>
+          <label>Subject<input placeholder='How can we help?' /></label>
           <label>Message<textarea rows='4' placeholder='Tell us more...' /></label>
-          <button className='btn pink'>Send Enquiry <FaArrowRight /></button>
-          {success && <p className='success'>Thank you! We'll get back to you shortly. 🎉</p>}
+          <button className='btn pink'>Send Message <FaArrowRight /></button>
+          {success && <p className='success'>Thank you! We'll get back to you shortly.</p>}
         </form>
+      </section>
+
+      {/* FAQs */}
+      <section className='bp-faq reveal' style={{ marginBottom: '60px' }}>
+        <span className='eyebrow' style={{ display: 'block', textAlign: 'center' }}>Got questions?</span>
+        <h2 style={{ textAlign: 'center', fontSize: '34px', margin: '8px 0 32px', fontWeight: 500 }}>
+          Frequently Asked <i style={{ color: 'var(--pink)', fontStyle: 'normal' }}>Questions</i>
+        </h2>
+        <div className='bp-faq-list'>
+          {faqs.map(([q, a], i) => (
+            <div className={`bp-faq-item ${openFaq === i ? 'open' : ''}`} key={i}>
+              <button onClick={() => setOpenFaq(openFaq === i ? null : i)}>
+                <span>{q}</span>
+                <span className='faq-arrow'>{openFaq === i ? '−' : '+'}</span>
+              </button>
+              {openFaq === i && <p>{a}</p>}
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );
