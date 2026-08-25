@@ -3,7 +3,8 @@ import {
   FaArrowRight, FaArrowUp, FaBaby, FaBirthdayCake, FaClock,
   FaFacebookF, FaInstagram, FaMapMarkerAlt, FaPuzzlePiece,
   FaShieldAlt, FaSocks, FaStar, FaTiktok, FaUsers, FaWhatsapp,
-  FaTimes, FaChevronLeft, FaChevronRight, FaHeart
+  FaTimes, FaChevronLeft, FaChevronRight, FaHeart, FaCheck,
+  FaPhone, FaCalendarAlt, FaGift, FaCamera,
 } from 'react-icons/fa';
 import { GiMountainClimbing, GiKidSlide, GiPartyPopper } from 'react-icons/gi';
 import { MdCleanHands, MdClose, MdMenu, MdOutlineToys } from 'react-icons/md';
@@ -14,20 +15,51 @@ const links = [
   ['Home', '/'],
   ['About Us', '/about-us'],
   ['Play Zones', '/play-zones'],
+  ['Birthday Parties', '/birthday-parties'],
   ['Gallery', '/gallery'],
-  ['Partner with Us', '/partner-with-us'],
   ['Contact Us', '/contact-us'],
 ];
+
+const pageMeta = {
+  '/': {
+    title: 'Little Explorers World | Indoor Kids Play Zone Islamabad',
+    desc: 'A colourful indoor playground for kids aged 0–10 in Bahria Town Phase 4, Islamabad. 6 play zones, birthday parties & more.',
+  },
+  '/birthday-parties': {
+    title: 'Birthday Parties in Islamabad | Little Explorers World',
+    desc: 'Book an unforgettable kids birthday party in Islamabad at Little Explorers World. Fun packages with décor, games, food & cake in Bahria Town Phase 4.',
+  },
+  '/about-us': {
+    title: 'About Us | Little Explorers World Islamabad',
+    desc: 'Learn about Little Explorers World — a safe, clean and colourful indoor playground in Bahria Town Phase 4, Islamabad for children aged 0–10.',
+  },
+  '/play-zones': {
+    title: 'Play Zones & Pricing | Little Explorers World Islamabad',
+    desc: '6 amazing play zones for kids in Islamabad. Slides, ball pit, climbing wall, kinetic sand & more. Rs. 1,199–1,999/hr. Daily 11AM–9PM.',
+  },
+  '/gallery': {
+    title: 'Gallery | Little Explorers World Islamabad',
+    desc: 'See photos from our indoor play zones and birthday parties at Little Explorers World, Bahria Town Islamabad.',
+  },
+  '/partner-with-us': {
+    title: 'Partner with Us | Little Explorers World',
+    desc: 'Partner with Little Explorers World Islamabad — schools, events, brand collaborations and community activations.',
+  },
+  '/contact-us': {
+    title: 'Contact Us | Little Explorers World Islamabad',
+    desc: 'Visit Little Explorers World in Bahria Town Phase 4, Islamabad. Open daily 11AM–9PM. Call +92 326 5652798.',
+  },
+};
 
 const pics = Array.from({ length: 6 }, (_, i) => `/assets/gallery-${i + 1}.png`);
 
 const zones = [
-  ['01', 'Slides & Climb', 'Zoom down, climb up, and enjoy endless giggles.', GiKidSlide, pics[0], 'purple'],
-  ['02', 'Ball Pit', 'Dive into a colourful world of movement and excitement.', FaBaby, pics[1], 'pink'],
-  ['03', 'Climbing Wall', 'Build strength, confidence, and reach new heights.', GiMountainClimbing, pics[5], 'green'],
-  ['04', 'Kinetic Sand', 'Shape, scoop and discover through calming sensory play.', MdOutlineToys, pics[2], 'aqua'],
-  ['05', 'Pretend Play', 'Big imaginations come alive in a world made for little roles.', FaPuzzlePiece, pics[3], 'orange'],
-  ['06', 'Interactive Fun', 'Games that keep young minds active, curious and connected.', FaStar, pics[4], 'purple'],
+  ['01', 'Slides & Climb', 'Zoom down, climb up, and enjoy endless giggles in our thrilling slide zone.', GiKidSlide, pics[0], 'purple'],
+  ['02', 'Ball Pit', 'Dive into a colourful world filled with fun, laughter and excitement.', FaBaby, pics[1], 'pink'],
+  ['03', 'Climbing Wall', 'Build strength, confidence and reach new heights safely.', GiMountainClimbing, pics[5], 'green'],
+  ['04', 'Play Area', 'Safe, cushioned play designed for little explorers of all ages.', MdOutlineToys, pics[2], 'aqua'],
+  ['05', 'Pretend Play', 'Inspiring creativity and big imaginations through imaginative play.', FaPuzzlePiece, pics[3], 'orange'],
+  ['06', 'Interactive Fun', 'Fun games that keep young minds active, curious and connected.', FaStar, pics[4], 'purple'],
 ];
 
 const stats = [
@@ -136,12 +168,12 @@ function Footer() {
         </div>
         <div>
           <h4>Quick Links</h4>
-          {links.slice(0, 4).map(([l, p]) => <A key={p} to={p}>{l}</A>)}
+          {links.slice(0, 5).map(([l, p]) => <A key={p} to={p}>{l}</A>)}
         </div>
         <div>
           <h4>Information</h4>
           <A to='/play-zones'>Pricing</A>
-          <a href={WA}>Birthday Parties</a>
+          <A to='/birthday-parties'>Birthday Parties</A>
           <A to='/about-us'>Safety & Cleanliness</A>
           <A to='/partner-with-us'>Partner with Us</A>
         </div>
@@ -390,12 +422,12 @@ function Home() {
 }
 
 /* ─── Page Hero ─── */
-function PageHero({ kicker, title, text, img = pics[0] }) {
+function PageHero({ kicker, title, titleJsx, text, img = pics[0] }) {
   return (
     <section className='page-hero'>
       <div>
         <span className='eyebrow'>{kicker}</span>
-        <h1>{title}</h1>
+        <h1>{titleJsx || title}</h1>
         <p>{text}</p>
         <a className='btn green' href={WA}><FaWhatsapp /> Book Your Visit</a>
       </div>
@@ -411,7 +443,8 @@ function About() {
       <PageHero
         kicker='Our happy little world'
         title='Where Play Builds Confidence'
-        text='A safe, clean and colourful indoor playground thoughtfully created for children aged 0–10.'
+        titleJsx={<><span>Where</span> Play<br />Builds <i>Confidence</i></>}
+        text='A safe, clean and colourful indoor playground designed to spark imagination, build confidence and create unforgettable childhood memories.'
         img={pics[2]}
       />
       <section className='story reveal'>
@@ -447,7 +480,8 @@ function Zones() {
       <PageHero
         kicker='Six zones. Endless possibilities.'
         title='Every Visit Is a New Adventure'
-        text='Climb, slide, imagine, build and discover in spaces designed for little minds and bodies.'
+        titleJsx={<><span>Endless</span> Fun<br />in Every <i>Zone</i></>}
+        text='Climb, slide, imagine, build and discover in spaces thoughtfully designed for little minds and bodies.'
       />
       <Trail />
       <Pricing />
@@ -462,6 +496,7 @@ function Partner() {
       <PageHero
         kicker='Grow with a joyful local brand'
         title='Partner with Little Explorers'
+        titleJsx={<><span>Partner</span> with<br /><i>Little</i> <b>Explorers</b></>}
         text="Let's create family-friendly experiences together through schools, communities and brand collaborations."
         img={pics[4]}
       />
@@ -491,7 +526,8 @@ function Contact() {
       <PageHero
         kicker="We'd love to welcome you"
         title='Plan Your Visit'
-        text='Questions about play sessions, memberships or birthdays? Our team is ready to help.'
+        titleJsx={<><span>Plan</span> Your<br /><i>Visit</i></>}
+        text='Questions about play sessions, birthday parties or group bookings? Our friendly team is here to help.'
         img={pics[3]}
       />
       <section className='contact reveal'>
@@ -535,6 +571,216 @@ function Contact() {
   );
 }
 
+/* ─── Birthday Party ─── */
+const bdPackages = [
+  {
+    name: 'Starter',
+    color: 'aqua',
+    price: 'Rs. 15,000',
+    guests: 'Up to 10 Kids',
+    duration: '2 Hours Play',
+    features: [
+      'Dedicated play area for your group',
+      'Basic balloon decorations',
+      'Birthday cake (1 kg)',
+      'Complimentary entry for birthday child',
+      'Staff assistance throughout',
+      'Parent seating area',
+    ],
+  },
+  {
+    name: 'Premium',
+    color: 'pink',
+    price: 'Rs. 25,000',
+    guests: 'Up to 20 Kids',
+    duration: '3 Hours Play',
+    highlight: true,
+    features: [
+      'Private zone for your celebration',
+      'Full balloon & banner decorations',
+      'Customised birthday cake (2 kg)',
+      'Party games & prizes included',
+      'Dedicated party host',
+      'Goodie bags for all kids',
+      'Photography moments',
+      'Parent lounge with refreshments',
+    ],
+  },
+  {
+    name: 'Grand',
+    color: 'purple',
+    price: 'Rs. 40,000',
+    guests: 'Up to 35 Kids',
+    duration: '4 Hours Play',
+    features: [
+      'Exclusive venue for full party',
+      'Premium themed décor & setup',
+      'Custom birthday cake (3 kg)',
+      'Full entertainment programme',
+      'Dedicated party host + assistant',
+      'Premium goodie bags',
+      'Catering / food included',
+      'Photo & video package',
+      'Customised invitations',
+    ],
+  },
+];
+
+const bdFaqs = [
+  ['How early should I book?', 'We recommend booking at least 1–2 weeks in advance, especially on weekends. Contact us on WhatsApp to check availability.'],
+  ['What age group is suitable?', 'Our play zones are designed for children aged 0–10 years. All our birthday packages are perfect for this age range.'],
+  ['Can we bring our own cake?', 'Absolutely! You are welcome to bring your own cake. We also offer in-house cakes with our Premium and Grand packages.'],
+  ['Is there parking available?', 'Yes, Alpha Marina has ample parking available for guests.'],
+  ['Can adults stay during the party?', 'Yes! Parents and guardians are always welcome. We have a comfortable parent lounge area with free Wi-Fi and refreshments.'],
+  ['Do you offer custom themes?', 'Yes — our Grand package includes themed décor of your choice. Contact us on WhatsApp to discuss your preferred theme.'],
+];
+
+function BirthdayParty() {
+  const [openFaq, setOpenFaq] = useState(null);
+  const waParty = 'https://wa.me/923265652798?text=Hi!%20I%20would%20like%20to%20book%20a%20birthday%20party%20at%20Little%20Explorers%20World.';
+
+  return (
+    <>
+      {/* Hero */}
+      <section className='bp-hero'>
+        <div className='bp-hero-copy'>
+          <GiPartyPopper className='bp-balloons' />
+          <span className='eyebrow'>Islamabad's favourite kids party venue</span>
+          <h1>Birthday Parties<br />in <i>Islamabad</i></h1>
+          <p>Create unforgettable childhood memories at Little Explorers World, Bahria Town Phase 4. Fun-filled packages with décor, cake, games and endless play!</p>
+          <div className='bp-hero-actions'>
+            <a className='btn pink' href={waParty}><FaWhatsapp /> Book a Party Now</a>
+            <a className='btn' style={{ background: 'var(--purple)' }} href='tel:+923265652798'><FaPhone /> Call Us</a>
+          </div>
+          <div className='bp-trust-pills'>
+            <span><FaCheck /> Free consultation</span>
+            <span><FaCheck /> Customisable packages</span>
+            <span><FaCheck /> Kids aged 0–10</span>
+          </div>
+        </div>
+        <div className='bp-hero-img'>
+          <img src={pics[3]} alt='Birthday party at Little Explorers World Islamabad' loading='eager' />
+          <div className='bp-badge'><FaStar /><span>Islamabad's<br />Top Rated<br />Play Zone</span></div>
+        </div>
+      </section>
+
+      {/* Why us */}
+      <section className='bp-why reveal'>
+        <span className='eyebrow'>Why families choose us</span>
+        <h2>Everything done for <i>you</i></h2>
+        <div className='bp-why-grid'>
+          {[
+            [GiPartyPopper, 'Hassle-Free Setup', 'We handle all decorations and arrangements so you can enjoy the day stress-free.'],
+            [FaShieldAlt, 'Safe & Supervised', 'Fully trained staff and childproofed play zones — safety is our top priority.'],
+            [FaCamera, 'Unforgettable Moments', 'Photo-worthy setups and joyful spaces that create lasting memories.'],
+            [FaGift, 'Customisable Packages', 'Choose from 3 packages or talk to us about a bespoke celebration.'],
+          ].map(([Icon, title, text]) => (
+            <article className='bp-why-card' key={title}>
+              <Icon />
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Packages */}
+      <section className='bp-packages reveal'>
+        <span className='eyebrow'>Choose your celebration</span>
+        <h2>Birthday <i>Packages</i></h2>
+        <p className='bp-pkg-sub'>All packages include dedicated play time, staff assistance & parent seating. <a href={waParty} style={{ color: 'var(--pink)', fontWeight: 600 }}>Contact us</a> for custom requests.</p>
+        <div className='bp-pkg-grid'>
+          {bdPackages.map(pkg => (
+            <div className={`bp-pkg-card ${pkg.highlight ? 'highlighted' : ''}`} key={pkg.name}>
+              {pkg.highlight && <div className='bp-popular'>Most Popular</div>}
+              <div className={`bp-pkg-icon ${pkg.color}`}><FaBirthdayCake /></div>
+              <h3>{pkg.name}</h3>
+              <div className='bp-price'>{pkg.price}</div>
+              <div className='bp-pkg-meta'>
+                <span><FaUsers /> {pkg.guests}</span>
+                <span><FaClock /> {pkg.duration}</span>
+              </div>
+              <ul className='bp-features'>
+                {pkg.features.map(f => <li key={f}><FaCheck className='check-icon' /> {f}</li>)}
+              </ul>
+              <a className={`btn ${pkg.highlight ? 'pink' : ''}`}
+                style={!pkg.highlight ? { background: `var(--${pkg.color})` } : {}}
+                href={waParty}>
+                Book {pkg.name} <FaArrowRight />
+              </a>
+            </div>
+          ))}
+        </div>
+        <p className='bp-note'>Prices are indicative — final quote shared after consultation. All prices include applicable taxes.</p>
+      </section>
+
+      {/* How to book */}
+      <section className='bp-steps reveal'>
+        <span className='eyebrow'>Simple & easy</span>
+        <h2>How to <i>Book</i></h2>
+        <div className='bp-steps-grid'>
+          {[
+            [FaWhatsapp, '01', 'Message Us', 'Send us a WhatsApp message with your preferred date and number of kids.'],
+            [FaCalendarAlt, '02', 'Confirm & Plan', "We'll confirm availability and help you choose the perfect package and theme."],
+            [GiPartyPopper, '03', 'Celebrate!', 'Show up and enjoy — we handle everything else for an unforgettable party!'],
+          ].map(([Icon, num, title, text]) => (
+            <div className='bp-step' key={num}>
+              <div className='bp-step-num'>{num}</div>
+              <Icon className='bp-step-icon' />
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </div>
+          ))}
+        </div>
+        <a className='btn pink' href={waParty}><FaWhatsapp /> Start Booking on WhatsApp</a>
+      </section>
+
+      {/* Gallery */}
+      <section className='bp-gallery reveal'>
+        <span className='eyebrow'>Real parties, real smiles</span>
+        <h2>Party <i>Moments</i></h2>
+        <div className='bp-gallery-grid'>
+          {[pics[3], pics[0], pics[4], pics[1], pics[5], pics[2]].map((p, i) => (
+            <div className='gallery-item' key={i}>
+              <img src={p} alt={`Birthday party at Little Explorers World Islamabad ${i + 1}`} loading='lazy' />
+              <div className='gallery-overlay'><span>View Photo</span></div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQs */}
+      <section className='bp-faq reveal'>
+        <span className='eyebrow'>Got questions?</span>
+        <h2>Frequently Asked <i>Questions</i></h2>
+        <div className='bp-faq-list'>
+          {bdFaqs.map(([q, a], i) => (
+            <div className={`bp-faq-item ${openFaq === i ? 'open' : ''}`} key={i}>
+              <button onClick={() => setOpenFaq(openFaq === i ? null : i)}>
+                <span>{q}</span>
+                <span className='faq-arrow'>{openFaq === i ? '−' : '+'}</span>
+              </button>
+              {openFaq === i && <p>{a}</p>}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className='bp-cta reveal'>
+        <GiPartyPopper className='bp-cta-icon' />
+        <h2>Ready to Plan the <i>Perfect Party?</i></h2>
+        <p>Get in touch today — availability fills up fast on weekends!</p>
+        <div className='bp-cta-btns'>
+          <a className='btn pink' href={waParty}><FaWhatsapp /> Book on WhatsApp</a>
+          <a className='btn' style={{ background: 'var(--purple)' }} href='tel:+923265652798'><FaPhone /> +92 326 5652798</a>
+          <a className='btn' style={{ background: 'var(--green)' }} href='mailto:Little.explorer904@gmail.com'>Email Us</a>
+        </div>
+      </section>
+    </>
+  );
+}
+
 /* ─── Back to Top ─── */
 function BackToTop() {
   const [visible, setVisible] = useState(false);
@@ -563,6 +809,11 @@ export function App() {
     const pop = () => setPath(location.pathname.replace(/\/$/, '') || '/');
     addEventListener('popstate', pop);
 
+    const meta = pageMeta[path] || pageMeta['/'];
+    document.title = meta.title;
+    const descTag = document.querySelector('meta[name="description"]');
+    if (descTag) descTag.setAttribute('content', meta.desc);
+
     const ob = new IntersectionObserver(
       es => es.forEach(e => e.isIntersecting && e.target.classList.add('visible')),
       { threshold: 0.1 }
@@ -579,12 +830,14 @@ export function App() {
     '/': Home,
     '/about-us': About,
     '/play-zones': Zones,
+    '/birthday-parties': BirthdayParty,
     '/gallery': () => (
       <>
         <PageHero
           kicker='See the smiles'
           title='A Peek Inside the Fun'
-          text='Explore colourful play spaces, party setups and joyful moments.'
+          titleJsx={<><span>Moments</span><br />of <i>Joy</i></>}
+          text='Explore colourful play spaces, birthday party setups and happy family moments.'
           img={pics[1]}
         />
         <Gallery full />
