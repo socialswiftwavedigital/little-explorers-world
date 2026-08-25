@@ -131,15 +131,24 @@ nav a:hover::after, nav a.active::after { width: 100%; }
 }
 .actions { display: flex; align-items: center; gap: 24px; margin: 15px 0 34px; }
 .actions button {
-  border: 0;
-  background: none;
+  border: 2px solid var(--ink);
+  background: transparent;
   font: 500 15px Fredoka;
-  display: flex;
+  display: inline-flex;
+  align-items: center;
   gap: 9px;
   cursor: pointer;
-  transition: .2s;
+  padding: 12px 22px;
+  border-radius: 50px;
+  color: var(--ink);
+  transition: .25s;
 }
-.actions button:hover { color: var(--pink); transform: translateX(3px); }
+.actions button:hover {
+  background: var(--ink);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px #28263a30;
+}
 .meta { display: flex; gap: 25px; font-size: 13px; }
 .meta span { display: flex; gap: 8px; align-items: center; }
 .meta svg { color: var(--pink); font-size: 19px; }
@@ -167,37 +176,58 @@ nav a:hover::after, nav a.active::after { width: 100%; }
 .stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  max-width: 1100px;
+  max-width: 1160px;
   margin: 0 auto;
-  padding: 50px max(4vw, 24px);
+  padding: 50px max(4vw, 24px) 60px;
   gap: 20px;
 }
 .stat-item {
   text-align: center;
-  padding: 28px 20px;
+  padding: 32px 20px 28px;
   background: #fff;
   border-radius: 24px;
-  box-shadow: 0 8px 28px #4b365b0d;
-  border: 1px solid #f0e8f5;
-  transition: transform .25s;
+  box-shadow: 0 10px 32px #4b365b12;
+  border-top: 4px solid var(--stat-color, var(--purple));
+  transition: transform .3s, box-shadow .3s;
+  position: relative;
+  overflow: hidden;
 }
-.stat-item:hover { transform: translateY(-5px); }
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 80px;
+  background: var(--stat-color, var(--purple));
+  opacity: .06;
+}
+.stat-item:nth-child(1) { --stat-color: var(--pink); }
+.stat-item:nth-child(2) { --stat-color: var(--purple); }
+.stat-item:nth-child(3) { --stat-color: var(--green); }
+.stat-item:nth-child(4) { --stat-color: var(--orange); }
+.stat-item:hover { transform: translateY(-6px); box-shadow: 0 18px 40px #4b365b1e; }
 .stat-icon {
-  font-size: 30px;
-  color: var(--purple);
-  margin-bottom: 10px;
-  display: block;
+  font-size: 28px;
+  color: var(--stat-color, var(--purple));
+  margin-bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--stat-color, var(--purple)) 12%, white);
 }
 .stat-item strong {
   display: block;
-  font: 600 32px Fredoka;
+  font: 700 38px Fredoka;
   color: var(--ink);
   line-height: 1;
+  margin-bottom: 6px;
 }
 .stat-item span {
-  font-size: 13px;
-  color: #888;
-  margin-top: 4px;
+  font-size: 14px;
+  color: #777;
+  font-weight: 500;
   display: block;
 }
 
@@ -605,10 +635,10 @@ footer { background: #f6f3fb; padding: 58px max(6vw, 28px) 20px; }
   overflow: hidden;
 }
 .page-hero > div { padding: 60px 60px 60px 0; }
-.page-hero h1 { font-size: clamp(38px, 4vw, 60px); line-height: 1.05; margin: 15px 0 22px; font-weight: 500; }
+.page-hero h1 { font-size: clamp(40px, 4.5vw, 66px); line-height: 1.0; margin: 15px 0 22px; font-weight: 600; }
 .page-hero h1 span { color: var(--purple); }
 .page-hero h1 i { color: var(--pink); font-style: normal; }
-.page-hero h1 b { color: var(--green); font-weight: 500; }
+.page-hero h1 b { color: var(--green); font-weight: 600; }
 .page-hero p { font-size: 18px; }
 .page-hero > img {
   width: 100%;
@@ -756,8 +786,9 @@ input:focus, select:focus, textarea:focus {
   .page-hero > img { height: 340px; clip-path: none; }
   .story, .partners, .contact { padding: 65px 20px; }
   .contact form { padding: 24px; }
-  .stats { grid-template-columns: repeat(2, 1fr); padding: 30px 16px; gap: 12px; }
-  .stat-item strong { font-size: 28px; }
+  .stats { grid-template-columns: repeat(2, 1fr); padding: 30px 16px; gap: 14px; }
+  .stat-item strong { font-size: 30px; }
+  .stat-icon { width: 48px; height: 48px; font-size: 22px; }
   .lightbox-prev { left: 8px; }
   .lightbox-next { right: 8px; }
 }
