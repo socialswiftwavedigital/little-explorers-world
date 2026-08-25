@@ -51,7 +51,7 @@ const pageMeta = {
   },
 };
 
-const pics = Array.from({ length: 6 }, (_, i) => `/assets/gallery-${i + 1}.png`);
+const pics = Array.from({ length: 10 }, (_, i) => `/assets/gallery-${i + 1}.jpg`);
 
 const zones = [
   ['01', 'Slides & Climb', 'Zoom down, climb up, and enjoy endless giggles.', GiKidSlide, pics[0], 'gold'],
@@ -395,7 +395,7 @@ function Gallery({ full = false }) {
       <span className='eyebrow'>Real moments, happy memories</span>
       <h2>Moments of <i>Joy</i></h2>
       <div>
-        {pics.map((p, i) => (
+        {(full ? pics : pics.slice(0, 6)).map((p, i) => (
           <div className='gallery-item' key={p} onClick={() => openLightbox(i)}>
             <img src={p} alt={`Play area ${i + 1}`} loading='lazy' />
             <div className='gallery-overlay'><span>View Photo</span></div>
@@ -455,7 +455,7 @@ function Home() {
           </div>
         </div>
         <div className='hero-image'>
-          <img src='/assets/hero.png' alt='Kids playing at Little Explorers World' />
+          <img src='/assets/hero.jpg' alt='Kids playing at Little Explorers World' />
           <label><FaStar /> Safe, clean & full of fun</label>
         </div>
       </section>
