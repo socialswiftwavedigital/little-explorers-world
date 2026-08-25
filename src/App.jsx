@@ -119,6 +119,23 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
   );
 }
 
+/* ─── Top Bar ─── */
+function TopBar() {
+  return (
+    <div className='top-bar'>
+      <span className='top-bar-tagline'>🌟 Islamabad&apos;s Favourite Kids Play Zone — Bahria Town Phase 4</span>
+      <div className='top-bar-right'>
+        <a className='top-bar-phone' href='tel:+923265652798'><FaPhone /> +92 326 5652798</a>
+        <div className='top-bar-social'>
+          <a href='https://facebook.com/littleexplorersworld' target='_blank' rel='noopener noreferrer' aria-label='Facebook'><FaFacebookF /></a>
+          <a href='https://instagram.com/littleexplorersworld' target='_blank' rel='noopener noreferrer' aria-label='Instagram'><FaInstagram /></a>
+          <a href='https://tiktok.com/@littleexplorersworld' target='_blank' rel='noopener noreferrer' aria-label='TikTok'><FaTiktok /></a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 /* ─── Header ─── */
 function Header({ path }) {
   const [open, setOpen] = useState(false);
@@ -880,6 +897,7 @@ export function App() {
 
   return (
     <>
+      <TopBar />
       <Header path={path} />
       <main><Page /></main>
       <Footer />
