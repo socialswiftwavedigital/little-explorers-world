@@ -505,20 +505,28 @@ function About() {
         kicker='Our happy little world'
         title='Where Play Builds Confidence'
         titleJsx={<><span>Where</span> Play<br />Builds <i>Confidence</i></>}
-        text='A safe, clean and colourful indoor playground designed to spark imagination, build confidence and create unforgettable childhood memories.'
+        text='A safe, clean and inclusive indoor play space where children of all abilities can come together to explore, imagine, learn and grow.'
         img={pics[2]}
       />
+
+      {/* Intro statement */}
+      <section className='about-intro reveal'>
+        <p>A safe, clean, and inclusive indoor play space where children of all abilities can come together to explore, imagine, learn, and grow. Our thoughtfully designed environment combines hygiene, security, creativity, and joyful activities to give children the freedom to play with confidence while parents enjoy complete peace of mind.</p>
+      </section>
+
+      {/* Who We Are */}
       <section className='story reveal'>
         <div>
-          <span className='eyebrow'>Explore. Play. Grow. Repeat!</span>
-          <h2>Designed for childhood's best moments</h2>
-          <p>Imaginative play, active movement, sensory discovery and parent comfort come together under one joyful roof. Every corner of Little Explorers World has been carefully designed with your child's development and safety in mind.</p>
+          <span className='eyebrow'>Who We Are</span>
+          <h2>Dedicated to <i>Every Child</i></h2>
+          <p>At Little Explorers, we are dedicated to creating safe, inclusive and inspiring play spaces across Pakistan where children of all abilities feel welcomed, valued and free to be themselves. Our aim is to provide a joyful environment where every child can explore, connect, learn and grow through meaningful play experiences.</p>
+          <p>Our thoughtfully designed space encourages imagination, physical movement, confidence, creativity and positive social interaction. From active play to calm sensory experiences, every area is created to support different stages of childhood development in a safe and engaging way.</p>
         </div>
         <div className='values'>
           {[
-            [FaShieldAlt, 'Safety by design', 'Every zone built with soft materials, padded surfaces and age-appropriate equipment.'],
-            [MdCleanHands, 'Clean every day', 'Daily deep-cleaning and sanitization after every session.'],
-            [FaUsers, 'Everyone belongs', 'Inclusive spaces for children of all abilities and ages up to 10.'],
+            [FaShieldAlt, 'Safety by Design', 'Every zone built with soft materials, padded surfaces and age-appropriate equipment.'],
+            [MdCleanHands, 'Clean Every Day', 'Daily deep-cleaning and sanitization — high standards maintained every session.'],
+            [FaUsers, 'Everyone Belongs', 'Inclusive spaces for children of all abilities and ages up to 10.'],
           ].map(([Icon, title, text]) => (
             <article key={title}>
               <Icon />
@@ -528,6 +536,46 @@ function About() {
           ))}
         </div>
       </section>
+
+      {/* Vision & Mission */}
+      <section className='about-vm reveal'>
+        <div className='about-vm-card vision'>
+          <span className='eyebrow'>Our Vision</span>
+          <h2>A World of <i>Joyful Play</i></h2>
+          <p>We envision a world where every child in Pakistan has access to a safe, clean, and joyful play environment that sparks their imagination and nurtures their development. Our play area will be a safe space for children, embracing diversity and inclusion, where laughter and learning come together to create lasting memories.</p>
+        </div>
+        <div className='about-vm-card mission'>
+          <span className='eyebrow'>Our Mission</span>
+          <h2>Play That <i>Matters</i></h2>
+          <p>Our mission is to evoke change by fostering a play community that prioritises the well-being of all children. We strive to create a hygienic and inclusive space where kids can explore, play, and connect with others. Through education and engagement, we empower parents to understand the importance of play, cultivating a generation that values creativity, kindness, and social interaction.</p>
+        </div>
+      </section>
+
+      {/* Owner Message */}
+      <section className='about-owners reveal'>
+        <div className='about-owners-inner'>
+          <span className='eyebrow'>Message From the Owners</span>
+          <h2>A Letter from <i>Our Founders</i></h2>
+          <blockquote>
+            <p>Dear Aspiring Entrepreneurs,</p>
+            <p>We invite you to join us on a transformative journey to create a brighter future for our children. Together, we can build a business that not only thrives on profit but also champions a noble cause. By establishing inclusive play areas across Pakistan, we aim to provide every child with a safe space to grow and learn while promoting kindness and acceptance within our communities.</p>
+            <p>Warm regards,</p>
+          </blockquote>
+          <div className='about-founders'>
+            <div className='founder-card'>
+              <div className='founder-avatar'><FaUsers /></div>
+              <strong>Muhammad Usman</strong>
+              <span>CEO &amp; Founder</span>
+            </div>
+            <div className='founder-card'>
+              <div className='founder-avatar'><FaHeart /></div>
+              <strong>Infaal Usman</strong>
+              <span>Co-Founder</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Stats />
       <Trust />
     </>
