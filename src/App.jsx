@@ -54,12 +54,12 @@ const pageMeta = {
 const pics = Array.from({ length: 6 }, (_, i) => `/assets/gallery-${i + 1}.png`);
 
 const zones = [
-  ['01', 'Slides & Climb', 'Zoom down, climb up, and enjoy endless giggles in our thrilling slide zone.', GiKidSlide, pics[0], 'purple'],
-  ['02', 'Ball Pit', 'Dive into a colourful world filled with fun, laughter and excitement.', FaBaby, pics[1], 'pink'],
-  ['03', 'Climbing Wall', 'Build strength, confidence and reach new heights safely.', GiMountainClimbing, pics[5], 'green'],
-  ['04', 'Play Area', 'Safe, cushioned play designed for little explorers of all ages.', MdOutlineToys, pics[2], 'aqua'],
-  ['05', 'Pretend Play', 'Inspiring creativity and big imaginations through imaginative play.', FaPuzzlePiece, pics[3], 'orange'],
-  ['06', 'Interactive Fun', 'Fun games that keep young minds active, curious and connected.', FaStar, pics[4], 'purple'],
+  ['01', 'Slides & Climb', 'Zoom down, climb up, and enjoy endless giggles.', GiKidSlide, pics[0], 'gold'],
+  ['02', 'Ball Pit', 'Dive into a colourful world filled with fun and excitement.', FaBaby, pics[1], 'purple'],
+  ['03', 'Climbing Wall', 'Build strength, confidence and reach new heights.', GiMountainClimbing, pics[5], 'green'],
+  ['04', 'Play Area', 'Safe, cushioned play designed for little explorers.', MdOutlineToys, pics[2], 'pink'],
+  ['05', 'Pretend Play', 'Inspiring creativity through imaginative play.', FaPuzzlePiece, pics[3], 'aqua'],
+  ['06', 'Interactive Fun', 'Fun games that keep young minds active and curious.', FaStar, pics[4], 'orange'],
 ];
 
 const stats = [
@@ -462,25 +462,21 @@ function Home() {
 
       <Stats />
 
-      {/* Zones Grid */}
+      {/* Zones Icon Grid */}
       <section className='zones-section reveal'>
         <div className='section-head'>
           <span className='eyebrow'>6 amazing play zones</span>
-          <h2>Endless Fun in <i>Every Zone</i></h2>
+          <h2>
+            <span className='sparkle'>✦✦</span> Endless Fun in <i>Every Zone</i> <span className='sparkle'>✦✦</span>
+          </h2>
           <p>Thoughtfully designed spaces that inspire imagination, movement and joy.</p>
         </div>
-        <div className='zones-grid'>
-          {zones.map(([num, name, desc, Icon, img, color]) => (
-            <div key={num} className={`zone-card z-${color}`}>
-              <div className='zone-img-wrap'>
-                <img src={img} alt={name} loading='lazy' />
-                <span className='zone-num'>{num}</span>
-              </div>
-              <div className='zone-card-body'>
-                <Icon className='zone-icon' />
-                <h3>{name}</h3>
-                <p>{desc}</p>
-              </div>
+        <div className='zones-icon-grid'>
+          {zones.map(([num, name, desc, Icon, , color]) => (
+            <div key={num} className={`zone-icon-card z-${color}`}>
+              <div className='zone-circle'><Icon /></div>
+              <h3>{name}</h3>
+              <p>{desc}</p>
             </div>
           ))}
         </div>
