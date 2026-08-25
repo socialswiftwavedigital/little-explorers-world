@@ -427,24 +427,11 @@ function Home() {
       {/* Hero */}
       <section className='hero'>
         <div className='hero-copy'>
-          <div className='rainbow' />
           <p className='hero-welcome'>Welcome to</p>
           <h1>
-            <span>Little</span><br />
-            <i>Explorers</i> <b>World</b>
+            <span>Little</span> <i>Explorers</i> <b>World</b>
           </h1>
           <p className='hero-tagline'>A colourful indoor play adventure for kids in Islamabad.</p>
-          <h2 className='hero-sub'>
-            <span>Explore. Play.</span> <b>Grow.</b> <em>Repeat!</em>
-          </h2>
-          <p className='hero-desc'>Little Explorers World is a colourful indoor playground designed to spark imagination, build confidence and create unforgettable childhood memories.</p>
-          <ul className='feature-list'>
-            <li><FaCheck /> Fun & stimulating play zones</li>
-            <li><FaCheck /> Encourages active play & creativity</li>
-            <li><FaCheck /> Comfortable space for parents to relax</li>
-            <li><FaCheck /> Clean, secure & child-friendly facility</li>
-            <li><FaCheck /> Inclusive play spaces for all abilities</li>
-          </ul>
           <div className='actions'>
             <a className='btn green' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
             <button onClick={() => go('/about-us')}>Learn More <FaArrowRight /></button>
@@ -453,10 +440,6 @@ function Home() {
             <span><FaMapMarkerAlt /> Bahria Town Phase 4</span>
             <span><FaClock /> Daily, 11 AM – 9 PM</span>
           </div>
-        </div>
-        <div className='hero-image'>
-          <img src='/assets/hero.jpg' alt='Kids playing at Little Explorers World' />
-          <label><FaStar /> Safe, clean & full of fun</label>
         </div>
       </section>
 
