@@ -51,22 +51,22 @@ const pageMeta = {
   },
 };
 
-const pics = Array.from({ length: 10 }, (_, i) => `/assets/gallery-${i + 1}.jpg`);
+const pics = Array.from({ length: 15 }, (_, i) => `/assets/gallery-${i + 1}.jpg`);
 
 const zones = [
-  ['01', 'Slides & Climb', 'Zoom down slides, climb soft structures and build confidence.', GiKidSlide, pics[0], 'gold'],
-  ['02', 'Ball Pit', 'Dive into a sea of soft balls and enjoy endless bouncing fun.', FaBaby, pics[1], 'purple'],
-  ['03', 'Climbing Wall', 'Build strength, balance and confidence one hold at a time.', GiMountainClimbing, pics[5], 'green'],
-  ['04', 'Pretend Play', 'Imaginative play areas that spark creativity and social interaction.', FaPuzzlePiece, pics[3], 'pink'],
-  ['05', 'Sensory Room', 'A calm, soothing space that encourages sensory exploration and relaxation.', FaStar, pics[4], 'aqua'],
-  ['06', 'Lego Table', 'Build, create and imagine with colourful bricks at our Lego table.', MdOutlineToys, pics[2], 'orange'],
-  ['07', 'Kinetic Sand', 'Scoop, mould and squish in a messy-free, super satisfying way.', FaSocks, pics[6], 'pink'],
-  ['08', 'Latcher Table', 'Boost fine motor skills with hands-on latches, doors and locks.', FaShieldAlt, pics[7], 'aqua'],
+  ['01', 'Slides & Climb', 'Zoom down slides, climb soft structures and build confidence.', GiKidSlide, '/assets/zone-slides.jpg', 'gold'],
+  ['02', 'Ball Pit', 'Dive into a sea of soft balls and enjoy endless bouncing fun.', FaBaby, '/assets/zone-ball-pit.jpg', 'purple'],
+  ['03', 'Climbing Wall', 'Build strength, balance and confidence one hold at a time.', GiMountainClimbing, '/assets/zone-climbing.jpg', 'green'],
+  ['04', 'Pretend Play', 'Imaginative play areas that spark creativity and social interaction.', FaPuzzlePiece, '/assets/zone-pretend-play.jpg', 'pink'],
+  ['05', 'Sensory Room', 'A calm, soothing space that encourages sensory exploration and relaxation.', FaStar, '/assets/zone-sensory.jpg', 'aqua'],
+  ['06', 'Lego Table', 'Build, create and imagine with colourful bricks at our Lego table.', MdOutlineToys, '/assets/zone-lego.jpg', 'orange'],
+  ['07', 'Kinetic Sand', 'Scoop, mould and squish in a messy-free, super satisfying way.', FaSocks, '/assets/zone-kinetic-sand.jpg', 'pink'],
+  ['08', 'Latcher Table', 'Boost fine motor skills with hands-on latches, doors and locks.', FaShieldAlt, '/assets/zone-latcher.jpg', 'aqua'],
 ];
 
 const stats = [
   ['3,000+', 'Happy Families', FaHeart],
-  ['6', 'Play Zones', FaPuzzlePiece],
+  ['8', 'Play Zones', FaPuzzlePiece],
   ['7', 'Days a Week', FaClock],
   ['0–10', 'Age Range (yrs)', FaBaby],
 ];
@@ -508,7 +508,7 @@ function About() {
         title='Where Play Builds Confidence'
         titleJsx={<><span>Where</span> Play<br />Builds <i>Confidence</i></>}
         text='A safe, clean and inclusive indoor play space where children of all abilities can come together to explore, imagine, learn and grow.'
-        img={pics[2]}
+        img='/assets/zone-pretend-play.jpg'
       />
 
       {/* Intro statement */}
@@ -615,6 +615,7 @@ function Zones() {
         title='Endless Fun in Every Zone'
         titleJsx={<><span>Endless</span> Fun<br />in Every <i>Zone</i></>}
         text='Step into a world of fun, adventure, and discovery. Our indoor play centre provides a safe and stimulating environment where children can stay active, spark their imagination, build friendships, and create lasting memories through play.'
+        img='/assets/zone-slides.jpg'
       />
 
       {/* 8 Zones Grid */}
@@ -661,7 +662,7 @@ function Zones() {
             <a className='btn green' href={WA}><FaWhatsapp /> Plan Your Visit</a>
           </div>
           <div className='zone-detail-img'>
-            <img src={pics[0]} alt='Ball Pit and Slides at Little Explorers World' loading='lazy' />
+            <img src='/assets/zone-slides.jpg' alt='Ball Pit and Slides at Little Explorers World' loading='lazy' />
           </div>
         </article>
 
@@ -673,7 +674,7 @@ function Zones() {
             <a className='btn green' href={WA}><FaWhatsapp /> Plan Your Visit</a>
           </div>
           <div className='zone-detail-img'>
-            <img src={pics[3]} alt='Pretend Play and Lego Table at Little Explorers World' loading='lazy' />
+            <img src='/assets/zone-pretend-play.jpg' alt='Pretend Play and Lego Table at Little Explorers World' loading='lazy' />
           </div>
         </article>
 
@@ -685,7 +686,7 @@ function Zones() {
             <a className='btn green' href={WA}><FaWhatsapp /> Plan Your Visit</a>
           </div>
           <div className='zone-detail-img'>
-            <img src={pics[4]} alt='Sensory Room and Kinetic Sand at Little Explorers World' loading='lazy' />
+            <img src='/assets/zone-sensory.jpg' alt='Sensory Room and Kinetic Sand at Little Explorers World' loading='lazy' />
           </div>
         </article>
       </section>
@@ -727,7 +728,7 @@ function Partner() {
         title='Partner with Little Explorers'
         titleJsx={<><span>Partner</span> with<br /><i>Little</i> <b>Explorers</b></>}
         text="Let's create family-friendly experiences together through schools, communities and brand collaborations."
-        img={pics[4]}
+        img='/assets/zone-ball-pit.jpg'
       />
       <section className='partners reveal'>
         {[
@@ -765,7 +766,7 @@ function Contact() {
         title='Get In Touch'
         titleJsx={<><span>Get</span> In<br /><i>Touch</i></>}
         text="At Little Explorers World, we believe every child's learning journey starts with curiosity and connection. Whether you're a parent looking for more information, interested in a play session, or want to book a birthday party — we're here to help."
-        img={pics[3]}
+        img='/assets/zone-lego.jpg'
       />
       <section className='contact reveal'>
         <div>
@@ -909,7 +910,7 @@ function BirthdayParty() {
           </div>
         </div>
         <div className='bp-hero-img'>
-          <img src={pics[3]} alt='Birthday party at Little Explorers World Islamabad' loading='eager' />
+          <img src='/assets/zone-pretend-play.jpg' alt='Birthday party at Little Explorers World Islamabad' loading='eager' />
           <div className='bp-badge'><FaStar /><span>Islamabad's<br />Top Rated<br />Play Zone</span></div>
         </div>
       </section>
@@ -990,7 +991,7 @@ function BirthdayParty() {
         <span className='eyebrow'>Real parties, real smiles</span>
         <h2>Party <i>Moments</i></h2>
         <div className='bp-gallery-grid'>
-          {[pics[3], pics[0], pics[4], pics[1], pics[5], pics[2]].map((p, i) => (
+          {['/assets/zone-slides.jpg', '/assets/zone-ball-pit.jpg', '/assets/zone-pretend-play.jpg', '/assets/zone-lego.jpg', '/assets/zone-kinetic-sand.jpg', '/assets/zone-climbing.jpg'].map((p, i) => (
             <div className='gallery-item' key={i}>
               <img src={p} alt={`Birthday party at Little Explorers World Islamabad ${i + 1}`} loading='lazy' />
               <div className='gallery-overlay'><span>View Photo</span></div>
@@ -1088,7 +1089,7 @@ export function App() {
           title='A Peek Inside the Fun'
           titleJsx={<><span>Moments</span><br />of <i>Joy</i></>}
           text='Explore colourful play spaces, birthday party setups and happy family moments.'
-          img={pics[1]}
+          img='/assets/zone-climbing.jpg'
         />
         <Gallery full />
       </>
