@@ -6,6 +6,7 @@ import {
   FaShieldAlt, FaSocks, FaStar, FaTiktok, FaUsers, FaWhatsapp,
   FaTimes, FaChevronLeft, FaChevronRight, FaHeart, FaCheck,
   FaPhone, FaCalendarAlt, FaGift, FaCamera, FaEnvelope,
+  FaHandshake, FaBullhorn, FaMedal, FaBuilding,
 } from 'react-icons/fa';
 import { GiMountainClimbing, GiKidSlide, GiPartyPopper } from 'react-icons/gi';
 import { MdCleanHands, MdClose, MdMenu, MdOutlineToys } from 'react-icons/md';
@@ -721,36 +722,41 @@ function Partner() {
   const [success, setSuccess] = useState(false);
 
   const whyCards = [
-    [FaHeart,    'Meaningful Impact',    'Help create safe, inclusive spaces where children explore, play and grow.', 'pink'],
-    [FaUsers,    'Stronger Community',   'Join a movement that brings families, organisations and changemakers together.', 'purple'],
-    [FaStar,     'Shared Mission',       'Work with a passionate team committed to building a better tomorrow for children.', 'gold'],
-    [FaCheck,    'Long-Term Difference', 'Your support creates sustainable change that benefits future generations.', 'green'],
+    [FaHandshake, 'Meaningful Impact',    'Help us create safe, inclusive spaces where children can learn, play and grow.', 'purple'],
+    [FaUsers,     'Stronger Community',   'Be part of a movement that brings families, organisations and changemakers together.', 'aqua'],
+    [FaBullhorn,  'Shared Mission',       'Work alongside a passionate team committed to building a better tomorrow for children.', 'orange'],
+    [FaMedal,     'Long-Term Difference', 'Your support helps create sustainable change that continues to benefit future generations.', 'pink'],
   ];
 
   const opportunities = [
-    [FaUsers,       'Schools & Groups',         'Organise field trips, group sessions and educational play events for students.', 'purple'],
-    [FaCalendarAlt, 'Events & Sponsorships',    'Support special events, activities and community-based experiences in our space.', 'pink'],
-    [FaGift,        'Resources & Donations',    'Contribute equipment or financial support to help us grow our play zones.', 'gold'],
-    [FaStar,        'Brand Partnerships',       'Co-create meaningful campaigns and activations that reach Islamabad families.', 'aqua'],
-    [FaWhatsapp,    'Spread the Word',          'Help us reach more families by sharing our mission within your network.', 'green'],
+    [FaUsers,       'Community Collaboration',  'Collaborate with us on initiatives that support children, families and inclusive play.', 'pink'],
+    [FaCalendarAlt, 'Event Support & Sponsorships', 'Support special events, activities and community-based experiences.', 'gold'],
+    [FaGift,        'Resource & Donations',     'Contribute useful resources, equipment or financial support to help us grow.', 'purple'],
+    [FaBuilding,    'Brand Partnerships',       'Partner with Little Explorers through meaningful campaigns and shared initiatives.', 'aqua'],
+    [FaBullhorn,    'Spread the Word',          'Help us reach more families by sharing our mission within your community.', 'green'],
   ];
 
   return (
     <>
-      <PageHero
-        kicker='Grow with a joyful local brand'
-        title='Partner with Little Explorers'
-        titleJsx={<><span>Partner</span> with<br /><i>Little</i> <b>Explorers</b></>}
-        text="We believe in the power of community and collaboration. Join us in creating a brighter, more inclusive future where every child has the opportunity to explore, play and grow."
-        img='/assets/zone-ball-pit.webp'
-      />
+      {/* ── Hero ── */}
+      <section className='pw-hero'>
+        <div className='pw-hero-text'>
+          <span className='eyebrow'>Grow with a joyful local brand</span>
+          <h1>Partner With Us.<br /><span className='pw-hero-sub'>Build Better Tomorrows</span></h1>
+          <p>We believe in the power of community, collaboration, and shared purpose. Join us in creating a brighter, more inclusive future where every child has the opportunity to explore, play, and grow.</p>
+          <p>Together, we can create meaningful experiences, support local families, and make a lasting impact through fun, learning, and connection.</p>
+          <A className='btn green' to='/about-us'>Learn More About Us <FaArrowRight /></A>
+        </div>
+        <div className='pw-hero-img'>
+          <img src='/assets/zone-ball-pit.webp' alt='Kids playing at Little Explorers World' />
+        </div>
+      </section>
 
       {/* ── Why Partner ── */}
       <section className='pw-why reveal'>
         <div className='heading'>
           <span className='eyebrow'>Why choose us</span>
-          <h2>Why <i>Partner</i> With Us?</h2>
-          <p>Together we can create meaningful experiences and make a lasting impact through fun, learning and connection.</p>
+          <h2><span className='sparkle'>✦</span> Why <i>Partner</i> With Us <span className='sparkle'>✦</span></h2>
         </div>
         <div className='pw-why-grid'>
           {whyCards.map(([Icon, title, text, color]) => (
@@ -767,7 +773,7 @@ function Partner() {
       <section className='pw-opps reveal'>
         <div className='heading'>
           <span className='eyebrow'>How you can collaborate</span>
-          <h2>Partnership <i>Opportunities</i></h2>
+          <h2>Partner <i>Opportunities</i></h2>
         </div>
         <div className='pw-opps-grid'>
           {opportunities.map(([Icon, title, text, color]) => (
@@ -778,6 +784,7 @@ function Partner() {
             </div>
           ))}
         </div>
+        <p className='pw-opps-note'>Every contribution, big or small, helps us create more smiles, greater confidence and more possibilities. <FaHeart style={{ color: 'var(--pink)', verticalAlign: 'middle' }} /></p>
       </section>
 
       {/* ── Inquiry Form ── */}
@@ -786,32 +793,36 @@ function Partner() {
           <div className='pw-form-left'>
             <span className='eyebrow'>Get in touch</span>
             <h2>Let's Create <i>Impact</i> Together</h2>
-            <p>If you share our passion for helping children thrive, we'd love to hear from you. Fill out the form and our team will get in touch to discuss partnership opportunities.</p>
-            <div className='pw-form-contact'>
-              <a href={WA}><FaWhatsapp className='pw-ci' /> Chat on WhatsApp</a>
-              <a href='mailto:Little.explorer904@gmail.com'><FaEnvelope className='pw-ci' /> Little.explorer904@gmail.com</a>
-            </div>
+            <p>If you share our passion for helping children thrive, we would love to hear from you. Fill out the form and our team will get in touch to discuss potential partnership opportunities.</p>
+            <img src='/assets/zone-pretend-play.webp' alt='Kids playing together' className='pw-form-img' />
           </div>
-          <form className='pw-form' onSubmit={e => { e.preventDefault(); setSuccess(true); }}>
-            <label>Name<input required placeholder='Your name or organisation' /></label>
-            <label>Email<input type='email' required placeholder='your@email.com' /></label>
-            <label>Phone Number<input placeholder='03XX XXXXXXX' /></label>
-            <label>
-              I am interested in
-              <select>
-                <option value=''>Select a partnership type</option>
-                <option>Community Collaboration</option>
-                <option>Event Sponsorship</option>
-                <option>Brand Partnership</option>
-                <option>Resource or Equipment Support</option>
-                <option>Schools & Group Bookings</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label>Message<textarea rows='4' placeholder='Tell us about your idea or how you'd like to collaborate...' /></label>
-            <button className='btn pink'>Send Inquiry <FaArrowRight /></button>
-            {success && <p className='success'>Thank you! We'll be in touch soon.</p>}
-          </form>
+          <div>
+            <h3 className='pw-form-title'>Send us a Message</h3>
+            <form className='pw-form' onSubmit={e => { e.preventDefault(); setSuccess(true); }}>
+              <div className='pw-form-row'>
+                <label>Full Name<input required placeholder='Full Name' /></label>
+                <label>Organisation<input placeholder='Organization (If Any)' /></label>
+              </div>
+              <label>Email Address<input type='email' required placeholder='Email Address' /></label>
+              <label>Phone Number<input placeholder='Phone Number' /></label>
+              <label>
+                I am Interested in
+                <select>
+                  <option value=''>— I am Interested in</option>
+                  <option>Community Collaboration</option>
+                  <option>Event Sponsorship</option>
+                  <option>Brand Partnership</option>
+                  <option>Resource or Equipment Support</option>
+                  <option>Donations</option>
+                  <option>Volunteering</option>
+                  <option>Other</option>
+                </select>
+              </label>
+              <label>Message<textarea rows='4' placeholder='How would you like to partner with us?' /></label>
+              <button className='btn pink'>Send Inquiry <FaArrowRight /></button>
+              {success && <p className='success'>Thank you! We'll be in touch soon.</p>}
+            </form>
+          </div>
         </div>
       </section>
 
@@ -819,11 +830,11 @@ function Partner() {
       <section className='pw-cta reveal'>
         <div className='pw-cta-inner'>
           <span className='eyebrow' style={{ color: '#ffffffcc' }}>Every partner, every child</span>
-          <h2>Every Contribution <i>Creates</i> a Smile</h2>
-          <p>Big or small, your partnership helps create more smiles, greater confidence and more possibilities for children in Islamabad.</p>
+          <h2>Every Partner. Every Child.<br /><i>Every Step Forward.</i></h2>
+          <p>Together, we can build a world where every child has the chance to explore, play and shine.</p>
           <div className='pw-cta-btns'>
-            <a className='btn' style={{ background: '#fff', color: 'var(--purple)' }} href='mailto:Little.explorer904@gmail.com'><FaEnvelope /> Email Us</a>
-            <a className='btn pink' href={WA}><FaWhatsapp /> WhatsApp Us</a>
+            <A className='btn' style={{ background: '#fff', color: 'var(--purple)' }} to='/contact-us'>Contact Us <FaArrowRight /></A>
+            <a className='btn pink' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
           </div>
         </div>
       </section>
