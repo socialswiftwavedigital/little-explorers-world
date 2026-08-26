@@ -422,16 +422,28 @@ function Home() {
     <>
       {/* Hero */}
       <section className='hero'>
-        <div className='hero-copy'>
-          <p className='hero-welcome'>Welcome to</p>
-          <h1>
-            <span>Little</span> <i>Explorers</i> <b>World</b>
-          </h1>
-          <p className='hero-tagline'>A colourful indoor play adventure for kids in Islamabad.</p>
-          <div className='actions'>
-            <a className='btn green' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
-            <button onClick={() => go('/about-us')}>Learn More <FaArrowRight /></button>
-          </div>
+        <span className='le-float-icon le-slide' aria-hidden='true' />
+        <span className='le-float-icon le-ballpit' aria-hidden='true' />
+        <span className='le-float-icon le-climbing' aria-hidden='true' />
+        <span className='le-float-icon le-blocks' aria-hidden='true' />
+
+        <p className='le-welcome'>Welcome to</p>
+
+        <p className='le-little' aria-hidden='true'>
+          <span className='lc-purple'>L</span><span className='lc-green'>i</span><span className='lc-orange'>t</span><span className='lc-pink'>t</span><span className='lc-aqua'>l</span><span className='lc-green'>e</span>
+        </p>
+        <h1 className='sr-only'>Little Explorers World — Indoor Kids Play Zone Islamabad</h1>
+
+        <p className='le-world'>
+          <span className='le-explorers'>EXPLORERS</span>
+          <span className='le-worldtxt'> WORLD</span>
+        </p>
+
+        <p className='le-tagline'>A colorful indoor play adventure<br />for kids</p>
+
+        <div className='actions le-actions'>
+          <a className='btn green' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
+          <button onClick={() => go('/about-us')}>Learn More <FaArrowRight /></button>
         </div>
       </section>
 
