@@ -181,7 +181,7 @@ function Footer() {
     <footer>
       <div className='footer-grid'>
         <div className='footer-seo'>
-          <img src='/assets/logo.png' alt='Little Explorers World' className='footer-logo' />
+          <A to='/'><img src='/assets/logo.png' alt='Little Explorers World' className='footer-logo' /></A>
           <p>Islamabad's favourite indoor kids play zone in Bahria Town Phase 4. Safe, colourful and fully supervised play spaces for children aged 0–10 years — including slides, ball pit, climbing wall, sensory room, kinetic sand, Lego table and more. Perfect for birthday parties, school trips and family outings. Open daily 11 AM – 9 PM.</p>
         </div>
         <div>
