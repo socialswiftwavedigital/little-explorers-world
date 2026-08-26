@@ -68,14 +68,14 @@ const zonePics = [
 ];
 
 const zones = [
-  ['01', 'Slides & Climb', 'Zoom down slides, climb soft structures and build confidence.', GiKidSlide, '/assets/zone-slides.webp', 'gold'],
-  ['02', 'Ball Pit', 'Dive into a sea of soft balls and enjoy endless bouncing fun.', FaBaby, '/assets/zone-ball-pit.webp', 'purple'],
-  ['03', 'Climbing Wall', 'Build strength, balance and confidence one hold at a time.', GiMountainClimbing, '/assets/zone-climbing.webp', 'green'],
-  ['04', 'Pretend Play', 'Imaginative play areas that spark creativity and social interaction.', FaPuzzlePiece, '/assets/zone-pretend-play.webp', 'pink'],
-  ['05', 'Sensory Room', 'A calm, soothing space that encourages sensory exploration and relaxation.', FaStar, '/assets/zone-sensory.webp', 'aqua'],
-  ['06', 'Lego Table', 'Build, create and imagine with colourful bricks at our Lego table.', MdOutlineToys, '/assets/zone-lego.webp', 'orange'],
-  ['07', 'Kinetic Sand', 'Scoop, mould and squish in a messy-free, super satisfying way.', FaSocks, '/assets/zone-kinetic-sand.webp', 'pink'],
-  ['08', 'Latcher Table', 'Boost fine motor skills with hands-on latches, doors and locks.', FaShieldAlt, '/assets/zone-latcher.webp', 'aqua'],
+  ['01', 'Slides & Climb', 'Zoom down colourful slides, scale soft climbing structures and build strength, courage and physical confidence — a favourite for active kids in Islamabad.', GiKidSlide, '/assets/zone-slides.webp', 'gold'],
+  ['02', 'Ball Pit', 'Dive into thousands of soft, clean, multicoloured balls and enjoy endless bouncing fun. Our supervised ball pit in Islamabad is safe, hygienic and refreshed daily.', FaBaby, '/assets/zone-ball-pit.webp', 'purple'],
+  ['03', 'Climbing Wall', 'Challenge grip, balance and determination on our indoor climbing wall. Colourful holds at varying heights make it perfect for toddlers and older kids building real-world motor skills.', GiMountainClimbing, '/assets/zone-climbing.webp', 'green'],
+  ['04', 'Pretend Play', 'A kitchen, market and grooming salon where children role-play real-world scenarios, sparking creativity, language skills and social interaction in a beautifully designed space.', FaPuzzlePiece, '/assets/zone-pretend-play.webp', 'pink'],
+  ['05', 'Sensory Room', 'A calm, low-stimulation retreat designed for children who need a quieter space. Soft lighting, textures and calming activities support sensory exploration, relaxation and emotional regulation.', FaStar, '/assets/zone-sensory.webp', 'aqua'],
+  ['06', 'Lego Table', 'Build, create and imagine with thousands of colourful LEGO bricks at our dedicated Lego table. Great for developing problem-solving, spatial thinking and fine motor skills.', MdOutlineToys, '/assets/zone-lego.webp', 'orange'],
+  ['07', 'Kinetic Sand', 'Scoop, mould, sculpt and squish our mess-free kinetic sand — the satisfying tactile play that kids absolutely love. Ideal for creative expression and sensory development.', FaSocks, '/assets/zone-kinetic-sand.webp', 'pink'],
+  ['08', 'Latcher Table', 'Boost fine motor skills and problem-solving with hands-on latches, bolts, doors and locks. A Montessori-inspired activity perfect for toddlers and early childhood development.', FaShieldAlt, '/assets/zone-latcher.webp', 'aqua'],
 ];
 
 const stats = [
@@ -477,7 +477,7 @@ function Home() {
 
         <div className='actions le-actions'>
           <a className='btn green' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
-          <button onClick={() => go('/about-us')}>Learn More <FaArrowRight /></button>
+          <button onClick={() => go('/about-us')}>About Us <FaArrowRight /></button>
         </div>
       </section>
 

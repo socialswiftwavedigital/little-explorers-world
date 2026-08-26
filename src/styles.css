@@ -441,7 +441,7 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
 }
 
 /* ─── Trail ─── */
-.trail-section { padding: 90px max(6vw, 38px); max-width: 1380px; margin: auto; }
+.trail-section { padding: 60px max(6vw, 38px); max-width: 1380px; margin: auto; }
 .heading { max-width: 440px; }
 .heading-center { max-width: 700px; margin: 0 auto; text-align: center; }
 .heading h2 { font-size: 40px; line-height: 1.1; margin: 13px 0; font-weight: 500; }
@@ -653,7 +653,7 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
 .party-link-btn:hover { color: #fff; gap: 11px; }
 
 /* ─── Trust ─── */
-.trust { padding: 70px max(6vw, 28px); background: #fff; border-block: 1px solid #dceceb; }
+.trust { padding: 50px max(6vw, 28px); background: #fff; border-block: 1px solid #dceceb; }
 .trust > h2 { text-align: center; color: var(--aqua); font-size: 32px; font-weight: 500; }
 .trust > h2 i { color: var(--ink); font-style: normal; }
 .trust > div {
@@ -682,7 +682,7 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
 /* ─── Testimonials ─── */
 .testimonials {
   text-align: center;
-  padding: 80px max(6vw, 28px);
+  padding: 55px max(6vw, 28px);
   background: #f9f5ff;
 }
 .testimonials h2 { font-size: 34px; margin: 8px 0 36px; font-weight: 500; }
@@ -709,8 +709,8 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
 .review-card strong { font: 700 14px Fredoka; color: var(--purple); }
 
 /* ─── Zones Icon Grid ─── */
-.zones-section { padding: 80px max(5vw, 30px) 90px; max-width: 1200px; margin: 0 auto; }
-.section-head { text-align: center; margin-bottom: 44px; }
+.zones-section { padding: 50px max(5vw, 30px) 60px; max-width: 1200px; margin: 0 auto; }
+.section-head { text-align: center; margin-bottom: 36px; }
 .section-head h2 { font-size: 38px; margin: 10px 0 12px; font-weight: 600; }
 .section-head h2 i { color: var(--pink); font-style: normal; }
 .section-head p { color: #666; font-size: 15px; max-width: 480px; margin: 0 auto; }
@@ -731,14 +731,16 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
 .z-orange { --zone-color: var(--orange); }
 .zone-icon-card {
   text-align: center;
-  padding: 26px 12px 22px;
+  padding: 26px 14px 24px;
   border-radius: 20px;
-  transition: background .3s, transform .3s, box-shadow .3s;
+  border: 2px solid color-mix(in srgb, var(--zone-color, var(--purple)) 22%, transparent);
+  transition: background .3s, transform .3s, box-shadow .3s, border-color .3s;
 }
 .zone-icon-card:hover {
-  background: color-mix(in srgb, var(--zone-color, var(--purple)) 14%, white);
+  background: color-mix(in srgb, var(--zone-color, var(--purple)) 10%, white);
+  border-color: color-mix(in srgb, var(--zone-color, var(--purple)) 55%, transparent);
   transform: translateY(-5px);
-  box-shadow: 0 14px 36px #4b365b14;
+  box-shadow: 0 14px 36px color-mix(in srgb, var(--zone-color, var(--purple)) 20%, transparent);
 }
 .zone-circle {
   width: 96px;
@@ -755,8 +757,8 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
   box-shadow: 0 8px 24px color-mix(in srgb, var(--zone-color, var(--purple)) 35%, transparent);
 }
 .zone-icon-card:hover .zone-circle { transform: scale(1.1); }
-.zone-icon-card h3 { font-size: 16px; font-weight: 600; margin: 0 0 8px; color: var(--ink); }
-.zone-icon-card p { font-size: 12.5px; color: #777; margin: 0; line-height: 1.5; }
+.zone-icon-card h3 { font-size: 18px; font-weight: 700; margin: 0 0 8px; color: var(--ink); }
+.zone-icon-card p { font-size: 13.5px; color: var(--ink); margin: 0; line-height: 1.6; }
 
 /* ─── Zone Features – Ticket Banner ─── */
 .zone-features {
@@ -888,7 +890,7 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
 
 /* ─── About Special ─── */
 .about-special {
-  padding: 80px max(5vw, 30px);
+  padding: 55px max(5vw, 30px);
   background: #fff;
 }
 .about-special-grid {
@@ -1210,7 +1212,7 @@ footer { background: #f6f3fb; padding: 58px max(6vw, 28px) 20px; }
 .about-vm {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px max(5vw, 30px);
+  padding: 55px max(5vw, 30px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
@@ -1232,7 +1234,7 @@ footer { background: #f6f3fb; padding: 58px max(6vw, 28px) 20px; }
 .about-vm-card p { font-size: 15px; color: #555; line-height: 1.75; margin: 0; }
 .about-owners {
   background: linear-gradient(135deg, #4b2d7a 0%, #9b4a72 100%);
-  padding: 80px max(5vw, 30px);
+  padding: 55px max(5vw, 30px);
   color: #fff;
 }
 .about-owners-inner {
@@ -1291,7 +1293,7 @@ footer { background: #f6f3fb; padding: 58px max(6vw, 28px) 20px; }
 .story {
   max-width: 1200px;
   margin: auto;
-  padding: 90px 40px;
+  padding: 60px 40px;
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 70px;
