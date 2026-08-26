@@ -636,20 +636,28 @@ function Zones() {
         </div>
       </section>
 
-      {/* Zone Features */}
+      {/* Zone Features – Ticket Banner */}
       <section className='zone-features reveal'>
-        {[
-          [FaClock, 'Indoor & Weather Proof', 'Play comfortably, no matter the season'],
-          [FaUsers, 'Designed for Active Play', 'Encourages movement, balance and healthy development'],
-          [MdCleanHands, 'Clean & Supervised', 'Our team keeps every area safe and spotless'],
-          [FaStar, 'Great for Learning', 'Play that supports growth, creativity & confidence'],
-        ].map(([Icon, title, text]) => (
-          <div className='zone-feature-item' key={title}>
-            <Icon />
-            <h3>{title}</h3>
-            <p>{text}</p>
+        <div className='zone-ticket'>
+          <div className='zone-ticket-head'>
+            <span className='eyebrow'>Everything included in one visit</span>
+            <h2><span className='sparkle'>✦</span> One Ticket, <i>All</i> Play Zones Included <span className='sparkle'>✦</span></h2>
           </div>
-        ))}
+          <div className='zone-ticket-grid'>
+            {[
+              [FaClock, 'Indoor & Weather Proof', 'Play comfortably, no matter the season', 'purple'],
+              [FaUsers, 'Active Play Zones', 'Movement, balance & healthy development for every child', 'pink'],
+              [MdCleanHands, 'Clean & Supervised', 'Our team keeps every area safe and spotless', 'gold'],
+              [FaStar, 'Great for Learning', 'Play that supports growth, creativity & confidence', 'aqua'],
+            ].map(([Icon, title, text, color]) => (
+              <div className='zone-ticket-item' key={title}>
+                <div className={`zone-ticket-icon zti-${color}`}><Icon /></div>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* Zone Detail Sections */}
@@ -699,13 +707,13 @@ function Zones() {
         </div>
         <div className='zone-inclusive-grid'>
           {[
-            [FaUsers, 'Inclusive Play', 'Welcoming environment for every child to play and thrive.'],
-            [FaShieldAlt, 'Safe Padded Setup', 'Soft, secure equipment for worry-free adventures.'],
-            [FaClock, 'Parent-Friendly', 'Relax in comfort while your little ones explore and have fun.'],
-            [FaBaby, 'For Every Age', 'Fun, engaging zones perfect for children aged 0–10.'],
-          ].map(([Icon, title, text]) => (
-            <div className='zone-incl-card' key={title}>
-              <Icon />
+            [FaUsers, 'Inclusive Play', 'Welcoming environment for every child to play and thrive.', 'pink'],
+            [FaShieldAlt, 'Safe Padded Setup', 'Soft, secure equipment for worry-free adventures.', 'gold'],
+            [FaClock, 'Parent-Friendly', 'Relax in comfort while your little ones explore and have fun.', 'purple'],
+            [FaBaby, 'For Every Age', 'Fun, engaging zones perfect for children aged 0–10.', 'aqua'],
+          ].map(([Icon, title, text, color]) => (
+            <div className={`zone-incl-card zic-${color}`} key={title}>
+              <div className='zone-incl-icon'><Icon /></div>
               <h3>{title}</h3>
               <p>{text}</p>
             </div>
