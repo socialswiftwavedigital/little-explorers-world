@@ -178,24 +178,13 @@ function Footer() {
   return (
     <footer>
       <div className='footer-grid'>
-        <div className='brand'>
-          <img src='/assets/logo.png' alt='Little Explorers World' />
-          <p>A colourful indoor play adventure for kids in Islamabad.</p>
-          <div className='social'>
-            <a href='https://facebook.com' target='_blank' rel='noopener noreferrer' aria-label='Facebook'><FaFacebookF /></a>
-            <a href='https://instagram.com' target='_blank' rel='noopener noreferrer' aria-label='Instagram'><FaInstagram /></a>
-            <a href='https://tiktok.com' target='_blank' rel='noopener noreferrer' aria-label='TikTok'><FaTiktok /></a>
-          </div>
+        <div className='footer-seo'>
+          <h4>Little Explorers World</h4>
+          <p>Islamabad's favourite indoor kids play zone in Bahria Town Phase 4. Safe, colourful and fully supervised play spaces for children aged 0–10 years — including slides, ball pit, climbing wall, sensory room, kinetic sand, Lego table and more. Perfect for birthday parties, school trips and family outings. Open daily 11 AM – 9 PM.</p>
         </div>
         <div>
           <h4>Quick Links</h4>
-          {links.slice(0, 5).map(([l, p]) => <A key={p} to={p}>{l}</A>)}
-        </div>
-        <div>
-          <h4>Information</h4>
-          <A to='/play-zones'>Pricing</A>
-          <A to='/birthday-parties'>Birthday Parties</A>
-          <A to='/about-us'>Safety & Cleanliness</A>
+          {links.map(([l, p]) => <A key={p} to={p}>{l}</A>)}
           <A to='/partner-with-us'>Partner with Us</A>
         </div>
         <div>
@@ -208,12 +197,14 @@ function Footer() {
           <h4>Opening Hours</h4>
           <p>Mon – Sun<br /><b>11:00 AM – 09:00 PM</b></p>
           <span className='pill'>Open 7 Days</span>
-          <a className='btn pink footer-wa' href={WA} style={{ marginTop: '16px' }}>
-            <FaWhatsapp /> WhatsApp Us
-          </a>
+          <div className='social' style={{ marginTop: '18px' }}>
+            <a href='https://facebook.com/littleexplorersworld' target='_blank' rel='noopener noreferrer' aria-label='Facebook'><FaFacebookF /></a>
+            <a href='https://instagram.com/littleexplorersworld' target='_blank' rel='noopener noreferrer' aria-label='Instagram'><FaInstagram /></a>
+            <a href='https://tiktok.com/@littleexplorersworld' target='_blank' rel='noopener noreferrer' aria-label='TikTok'><FaTiktok /></a>
+          </div>
         </div>
       </div>
-      <div className='copy'>© 2026 Little Explorers World. All Rights Reserved. Made with <FaHeart style={{ color: 'var(--pink)', verticalAlign: 'middle' }} /> in Islamabad.</div>
+      <div className='copy'>© 2026 Little Explorers World. All Rights Reserved.</div>
     </footer>
   );
 }
