@@ -549,7 +549,9 @@ function About() {
 
       {/* Intro statement */}
       <section className='about-intro reveal'>
-        <p>A safe, clean, and inclusive indoor play space where children of all abilities can come together to explore, imagine, learn, and grow. Our thoughtfully designed environment combines hygiene, security, creativity, and joyful activities to give children the freedom to play with confidence while parents enjoy complete peace of mind.</p>
+        <span className='eyebrow' style={{ margin: '0 auto 12px', display: 'block' }}>Little Explorers World Islamabad</span>
+        <h2>Pakistan's Most <i>Loved</i> Indoor Play Space</h2>
+        <p>A safe, clean, and inclusive indoor play space in Islamabad where children of all abilities can come together to explore, imagine, learn, and grow. Our thoughtfully designed environment combines hygiene, security, creativity, and joyful activities to give children the freedom to play with confidence while parents enjoy complete peace of mind.</p>
       </section>
 
       {/* Who We Are */}
