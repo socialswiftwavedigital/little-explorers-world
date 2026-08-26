@@ -438,10 +438,6 @@ function Home() {
             <a className='btn green' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
             <button onClick={() => go('/about-us')}>Learn More <FaArrowRight /></button>
           </div>
-          <div className='meta'>
-            <span><FaMapMarkerAlt /> Bahria Town Phase 4</span>
-            <span><FaClock /> Daily, 11 AM – 11 PM</span>
-          </div>
         </div>
       </section>
 
