@@ -425,6 +425,8 @@ nav a:hover::after, nav a.active::after { width: calc(100% - 28px); }
 /* ─── Eyebrow ─── */
 .eyebrow {
   display: inline-block;
+  width: fit-content;
+  max-width: max-content;
   font: 700 11px Fredoka;
   letter-spacing: .13em;
   text-transform: uppercase;
