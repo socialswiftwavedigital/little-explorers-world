@@ -1962,9 +1962,23 @@ input:focus, select:focus, textarea:focus {
 
 /* ─── Per-Page Backgrounds ─── */
 main.bg-yellow { background: #fffbee; }
-main.bg-pink   { background: #fff4f8; }
-main.bg-purple { background: #f6f3ff; }
-main.bg-green  { background: #f3fbf1; }
+main.bg-pink   { background: #fff0f5; }
+main.bg-purple { background: #f4f1ff; }
+main.bg-green  { background: #f2faed; }
+main.bg-orange { background: #fff6f2; }
+main.bg-multi  { background: #fffbee; }
+
+/* Section-wise alternating tints — single-colour pages */
+main.bg-pink   > section:nth-child(odd)   { background: rgba(231,146,172,.06); }
+main.bg-purple > section:nth-child(odd)   { background: rgba(170,157,210,.08); }
+main.bg-green  > section:nth-child(odd)   { background: rgba(156,189, 61,.06); }
+main.bg-orange > section:nth-child(odd)   { background: rgba(236,132,104,.07); }
+
+/* Home — rotate all 4 colours across sections */
+main.bg-multi > section:nth-child(4n+1) { background: rgba(231,146,172,.06); }
+main.bg-multi > section:nth-child(4n+2) { background: rgba(170,157,210,.08); }
+main.bg-multi > section:nth-child(4n+3) { background: rgba(236,132,104,.06); }
+main.bg-multi > section:nth-child(4n+4) { background: rgba(156,189, 61,.06); }
 
 /* ─── Footer: Contact Icons ─── */
 .footer-contact-item {
