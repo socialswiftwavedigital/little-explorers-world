@@ -366,22 +366,49 @@ function Trust() {
 
 /* ─── Testimonials ─── */
 function Testimonials() {
-  const reviews = [
-    { name: 'Ayesha K.', text: 'My daughter absolutely loves it here! The staff is so kind and the place is spotlessly clean. We come every weekend!', stars: 5 },
-    { name: 'Bilal A.', text: 'Best birthday party venue in Islamabad! Everything was perfectly arranged and the kids had a blast. Highly recommended!', stars: 5 },
-    { name: 'Sara M.', text: 'Great place for kids to burn energy! The play zones are well thought out and the safety standards are impressive.', stars: 5 },
+  const allReviews = [
+    { name: 'Ayesha K.', text: 'My daughter absolutely loves it here! The staff is so kind and the place is spotlessly clean. We come every weekend without fail!', stars: 5 },
+    { name: 'Bilal A.', text: 'Best birthday party venue in Islamabad! Everything was perfectly arranged and the kids had a blast. Highly recommended for families!', stars: 5 },
+    { name: 'Sara M.', text: 'Great place for kids to burn energy! The play zones are well thought out and the safety standards are truly impressive.', stars: 5 },
+    { name: 'Hina R.', text: 'We visited with our 3-year-old and she didn\'t want to leave! The sensory room was a highlight — calm, clean and so well designed.', stars: 5 },
+    { name: 'Usman T.', text: 'Finally a proper indoor play area in Islamabad. The kinetic sand zone is amazing — kids were occupied for hours. Totally worth it!', stars: 5 },
+    { name: 'Fatima Z.', text: 'The climbing wall and ball pit are incredible! Staff are attentive and very helpful. Our son has been asking to come back every day.', stars: 5 },
+    { name: 'Mehwish L.', text: 'Hosted my niece\'s birthday party here — the team handled everything beautifully. Decorations, setup, food area — all spotless and super fun!', stars: 5 },
   ];
+  const visible = 3;
+  const maxIdx = allReviews.length - visible;
+  const [idx, setIdx] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    if (paused) return;
+    const t = setInterval(() => setIdx(i => i >= maxIdx ? 0 : i + 1), 4000);
+    return () => clearInterval(t);
+  }, [paused, maxIdx]);
+
+  const prev = () => setIdx(i => i <= 0 ? maxIdx : i - 1);
+  const next = () => setIdx(i => i >= maxIdx ? 0 : i + 1);
+
   return (
-    <section className='testimonials reveal'>
-      <span className='eyebrow'>What parents are saying</span>
+    <section className='testimonials reveal' onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+      <span className='eyebrow' style={{ margin: '0 auto 10px', display: 'block' }}>What parents are saying</span>
       <h2>Loved by <i>Families</i></h2>
-      <div className='review-grid'>
-        {reviews.map(({ name, text, stars }) => (
-          <article className='review-card' key={name}>
-            <div className='review-stars'>{Array.from({ length: stars }, (_, i) => <FaStar key={i} />)}</div>
-            <p>"{text}"</p>
-            <strong>— {name}</strong>
-          </article>
+      <div className='review-slider-wrap'>
+        <button className='slider-btn' onClick={prev} aria-label='Previous'><FaChevronLeft /></button>
+        <div className='review-grid'>
+          {allReviews.slice(idx, idx + visible).map(({ name, text, stars }) => (
+            <article className='review-card' key={name}>
+              <div className='review-stars'>{Array.from({ length: stars }, (_, i) => <FaStar key={i} />)}</div>
+              <p>"{text}"</p>
+              <strong>— {name}</strong>
+            </article>
+          ))}
+        </div>
+        <button className='slider-btn' onClick={next} aria-label='Next'><FaChevronRight /></button>
+      </div>
+      <div className='slider-dots'>
+        {Array.from({ length: maxIdx + 1 }, (_, i) => (
+          <button key={i} className={'dot' + (i === idx ? ' active' : '')} onClick={() => setIdx(i)} aria-label={`Go to slide ${i + 1}`} />
         ))}
       </div>
     </section>
@@ -561,6 +588,8 @@ function About() {
           <h2>Dedicated to <i>Every Child</i></h2>
           <p>At Little Explorers, we are dedicated to creating safe, inclusive and inspiring play spaces across Pakistan where children of all abilities feel welcomed, valued and free to be themselves. Our aim is to provide a joyful environment where every child can explore, connect, learn and grow through meaningful play experiences.</p>
           <p>Our thoughtfully designed space encourages imagination, physical movement, confidence, creativity and positive social interaction. From active play to calm sensory experiences, every area is created to support different stages of childhood development in a safe and engaging way.</p>
+          <p>Located in Bahria Town Islamabad, we welcome children up to age 10 with 8 dedicated play zones, daily deep-cleaning, trained staff, and a welcoming environment that truly feels like a second home for your family.</p>
+          <a className='btn green' style={{ marginTop: 24, display: 'inline-flex' }} href={WA}><FaWhatsapp /> Book a Visit</a>
         </div>
         <div className='values'>
           {[
