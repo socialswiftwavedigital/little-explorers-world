@@ -1358,7 +1358,7 @@ export function App() {
           title='A Peek Inside the Fun'
           titleJsx={<><span>Moments</span><br />of <i>Joy</i></>}
           text='Explore colourful play spaces, birthday party setups and happy family moments.'
-          img='/assets/gallery-15.webp'
+          img='/assets/gallery-23.webp'
         />
         <Gallery />
       </>
