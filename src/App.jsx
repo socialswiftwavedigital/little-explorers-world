@@ -56,6 +56,17 @@ const pageMeta = {
 
 const pics = Array.from({ length: 15 }, (_, i) => `/assets/gallery-${i + 1}.webp`);
 
+const zonePics = [
+  '/assets/zone-slides.webp',
+  '/assets/zone-ball-pit.webp',
+  '/assets/zone-climbing.webp',
+  '/assets/zone-pretend-play.webp',
+  '/assets/zone-sensory.webp',
+  '/assets/zone-lego.webp',
+  '/assets/zone-kinetic-sand.webp',
+  '/assets/zone-latcher.webp',
+];
+
 const zones = [
   ['01', 'Slides & Climb', 'Zoom down slides, climb soft structures and build confidence.', GiKidSlide, '/assets/zone-slides.webp', 'gold'],
   ['02', 'Ball Pit', 'Dive into a sea of soft balls and enjoy endless bouncing fun.', FaBaby, '/assets/zone-ball-pit.webp', 'purple'],
@@ -378,39 +389,62 @@ function Testimonials() {
 }
 
 /* ─── Gallery ─── */
-function Gallery({ full = false }) {
+/* Gallery page — zone images */
+function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
-
-  const openLightbox = useCallback((i) => setLightboxIndex(i), []);
-  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
-  const prevImage = useCallback(() => setLightboxIndex(i => (i - 1 + pics.length) % pics.length), []);
-  const nextImage = useCallback(() => setLightboxIndex(i => (i + 1) % pics.length), []);
+  const open  = useCallback(i => setLightboxIndex(i), []);
+  const close = useCallback(() => setLightboxIndex(null), []);
+  const prev  = useCallback(() => setLightboxIndex(i => (i - 1 + zonePics.length) % zonePics.length), []);
+  const next  = useCallback(() => setLightboxIndex(i => (i + 1) % zonePics.length), []);
 
   return (
     <section className='gallery reveal'>
-      <span className='eyebrow'>Real moments, happy memories</span>
-      <h2>Moments of <i>Joy</i></h2>
+      <span className='eyebrow'>Explore every zone</span>
+      <h2>Inside <i>Little Explorers World</i></h2>
       <div>
-        {(full ? pics : pics.slice(0, 6)).map((p, i) => (
-          <div className='gallery-item' key={p} onClick={() => openLightbox(i)}>
-            <img src={p} alt={`Play area ${i + 1}`} loading='lazy' />
+        {zonePics.map((p, i) => (
+          <div className='gallery-item' key={p} onClick={() => open(i)}>
+            <img src={p} alt={`Play zone ${i + 1}`} loading='lazy' />
             <div className='gallery-overlay'><span>View Photo</span></div>
           </div>
         ))}
       </div>
-      {!full && (
-        <button className='btn purple' onClick={() => go('/gallery')}>
-          View Full Gallery <FaArrowRight />
-        </button>
-      )}
       {lightboxIndex !== null && (
-        <Lightbox
-          images={pics}
-          index={lightboxIndex}
-          onClose={closeLightbox}
-          onPrev={prevImage}
-          onNext={nextImage}
-        />
+        <Lightbox images={zonePics} index={lightboxIndex} onClose={close} onPrev={prev} onNext={next} />
+      )}
+    </section>
+  );
+}
+
+/* Home photo strip — all 15 real landscape photos */
+function HomePhotos() {
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+  const open  = useCallback(i => setLightboxIndex(i), []);
+  const close = useCallback(() => setLightboxIndex(null), []);
+  const prev  = useCallback(() => setLightboxIndex(i => (i - 1 + pics.length) % pics.length), []);
+  const next  = useCallback(() => setLightboxIndex(i => (i + 1) % pics.length), []);
+
+  return (
+    <section className='home-photos reveal'>
+      <div className='heading-center'>
+        <span className='eyebrow'>Real moments, happy memories</span>
+        <h2 style={{ marginTop: '12px' }}>A Peek Inside <i>Our World</i></h2>
+      </div>
+      <div className='photo-strip'>
+        {pics.map((p, i) => (
+          <div className='photo-strip-item' key={p} onClick={() => open(i)}>
+            <img src={p} alt={`Little Explorers World photo ${i + 1}`} loading='lazy' />
+            <div className='gallery-overlay'><span>View Photo</span></div>
+          </div>
+        ))}
+      </div>
+      <div style={{ textAlign: 'center', marginTop: '28px' }}>
+        <button className='btn purple' onClick={() => go('/gallery')}>
+          Explore Play Zones <FaArrowRight />
+        </button>
+      </div>
+      {lightboxIndex !== null && (
+        <Lightbox images={pics} index={lightboxIndex} onClose={close} onPrev={prev} onNext={next} />
       )}
     </section>
   );
@@ -472,7 +506,7 @@ function Home() {
       <Pricing />
       <Trust />
       <Testimonials />
-      <Gallery />
+      <HomePhotos />
 
       <section className='cta reveal'>
         <h2>Ready To Explore <i>Every Zone?</i></h2>
@@ -1223,7 +1257,7 @@ export function App() {
           text='Explore colourful play spaces, birthday party setups and happy family moments.'
           img='/assets/zone-climbing.webp'
         />
-        <Gallery full />
+        <Gallery />
       </>
     ),
     '/partner-with-us': Partner,
