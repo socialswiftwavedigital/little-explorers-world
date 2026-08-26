@@ -349,7 +349,7 @@ function Trust() {
   ];
   return (
     <section className='trust reveal'>
-      <span className='eyebrow' style={{ display: 'block', textAlign: 'center', marginBottom: '8px' }}>Why families love us</span>
+      <span className='eyebrow' style={{ display: 'block', margin: '0 auto 8px' }}>Why families love us</span>
       <h2>Safety. Cleanliness. <i>Peace of Mind.</i></h2>
       <div>
         {items.map(([Icon, title, text]) => (
