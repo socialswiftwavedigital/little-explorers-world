@@ -54,7 +54,7 @@ const pageMeta = {
   },
 };
 
-const pics = Array.from({ length: 15 }, (_, i) => `/assets/gallery-${i + 1}.webp`);
+const pics = Array.from({ length: 25 }, (_, i) => `/assets/gallery-${i + 1}.webp`);
 
 const zonePics = [
   '/assets/zone-slides.webp',
