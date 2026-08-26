@@ -416,8 +416,36 @@ function Testimonials() {
 }
 
 /* ─── Gallery ─── */
-/* Gallery page — zone images */
+/* Gallery page — all images combined */
+const allPics = [...pics, ...zonePics];
 function Gallery() {
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+  const open  = useCallback(i => setLightboxIndex(i), []);
+  const close = useCallback(() => setLightboxIndex(null), []);
+  const prev  = useCallback(() => setLightboxIndex(i => (i - 1 + allPics.length) % allPics.length), []);
+  const next  = useCallback(() => setLightboxIndex(i => (i + 1) % allPics.length), []);
+
+  return (
+    <section className='gallery reveal'>
+      <span className='eyebrow'>Explore every zone</span>
+      <h2>Inside <i>Little Explorers World</i></h2>
+      <div>
+        {allPics.map((p, i) => (
+          <div className='gallery-item' key={p} onClick={() => open(i)}>
+            <img src={p} alt={`Little Explorers World photo ${i + 1}`} loading='lazy' />
+            <div className='gallery-overlay'><span>View Photo</span></div>
+          </div>
+        ))}
+      </div>
+      {lightboxIndex !== null && (
+        <Lightbox images={allPics} index={lightboxIndex} onClose={close} onPrev={prev} onNext={next} />
+      )}
+    </section>
+  );
+}
+
+/* Zone photo strip — 8 zone area photos */
+function ZonePhotos() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const open  = useCallback(i => setLightboxIndex(i), []);
   const close = useCallback(() => setLightboxIndex(null), []);
@@ -425,16 +453,23 @@ function Gallery() {
   const next  = useCallback(() => setLightboxIndex(i => (i + 1) % zonePics.length), []);
 
   return (
-    <section className='gallery reveal'>
-      <span className='eyebrow'>Explore every zone</span>
-      <h2>Inside <i>Little Explorers World</i></h2>
-      <div>
+    <section className='home-photos reveal'>
+      <div className='heading-center'>
+        <span className='eyebrow'>Real moments, happy memories</span>
+        <h2 style={{ marginTop: '12px' }}>A Peek Inside <i>Our World</i></h2>
+      </div>
+      <div className='photo-strip'>
         {zonePics.map((p, i) => (
-          <div className='gallery-item' key={p} onClick={() => open(i)}>
+          <div className='photo-strip-item' key={p} onClick={() => open(i)}>
             <img src={p} alt={`Play zone ${i + 1}`} loading='lazy' />
             <div className='gallery-overlay'><span>View Photo</span></div>
           </div>
         ))}
+      </div>
+      <div style={{ textAlign: 'center', marginTop: '28px' }}>
+        <button className='btn purple' onClick={() => go('/gallery')}>
+          See All Photos <FaArrowRight />
+        </button>
       </div>
       {lightboxIndex !== null && (
         <Lightbox images={zonePics} index={lightboxIndex} onClose={close} onPrev={prev} onNext={next} />
@@ -794,7 +829,7 @@ function Zones() {
         </div>
       </section>
 
-      <HomePhotos />
+      <ZonePhotos />
 
       <section className='cta reveal'>
         <h2>Ready to <i>Book Your Visit?</i></h2>
