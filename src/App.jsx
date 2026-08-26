@@ -1000,21 +1000,20 @@ function Contact() {
       <section className='contact reveal'>
         <div>
           <h2>Come say hello</h2>
-          <p><FaMapMarkerAlt /> 2nd Floor, Plaza No. 42, Alpha Marina, Marina Commercial, Corniche Road, Bahria Town Phase 4, Islamabad</p>
+          <a href='https://maps.google.com/?q=Alpha+Marina+Plaza+42+Bahria+Town+Phase+4+Islamabad' target='_blank' rel='noopener noreferrer' className='contact-address'>
+            <FaMapMarkerAlt /> 2nd Floor, Plaza No. 42, Alpha Marina, Marina Commercial, Corniche Road, Bahria Town Phase 4, Islamabad
+          </a>
           <p><FaClock /> Open daily: 11:00 AM – 11:00 PM (7 Days a Week)</p>
           <a href='tel:+923265652798'><FaPhone /> +92 326 5652798</a>
           <a href='mailto:little.explorer904@gmail.com'>little.explorer904@gmail.com</a>
           <a className='btn green' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
-          <div className='map-embed'>
-            <iframe
-              title='Little Explorers World Location'
-              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.!2d73.1!3d33.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDMwJzAwLjAiTiA3M8KwMDYnMDAuMCJF!5e0!3m2!1sen!2spk!4v1234567890'
-              width='100%'
-              height='220'
-              style={{ border: 0, borderRadius: '16px', marginTop: '24px' }}
-              allowFullScreen
-              loading='lazy'
-            />
+          <div className='contact-social'>
+            <p>Follow us</p>
+            <div className='contact-social-icons'>
+              <a href='https://facebook.com/littleexplorersworld' target='_blank' rel='noopener noreferrer' aria-label='Facebook' className='cs-icon cs-fb'><FaFacebookF /></a>
+              <a href='https://instagram.com/littleexplorersworld' target='_blank' rel='noopener noreferrer' aria-label='Instagram' className='cs-icon cs-ig'><FaInstagram /></a>
+              <a href='https://tiktok.com/@littleexplorersworld' target='_blank' rel='noopener noreferrer' aria-label='TikTok' className='cs-icon cs-tk'><FaTiktok /></a>
+            </div>
           </div>
         </div>
         <form onSubmit={e => { e.preventDefault(); setSuccess(true); }}>
@@ -1031,7 +1030,7 @@ function Contact() {
 
       {/* FAQs */}
       <section className='bp-faq reveal' style={{ marginBottom: '60px' }}>
-        <span className='eyebrow' style={{ display: 'block', textAlign: 'center' }}>Got questions?</span>
+        <span className='eyebrow' style={{ display: 'block', margin: '0 auto 10px' }}>Got questions?</span>
         <h2 style={{ textAlign: 'center', fontSize: '34px', margin: '8px 0 32px', fontWeight: 500 }}>
           Frequently Asked <i style={{ color: 'var(--pink)', fontStyle: 'normal' }}>Questions</i>
         </h2>
@@ -1045,6 +1044,23 @@ function Contact() {
               {openFaq === i && <p>{a}</p>}
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Map */}
+      <section className='contact-map reveal'>
+        <div className='contact-map-inner'>
+          <span className='eyebrow' style={{ display: 'block', margin: '0 auto 12px' }}>Find us here</span>
+          <h2 style={{ textAlign: 'center', marginBottom: '28px' }}>We're in <i>Bahria Town</i></h2>
+          <iframe
+            title='Little Explorers World Location'
+            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.!2d73.1!3d33.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDMwJzAwLjAiTiA3M8KwMDYnMDAuMCJF!5e0!3m2!1sen!2spk!4v1234567890'
+            width='100%'
+            height='450'
+            style={{ border: 0, borderRadius: '24px' }}
+            allowFullScreen
+            loading='lazy'
+          />
         </div>
       </section>
     </>
