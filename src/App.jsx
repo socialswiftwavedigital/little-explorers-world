@@ -964,11 +964,11 @@ function Partner() {
       {/* ── CTA Banner ── */}
       <section className='pw-cta reveal'>
         <div className='pw-cta-inner'>
-          <span className='eyebrow' style={{ color: '#ffffffcc' }}>Every partner, every child</span>
+          <span className='eyebrow' style={{ color: '#111' }}>Every partner, every child</span>
           <h2>Every Partner. Every Child.<br /><i>Every Step Forward.</i></h2>
           <p>Together, we can build a world where every child has the chance to explore, play and shine.</p>
           <div className='pw-cta-btns'>
-            <A className='btn' style={{ background: '#fff', color: 'var(--purple)' }} to='/contact-us'>Contact Us <FaArrowRight /></A>
+            <A className='btn green' to='/contact-us'>Contact Us <FaArrowRight /></A>
             <a className='btn pink' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
           </div>
         </div>
@@ -1162,11 +1162,6 @@ function BirthdayParty() {
             <a className='btn pink' href={waParty}><FaWhatsapp /> Book a Party Now</a>
             <a className='btn' style={{ background: 'var(--purple)' }} href='tel:+923265652798'><FaPhone /> Call Us</a>
           </div>
-          <div className='bp-trust-pills'>
-            <span><FaCheck /> Free consultation</span>
-            <span><FaCheck /> Customisable packages</span>
-            <span><FaCheck /> Kids aged 0–10</span>
-          </div>
         </div>
         <div className='bp-hero-img'>
           <img src='/assets/zone-pretend-play.webp' alt='Birthday party at Little Explorers World Islamabad' loading='eager' />
@@ -1337,7 +1332,7 @@ export function App() {
           title='A Peek Inside the Fun'
           titleJsx={<><span>Moments</span><br />of <i>Joy</i></>}
           text='Explore colourful play spaces, birthday party setups and happy family moments.'
-          img='/assets/zone-climbing.webp'
+          img='/assets/gallery-15.webp'
         />
         <Gallery />
       </>
