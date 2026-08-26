@@ -1580,3 +1580,26 @@ input:focus, select:focus, textarea:focus {
   * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ─── Per-Page Backgrounds ─── */
+main.bg-yellow { background: #fffbee; }
+main.bg-pink   { background: #fff4f8; }
+main.bg-purple { background: #f6f3ff; }
+main.bg-green  { background: #f3fbf1; }
+
+/* ─── Footer: Contact Icons ─── */
+.footer-grid h4 { font-size: 16px; font-weight: 700; margin-bottom: 16px; }
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 13.5px;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+.fc-icon {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--purple);
+  font-size: 14px;
+}

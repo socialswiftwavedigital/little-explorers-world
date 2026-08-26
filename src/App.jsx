@@ -5,7 +5,7 @@ import {
   FaFacebookF, FaInstagram, FaMapMarkerAlt, FaPuzzlePiece,
   FaShieldAlt, FaSocks, FaStar, FaTiktok, FaUsers, FaWhatsapp,
   FaTimes, FaChevronLeft, FaChevronRight, FaHeart, FaCheck,
-  FaPhone, FaCalendarAlt, FaGift, FaCamera,
+  FaPhone, FaCalendarAlt, FaGift, FaCamera, FaEnvelope,
 } from 'react-icons/fa';
 import { GiMountainClimbing, GiKidSlide, GiPartyPopper } from 'react-icons/gi';
 import { MdCleanHands, MdClose, MdMenu, MdOutlineToys } from 'react-icons/md';
@@ -200,13 +200,13 @@ function Footer() {
         </div>
         <div>
           <h4>Contact Us</h4>
-          <p><FaMapMarkerAlt /> 2nd Floor, Plaza 42, Alpha Marina, Bahria Town Phase 4, Islamabad</p>
-          <a href='tel:+923265652798'>+92 326 5652798</a>
-          <a href='mailto:Little.explorer904@gmail.com'>Little.explorer904@gmail.com</a>
+          <p className='footer-contact-item'><FaMapMarkerAlt className='fc-icon' /> 2nd Floor, Plaza No. 42, Alpha Marina, Marina Commercial, Corniche Road, Bahria Town Phase 4, Islamabad 46220, Pakistan</p>
+          <a className='footer-contact-item' href='tel:+923265652798'><FaPhone className='fc-icon' /> <b>+92 326 5652798</b></a>
+          <a className='footer-contact-item' href='mailto:Little.explorer904@gmail.com'><FaEnvelope className='fc-icon' /> <b>Little.explorer904@gmail.com</b></a>
         </div>
         <div>
           <h4>Opening Hours</h4>
-          <p>Mon – Sun<br /><b>11:00 AM – 11:00 PM</b></p>
+          <p>Mon – Sun<br /><b>11:00 AM – 09:00 PM</b></p>
           <span className='pill'>Open 7 Days</span>
           <a className='btn pink footer-wa' href={WA} style={{ marginTop: '16px' }}>
             <FaWhatsapp /> WhatsApp Us
@@ -892,6 +892,36 @@ const bdFaqs = [
   ['Do you offer custom themes?', 'Yes — our Grand package includes themed décor of your choice. Contact us on WhatsApp to discuss your preferred theme.'],
 ];
 
+const bpPhotos = [
+  '/assets/zone-slides.webp', '/assets/zone-ball-pit.webp', '/assets/zone-pretend-play.webp',
+  '/assets/zone-lego.webp', '/assets/zone-kinetic-sand.webp', '/assets/zone-climbing.webp',
+];
+
+function BpGallery() {
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+  const open  = useCallback(i => setLightboxIndex(i), []);
+  const close = useCallback(() => setLightboxIndex(null), []);
+  const prev  = useCallback(() => setLightboxIndex(i => (i - 1 + bpPhotos.length) % bpPhotos.length), []);
+  const next  = useCallback(() => setLightboxIndex(i => (i + 1) % bpPhotos.length), []);
+  return (
+    <section className='bp-gallery reveal'>
+      <span className='eyebrow'>Real parties, real smiles</span>
+      <h2>Party <i>Moments</i></h2>
+      <div className='bp-gallery-grid'>
+        {bpPhotos.map((p, i) => (
+          <div className='gallery-item' key={i} onClick={() => open(i)}>
+            <img src={p} alt={`Birthday party at Little Explorers World ${i + 1}`} loading='lazy' />
+            <div className='gallery-overlay'><span>View Photo</span></div>
+          </div>
+        ))}
+      </div>
+      {lightboxIndex !== null && (
+        <Lightbox images={bpPhotos} index={lightboxIndex} onClose={close} onPrev={prev} onNext={next} />
+      )}
+    </section>
+  );
+}
+
 function BirthdayParty() {
   const [openFaq, setOpenFaq] = useState(null);
   const waParty = 'https://wa.me/923265652798?text=Hi!%20I%20would%20like%20to%20book%20a%20birthday%20party%20at%20Little%20Explorers%20World.';
@@ -993,18 +1023,7 @@ function BirthdayParty() {
       </section>
 
       {/* Gallery */}
-      <section className='bp-gallery reveal'>
-        <span className='eyebrow'>Real parties, real smiles</span>
-        <h2>Party <i>Moments</i></h2>
-        <div className='bp-gallery-grid'>
-          {['/assets/zone-slides.webp', '/assets/zone-ball-pit.webp', '/assets/zone-pretend-play.webp', '/assets/zone-lego.webp', '/assets/zone-kinetic-sand.webp', '/assets/zone-climbing.webp'].map((p, i) => (
-            <div className='gallery-item' key={i}>
-              <img src={p} alt={`Birthday party at Little Explorers World Islamabad ${i + 1}`} loading='lazy' />
-              <div className='gallery-overlay'><span>View Photo</span></div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <BpGallery />
 
       {/* FAQs */}
       <section className='bp-faq reveal'>
@@ -1106,11 +1125,21 @@ export function App() {
 
   const Page = routes[path] || Home;
 
+  const pageBg = {
+    '/': 'bg-yellow',
+    '/about-us': 'bg-purple',
+    '/play-zones': 'bg-green',
+    '/birthday-parties': 'bg-pink',
+    '/gallery': 'bg-yellow',
+    '/partner-with-us': 'bg-purple',
+    '/contact-us': 'bg-green',
+  };
+
   return (
     <>
       <TopBar />
       <Header path={path} />
-      <main><Page /></main>
+      <main className={pageBg[path] || ''}><Page /></main>
       <Footer />
       <a className='float' href={WA} aria-label='Chat on WhatsApp'><FaWhatsapp /></a>
       <BackToTop />
