@@ -1193,10 +1193,10 @@ footer { background: #f6f3fb; padding: 58px max(6vw, 28px) 20px; }
   grid-template-columns: 1.6fr .85fr 1.4fr .85fr;
   gap: 40px;
 }
-.footer-grid h4 { font-size: 16px; margin-bottom: 14px; font-weight: 700; letter-spacing: .03em; }
-.footer-grid > div > a { display: block; margin: 9px 0; font-size: 14px; transition: color .2s; }
+.footer-grid h4 { font-size: 17px; margin-bottom: 16px; font-weight: 700; letter-spacing: .03em; color: #111; }
+.footer-grid > div > a { display: block; margin: 10px 0; font-size: 15px; font-weight: 600; color: #111; transition: color .2s; }
 .footer-grid > div > a:hover { color: var(--purple); }
-.footer-grid p { font-size: 14px; }
+.footer-grid p { font-size: 15px; font-weight: 500; color: #111; line-height: 1.7; }
 .footer-logo { width: 160px; margin-bottom: 12px; display: block; }
 .footer-seo p { font-size: 13.5px; color: #666; line-height: 1.65; margin-top: 4px; }
 .social { display: flex; gap: 18px; margin-top: 14px; }
@@ -1956,18 +1956,19 @@ main.bg-purple { background: #f6f3ff; }
 main.bg-green  { background: #f3fbf1; }
 
 /* ─── Footer: Contact Icons ─── */
-.footer-grid h4 { font-size: 16px; font-weight: 700; margin-bottom: 16px; }
 .footer-contact-item {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  font-size: 13.5px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
   margin: 12px 0;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 .fc-icon {
   flex-shrink: 0;
   margin-top: 3px;
   color: var(--purple);
-  font-size: 14px;
+  font-size: 15px;
 }

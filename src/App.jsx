@@ -794,7 +794,17 @@ function Zones() {
         </div>
       </section>
 
-      <Gallery />
+      <HomePhotos />
+
+      <section className='cta reveal'>
+        <h2>Ready to <i>Book Your Visit?</i></h2>
+        <p>8 amazing play zones await your little explorer. Join thousands of Islamabad families who make Little Explorers World their favourite weekend destination.</p>
+        <div className='actions' style={{ justifyContent: 'center' }}>
+          <a className='btn green' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
+          <button onClick={() => go('/birthday-parties')}>Birthday Parties <FaArrowRight /></button>
+        </div>
+      </section>
+
       <Pricing />
     </>
   );
