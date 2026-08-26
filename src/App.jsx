@@ -1370,12 +1370,12 @@ export function App() {
   const Page = routes[path] || Home;
 
   const pageBg = {
-    '/': 'bg-multi',
-    '/about-us': 'bg-pink',
-    '/play-zones': 'bg-purple',
+    '/': 'bg-yellow',
+    '/about-us': 'bg-purple',
+    '/play-zones': 'bg-green',
     '/birthday-parties': 'bg-pink',
     '/gallery': 'bg-yellow',
-    '/partner-with-us': 'bg-orange',
+    '/partner-with-us': 'bg-purple',
     '/contact-us': 'bg-green',
   };
 
