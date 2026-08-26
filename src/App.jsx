@@ -975,13 +975,13 @@ function BirthdayParty() {
         <h2>How to <i>Book</i></h2>
         <div className='bp-steps-grid'>
           {[
-            [FaWhatsapp, '01', 'Message Us', 'Send us a WhatsApp message with your preferred date and number of kids.'],
-            [FaCalendarAlt, '02', 'Confirm & Plan', "We'll confirm availability and help you choose the perfect package and theme."],
-            [GiPartyPopper, '03', 'Celebrate!', 'Show up and enjoy — we handle everything else for an unforgettable party!'],
-          ].map(([Icon, num, title, text]) => (
-            <div className='bp-step' key={num}>
+            [FaWhatsapp, '01', 'Message Us', 'Send us a WhatsApp message with your preferred date and number of kids.', 'green'],
+            [FaCalendarAlt, '02', 'Confirm & Plan', "We'll confirm availability and help you choose the perfect package and theme.", 'purple'],
+            [GiPartyPopper, '03', 'Celebrate!', 'Show up and enjoy — we handle everything else for an unforgettable party!', 'pink'],
+          ].map(([Icon, num, title, text, color]) => (
+            <div className={`bp-step bps-${color}`} key={num}>
               <div className='bp-step-num'>{num}</div>
-              <Icon className='bp-step-icon' />
+              <div className='bp-step-circle'><Icon /></div>
               <h3>{title}</h3>
               <p>{text}</p>
             </div>
