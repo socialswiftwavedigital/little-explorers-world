@@ -91,12 +91,13 @@ function go(p) {
   scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-const A = ({ to, children, className = '' }) => (
+const A = ({ to, children, className = '', onClick }) => (
   <a
     className={className}
     href={to}
     onClick={e => {
       if (to[0] === '/') { e.preventDefault(); go(to); }
+      onClick && onClick(e);
     }}
   >
     {children}
@@ -375,10 +376,18 @@ function Testimonials() {
     { name: 'Fatima Z.', text: 'The climbing wall and ball pit are incredible! Staff are attentive and very helpful. Our son has been asking to come back every day.', stars: 5 },
     { name: 'Mehwish L.', text: 'Hosted my niece\'s birthday party here — the team handled everything beautifully. Decorations, setup, food area — all spotless and super fun!', stars: 5 },
   ];
-  const visible = 3;
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768);
+  useEffect(() => {
+    const fn = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', fn);
+    return () => window.removeEventListener('resize', fn);
+  }, []);
+  const visible = isMobile ? 1 : 3;
   const maxIdx = allReviews.length - visible;
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
+
+  useEffect(() => { setIdx(i => Math.min(i, maxIdx)); }, [maxIdx]);
 
   useEffect(() => {
     if (paused) return;

@@ -1345,7 +1345,7 @@ footer { background: #f6f3fb; padding: 58px max(6vw, 28px) 20px; }
 .founder-card span { font-size: 13px; color: rgba(255,255,255,.7); }
 @media(max-width:900px){
   .about-owners-inner { grid-template-columns: 1fr; }
-  .about-owners-photo { order: -1; max-width: 400px; margin: 0 auto; }
+  .about-owners-photo { max-width: 400px; margin: 0 auto; }
 }
 .story {
   max-width: 1200px;
@@ -1586,17 +1586,31 @@ input:focus, select:focus, textarea:focus {
   .logo img { width: 115px; }
   .menu { display: block; margin-left: auto; }
   nav {
-    display: none;
+    display: flex;
     position: absolute;
     top: 78px;
     left: 0;
     right: 0;
     background: #fff;
-    padding: 22px;
+    padding: 0 22px;
     flex-direction: column;
-    box-shadow: var(--shadow);
+    box-shadow: 0 12px 32px rgba(0,0,0,.12);
+    border-radius: 0 0 20px 20px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: max-height .35s cubic-bezier(.4,0,.2,1), opacity .25s ease, transform .25s ease, padding .25s ease;
   }
-  nav.open { display: flex; }
+  nav.open {
+    max-height: 480px;
+    padding: 18px 22px 22px;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  nav a { padding: 12px 16px; border-radius: 12px; font-size: 16px; }
   .book { display: none; }
   .hero { min-height: 560px; }
   .stats { grid-template-columns: repeat(2, 1fr); }
@@ -1639,20 +1653,20 @@ input:focus, select:focus, textarea:focus {
   .top-bar-phone { display: none; }
   .top-bar-tagline { font-size: 11px; }
   .heading h2 { font-size: 38px; }
-  .trail-section { padding: 65px 20px; }
+  .trail-section { padding: 44px 20px; }
   .trail::before { display: none; }
-  .stop, .stop.reverse { grid-template-columns: 48px 1fr; margin-bottom: 45px; }
-  .stop > img, .stop.reverse > img { grid-column: 1 / -1; grid-row: 2; height: 220px; border-radius: 26px; transform: none; }
+  .stop, .stop.reverse { grid-template-columns: 48px 1fr; margin-bottom: 32px; }
+  .stop > img, .stop.reverse > img { grid-column: 1 / -1; grid-row: 2; height: 200px; border-radius: 22px; transform: none; }
   .zone-copy, .stop.reverse .zone-copy { grid-column: 2; grid-row: 1; padding: 0; }
   .pricing-wrap { padding-inline: 16px; }
-  .price-card, .party-card { padding: 26px 22px; }
+  .price-card, .party-card { padding: 22px 18px; }
   .price-card-top { flex-direction: column; align-items: flex-start; gap: 8px; }
-  .trust { padding: 55px 20px; }
-  .trust > h2 { font-size: 31px; }
-  .trust > div { gap: 14px; }
+  .trust { padding: 38px 20px; }
+  .trust > h2 { font-size: 30px; }
+  .trust > div { gap: 12px; }
   .trust article p { font-size: 12px; }
-  .testimonials { padding: 60px 20px; }
-  .testimonials h2 { font-size: 34px; }
+  .testimonials { padding: 44px 20px; }
+  .testimonials h2 { font-size: 30px; }
   .review-grid { gap: 16px; }
   .gallery { padding: 65px 16px; }
   .gallery > div { grid-template-columns: 1fr 1fr; gap: 10px; }
@@ -1660,9 +1674,9 @@ input:focus, select:focus, textarea:focus {
   .cta { margin: 0 16px 70px; padding: 36px 20px; }
   .footer-grid { grid-template-columns: 1fr; }
   .page-hero { grid-template-columns: 1fr; padding: 0; }
-  .page-hero > div { padding: 55px 24px; }
-  .page-hero h1 { font-size: 48px; }
-  .page-hero > img { height: 340px; clip-path: none; }
+  .page-hero > img { order: -1; width: 100%; height: 280px; margin: 0; border-radius: 0 0 24px 24px; clip-path: none; }
+  .page-hero > div { padding: 36px 24px 55px; }
+  .page-hero h1 { font-size: 40px; }
   .story, .partners, .contact { padding: 65px 20px; }
   .contact form { padding: 24px; }
   .stats { grid-template-columns: repeat(2, 1fr); padding: 30px 16px; gap: 14px; }
