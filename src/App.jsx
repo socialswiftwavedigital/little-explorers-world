@@ -19,6 +19,7 @@ const links = [
   ['Play Zones', '/play-zones'],
   ['Birthday Parties', '/birthday-parties'],
   ['Gallery', '/gallery'],
+  ['Partner with Us', '/partner-with-us'],
   ['Contact Us', '/contact-us'],
 ];
 
@@ -180,13 +181,12 @@ function Footer() {
     <footer>
       <div className='footer-grid'>
         <div className='footer-seo'>
-          <h4>Little Explorers World</h4>
+          <img src='/assets/logo.png' alt='Little Explorers World' className='footer-logo' />
           <p>Islamabad's favourite indoor kids play zone in Bahria Town Phase 4. Safe, colourful and fully supervised play spaces for children aged 0–10 years — including slides, ball pit, climbing wall, sensory room, kinetic sand, Lego table and more. Perfect for birthday parties, school trips and family outings. Open daily 11 AM – 9 PM.</p>
         </div>
         <div>
           <h4>Quick Links</h4>
           {links.map(([l, p]) => <A key={p} to={p}>{l}</A>)}
-          <A to='/partner-with-us'>Partner with Us</A>
         </div>
         <div>
           <h4>Contact Us</h4>
@@ -754,12 +754,19 @@ function Partner() {
       <section className='pw-hero'>
         <div className='pw-hero-text'>
           <span className='eyebrow'>Grow with a joyful local brand</span>
-          <h1>Partner With Us.<br /><span className='pw-hero-sub'>Build Better Tomorrows</span></h1>
+          <h1>
+            Partner With Us.<br />
+            <span className='pw-hero-sub'>
+              <span style={{color:'#A796D4'}}>Build </span>
+              <span style={{color:'#A9C63E'}}>Better </span>
+              <span style={{color:'#F59A50'}}>Tom</span><span style={{color:'#E98BAD'}}>or</span><span style={{color:'#A6D9DB'}}>rows</span>
+            </span>
+          </h1>
           <p>We believe in the power of community, collaboration, and shared purpose. Join us in creating a brighter, more inclusive future where every child has the opportunity to explore, play, and grow.</p>
           <p>Together, we can create meaningful experiences, support local families, and make a lasting impact through fun, learning, and connection.</p>
           <A className='btn green' to='/about-us'>Learn More About Us <FaArrowRight /></A>
         </div>
-        <div className='pw-hero-img'>
+        <div className='pw-hero-img blob-wrap'>
           <img src='/assets/zone-ball-pit.webp' alt='Kids playing at Little Explorers World' />
         </div>
       </section>
