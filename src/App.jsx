@@ -614,24 +614,30 @@ function About() {
       {/* Owner Message */}
       <section className='about-owners reveal'>
         <div className='about-owners-inner'>
-          <span className='eyebrow'>Message From the Owners</span>
-          <h2>A Letter from <i>Our Founders</i></h2>
-          <blockquote>
-            <p>Dear Aspiring Entrepreneurs,</p>
-            <p>We invite you to join us on a transformative journey to create a brighter future for our children. Together, we can build a business that not only thrives on profit but also champions a noble cause. By establishing inclusive play areas across Pakistan, we aim to provide every child with a safe space to grow and learn while promoting kindness and acceptance within our communities.</p>
-            <p>Warm regards,</p>
-          </blockquote>
-          <div className='about-founders'>
-            <div className='founder-card'>
-              <div className='founder-avatar'><FaUsers /></div>
-              <strong>Muhammad Usman</strong>
-              <span>CEO &amp; Founder</span>
+          <div className='about-owners-text'>
+            <span className='eyebrow'>Message From the Owners</span>
+            <h2>A Letter from <i>Our Founders</i></h2>
+            <blockquote>
+              <p>Dear Families and Aspiring Partners,</p>
+              <p>We started Little Explorers World with one simple dream — to create a place where every child feels safe, valued, and completely free to be themselves. Having witnessed firsthand how meaningful, purposeful play shapes a child's confidence, creativity and character, we knew Islamabad deserved a space truly designed with children at its heart.</p>
+              <p>Every zone you walk through was built with love, careful thought, and a deep commitment to inclusion. We believe play is not just fun — it is how children learn empathy, build friendships, and discover who they are. From the soft padded floors to the vibrant climbing wall, every corner was chosen with your child's wellbeing in mind.</p>
+              <p>Our mission goes beyond a play area. We want to build a community where families feel at home, where children of all abilities feel welcomed, and where parents can relax knowing their little ones are in the safest of hands.</p>
+              <p>Thank you for trusting us with your most precious gift — your child.</p>
+              <p style={{marginTop: 16, fontWeight: 600}}>Warm regards,</p>
+            </blockquote>
+            <div className='about-founders'>
+              <div className='founder-card'>
+                <strong>Muhammad Usman</strong>
+                <span>CEO &amp; Founder</span>
+              </div>
+              <div className='founder-card'>
+                <strong>Infaal Usman</strong>
+                <span>Co-Founder</span>
+              </div>
             </div>
-            <div className='founder-card'>
-              <div className='founder-avatar'><FaHeart /></div>
-              <strong>Infaal Usman</strong>
-              <span>Co-Founder</span>
-            </div>
+          </div>
+          <div className='about-owners-photo'>
+            <img src='/assets/owners.webp' alt='Muhammad Usman and Infaal Usman, Founders of Little Explorers World' loading='lazy' />
           </div>
         </div>
       </section>

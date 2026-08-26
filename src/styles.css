@@ -422,6 +422,9 @@ nav a:hover::after, nav a.active::after { width: calc(100% - 28px); }
   display: block;
 }
 
+/* ─── Global italic-in-heading reset ─── */
+h1 i, h2 i, h3 i, h4 i { font-style: normal; }
+
 /* ─── Eyebrow ─── */
 .eyebrow {
   display: inline-block;
@@ -432,7 +435,7 @@ nav a:hover::after, nav a.active::after { width: calc(100% - 28px); }
   text-transform: uppercase;
   color: #222;
   background: #e6f9fd;
-  border: 1.5px solid var(--aqua);
+  border: 1.5px solid #333;
   border-radius: 50px;
   padding: 5px 16px;
 }
@@ -1233,53 +1236,58 @@ footer { background: #f6f3fb; padding: 58px max(6vw, 28px) 20px; }
   color: #fff;
 }
 .about-owners-inner {
-  max-width: 860px;
+  max-width: 1100px;
   margin: 0 auto;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 60px;
+  align-items: center;
 }
-.about-owners .eyebrow { color: rgba(255,255,255,.7); }
-.about-owners h2 { font-size: 34px; margin: 10px 0 30px; font-weight: 500; }
-.about-owners h2 i { color: #ffd166; font-style: normal; }
+.about-owners .eyebrow {
+  color: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.35);
+}
+.about-owners-text h2 { font-size: 34px; margin: 10px 0 30px; font-weight: 500; }
+.about-owners-text h2 i { color: #ffd166; font-style: normal; }
 .about-owners blockquote {
-  margin: 0 0 36px;
+  margin: 0 0 30px;
   font-size: 15px;
   line-height: 1.8;
   color: rgba(255,255,255,.88);
-  text-align: left;
   background: rgba(255,255,255,.1);
   border-radius: 20px;
-  padding: 30px 36px;
+  padding: 28px 32px;
   border-left: 4px solid rgba(255,255,255,.3);
 }
 .about-owners blockquote p { margin: 0 0 12px; }
 .about-owners blockquote p:last-child { margin: 0; }
+.about-owners-photo img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  display: block;
+  object-fit: cover;
+}
 .about-founders {
   display: flex;
-  gap: 24px;
-  justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
 }
 .founder-card {
   background: rgba(255,255,255,.14);
   border: 1px solid rgba(255,255,255,.25);
   border-radius: 20px;
-  padding: 28px 36px;
+  padding: 18px 28px;
   text-align: center;
-  min-width: 180px;
-}
-.founder-avatar {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: rgba(255,255,255,.2);
-  display: grid;
-  place-items: center;
-  font-size: 26px;
-  margin: 0 auto 14px;
-  color: #ffd166;
+  min-width: 160px;
 }
 .founder-card strong { display: block; font: 600 16px Fredoka; margin-bottom: 4px; }
 .founder-card span { font-size: 13px; color: rgba(255,255,255,.7); }
+@media(max-width:900px){
+  .about-owners-inner { grid-template-columns: 1fr; }
+  .about-owners-photo { order: -1; max-width: 400px; margin: 0 auto; }
+}
 .story {
   max-width: 1200px;
   margin: auto;
