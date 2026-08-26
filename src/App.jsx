@@ -1000,7 +1000,7 @@ function Contact() {
       <section className='contact reveal'>
         <div>
           <h2>Come say hello</h2>
-          <p style={{ color: '#555', fontSize: '15px', margin: '8px 0 18px', lineHeight: 1.6 }}>We'd love to hear from you! Whether you want to book a play session, plan a birthday party, or just ask a question — fill in the form or reach us directly below.</p>
+          <p style={{ color: '#555', fontSize: '15px', margin: '8px 0 18px', lineHeight: 1.7 }}>We'd love to hear from you! Whether you want to book a play session, plan a birthday party, ask about our zones, or explore partnership opportunities — our friendly team is here to help. Fill in the form and we'll get back to you within a few hours, or reach us directly via phone, WhatsApp or email below.</p>
           <a href='https://maps.google.com/?q=Alpha+Marina+Plaza+42+Bahria+Town+Phase+4+Islamabad' target='_blank' rel='noopener noreferrer' className='contact-address'>
             <FaMapMarkerAlt /> 2nd Floor, Plaza No. 42, Alpha Marina, Marina Commercial, Corniche Road, Bahria Town Phase 4, Islamabad
           </a>
