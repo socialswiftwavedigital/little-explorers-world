@@ -507,7 +507,7 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
 .pricing-wrap {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 20px max(4vw, 22px) 90px;
+  padding: 20px max(4vw, 22px) 60px;
 }
 .pricing-header { text-align: center; margin-bottom: 40px; }
 .pricing-header h2 { font-size: 36px; margin: 8px 0 10px; font-weight: 500; }
@@ -880,10 +880,10 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
 .zone-details {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px max(5vw, 30px);
+  padding: 50px max(5vw, 30px);
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 55px;
 }
 .zone-detail-block {
   display: grid;
@@ -906,7 +906,7 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
 }
 
 /* ─── Zone Inclusive ─── */
-.zone-inclusive { padding: 80px max(5vw, 30px); }
+.zone-inclusive { padding: 50px max(5vw, 30px); }
 .zone-inclusive-grid {
   max-width: 1100px;
   margin: 36px auto 0;
@@ -979,7 +979,7 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
 .about-special-card p { font-size: 14px; color: #666; margin: 0; line-height: 1.65; }
 
 /* ─── Gallery ─── */
-.gallery { text-align: center; padding: 90px max(6vw, 28px); }
+.gallery { text-align: center; padding: 55px max(6vw, 28px); }
 .gallery h2 { font-size: 34px; margin: 8px 0 28px; font-weight: 500; }
 .gallery > div {
   max-width: 1200px;
@@ -1019,7 +1019,7 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
 }
 
 /* ─── Home Photo Strip ─── */
-.home-photos { padding: 70px max(5vw, 28px) 60px; text-align: center; }
+.home-photos { padding: 45px max(5vw, 28px) 50px; text-align: center; }
 .photo-strip {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -1119,8 +1119,8 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
 /* ─── CTA ─── */
 .cta {
   max-width: 1200px;
-  margin: 0 auto 100px;
-  padding: 48px;
+  margin: 0 auto 60px;
+  padding: 44px;
   text-align: center;
   border-radius: 32px;
   background: var(--purple);
