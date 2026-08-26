@@ -727,28 +727,114 @@ function Zones() {
 
 /* ─── Partner ─── */
 function Partner() {
+  const [success, setSuccess] = useState(false);
+
+  const whyCards = [
+    [FaHeart,    'Meaningful Impact',    'Help create safe, inclusive spaces where children explore, play and grow.', 'pink'],
+    [FaUsers,    'Stronger Community',   'Join a movement that brings families, organisations and changemakers together.', 'purple'],
+    [FaStar,     'Shared Mission',       'Work with a passionate team committed to building a better tomorrow for children.', 'gold'],
+    [FaCheck,    'Long-Term Difference', 'Your support creates sustainable change that benefits future generations.', 'green'],
+  ];
+
+  const opportunities = [
+    [FaUsers,       'Schools & Groups',         'Organise field trips, group sessions and educational play events for students.', 'purple'],
+    [FaCalendarAlt, 'Events & Sponsorships',    'Support special events, activities and community-based experiences in our space.', 'pink'],
+    [FaGift,        'Resources & Donations',    'Contribute equipment or financial support to help us grow our play zones.', 'gold'],
+    [FaStar,        'Brand Partnerships',       'Co-create meaningful campaigns and activations that reach Islamabad families.', 'aqua'],
+    [FaWhatsapp,    'Spread the Word',          'Help us reach more families by sharing our mission within your network.', 'green'],
+  ];
+
   return (
     <>
       <PageHero
         kicker='Grow with a joyful local brand'
         title='Partner with Little Explorers'
         titleJsx={<><span>Partner</span> with<br /><i>Little</i> <b>Explorers</b></>}
-        text="Let's create family-friendly experiences together through schools, communities and brand collaborations."
+        text="We believe in the power of community and collaboration. Join us in creating a brighter, more inclusive future where every child has the opportunity to explore, play and grow."
         img='/assets/zone-ball-pit.webp'
       />
-      <section className='partners reveal'>
-        {[
-          [FaUsers, 'Schools & Groups', 'Organise field trips, group sessions and educational play events for your students.'],
-          [FaBirthdayCake, 'Events & Activations', 'Host brand activations, product launches or corporate family days in our vibrant space.'],
-          [FaStar, 'Brand Collaborations', 'Co-create memorable campaigns that reach thousands of Islamabad families.'],
-        ].map(([Icon, title, text]) => (
-          <article key={title}>
-            <Icon />
-            <h2>{title}</h2>
-            <p>{text}</p>
-            <a href='mailto:Little.explorer904@gmail.com'>Start a conversation <FaArrowRight /></a>
-          </article>
-        ))}
+
+      {/* ── Why Partner ── */}
+      <section className='pw-why reveal'>
+        <div className='heading'>
+          <span className='eyebrow'>Why choose us</span>
+          <h2>Why <i>Partner</i> With Us?</h2>
+          <p>Together we can create meaningful experiences and make a lasting impact through fun, learning and connection.</p>
+        </div>
+        <div className='pw-why-grid'>
+          {whyCards.map(([Icon, title, text, color]) => (
+            <div className={`pw-why-card pwc-${color}`} key={title}>
+              <div className='pw-why-icon'><Icon /></div>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Opportunities ── */}
+      <section className='pw-opps reveal'>
+        <div className='heading'>
+          <span className='eyebrow'>How you can collaborate</span>
+          <h2>Partnership <i>Opportunities</i></h2>
+        </div>
+        <div className='pw-opps-grid'>
+          {opportunities.map(([Icon, title, text, color]) => (
+            <div className={`pw-opp-card pwoc-${color}`} key={title}>
+              <div className='pw-opp-icon'><Icon /></div>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Inquiry Form ── */}
+      <section className='pw-form-wrap reveal'>
+        <div className='pw-form-inner'>
+          <div className='pw-form-left'>
+            <span className='eyebrow'>Get in touch</span>
+            <h2>Let's Create <i>Impact</i> Together</h2>
+            <p>If you share our passion for helping children thrive, we'd love to hear from you. Fill out the form and our team will get in touch to discuss partnership opportunities.</p>
+            <div className='pw-form-contact'>
+              <a href={WA}><FaWhatsapp className='pw-ci' /> Chat on WhatsApp</a>
+              <a href='mailto:Little.explorer904@gmail.com'><FaEnvelope className='pw-ci' /> Little.explorer904@gmail.com</a>
+            </div>
+          </div>
+          <form className='pw-form' onSubmit={e => { e.preventDefault(); setSuccess(true); }}>
+            <label>Name<input required placeholder='Your name or organisation' /></label>
+            <label>Email<input type='email' required placeholder='your@email.com' /></label>
+            <label>Phone Number<input placeholder='03XX XXXXXXX' /></label>
+            <label>
+              I am interested in
+              <select>
+                <option value=''>Select a partnership type</option>
+                <option>Community Collaboration</option>
+                <option>Event Sponsorship</option>
+                <option>Brand Partnership</option>
+                <option>Resource or Equipment Support</option>
+                <option>Schools & Group Bookings</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>Message<textarea rows='4' placeholder='Tell us about your idea or how you'd like to collaborate...' /></label>
+            <button className='btn pink'>Send Inquiry <FaArrowRight /></button>
+            {success && <p className='success'>Thank you! We'll be in touch soon.</p>}
+          </form>
+        </div>
+      </section>
+
+      {/* ── CTA Banner ── */}
+      <section className='pw-cta reveal'>
+        <div className='pw-cta-inner'>
+          <span className='eyebrow' style={{ color: '#ffffffcc' }}>Every partner, every child</span>
+          <h2>Every Contribution <i>Creates</i> a Smile</h2>
+          <p>Big or small, your partnership helps create more smiles, greater confidence and more possibilities for children in Islamabad.</p>
+          <div className='pw-cta-btns'>
+            <a className='btn' style={{ background: '#fff', color: 'var(--purple)' }} href='mailto:Little.explorer904@gmail.com'><FaEnvelope /> Email Us</a>
+            <a className='btn pink' href={WA}><FaWhatsapp /> WhatsApp Us</a>
+          </div>
+        </div>
       </section>
     </>
   );
