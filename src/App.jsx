@@ -1000,6 +1000,7 @@ function Contact() {
       <section className='contact reveal'>
         <div>
           <h2>Come say hello</h2>
+          <p style={{ color: '#555', fontSize: '15px', margin: '8px 0 18px', lineHeight: 1.6 }}>We'd love to hear from you! Whether you want to book a play session, plan a birthday party, or just ask a question — fill in the form or reach us directly below.</p>
           <a href='https://maps.google.com/?q=Alpha+Marina+Plaza+42+Bahria+Town+Phase+4+Islamabad' target='_blank' rel='noopener noreferrer' className='contact-address'>
             <FaMapMarkerAlt /> 2nd Floor, Plaza No. 42, Alpha Marina, Marina Commercial, Corniche Road, Bahria Town Phase 4, Islamabad
           </a>
@@ -1029,7 +1030,7 @@ function Contact() {
       </section>
 
       {/* FAQs */}
-      <section className='bp-faq reveal' style={{ marginBottom: '60px' }}>
+      <section className='bp-faq reveal' style={{ marginBottom: '20px' }}>
         <span className='eyebrow' style={{ display: 'block', margin: '0 auto 10px' }}>Got questions?</span>
         <h2 style={{ textAlign: 'center', fontSize: '34px', margin: '8px 0 32px', fontWeight: 500 }}>
           Frequently Asked <i style={{ color: 'var(--pink)', fontStyle: 'normal' }}>Questions</i>
@@ -1054,7 +1055,7 @@ function Contact() {
           <h2 style={{ textAlign: 'center', marginBottom: '28px' }}>We're in <i>Bahria Town</i></h2>
           <iframe
             title='Little Explorers World Location'
-            src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.!2d73.1!3d33.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDMwJzAwLjAiTiA3M8KwMDYnMDAuMCJF!5e0!3m2!1sen!2spk!4v1234567890'
+            src='https://maps.google.com/maps?q=Alpha+Marina+Bahria+Town+Phase+4+Islamabad+Pakistan&z=16&output=embed'
             width='100%'
             height='450'
             style={{ border: 0, borderRadius: '24px' }}

@@ -1550,12 +1550,12 @@ footer { background: #f6f3fb; padding: 58px max(6vw, 28px) 20px; }
 .contact-social { margin-top: 28px; }
 .contact-social p { font: 600 13px Fredoka; color: #888; text-transform: uppercase; letter-spacing: .06em; margin: 0 0 12px; }
 .contact-social-icons { display: flex; gap: 14px; }
-.cs-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; color: #fff; text-decoration: none; transition: transform .2s, box-shadow .2s; }
+.cs-icon { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #fff; text-decoration: none; transition: transform .2s, box-shadow .2s; }
 .cs-icon:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,.18); }
-.cs-fb { background: #1877f2; }
-.cs-ig { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
-.cs-tk { background: #000; }
-.contact-map { padding: 20px 30px 70px; }
+.cs-fb { background: var(--purple); }
+.cs-ig { background: var(--pink); }
+.cs-tk { background: var(--green); }
+.contact-map { padding: 0 30px 70px; }
 .contact-map-inner { max-width: 1120px; margin: 0 auto; }
 .contact-map-inner iframe { display: block; box-shadow: 0 12px 40px rgba(0,0,0,.1); }
 label { display: block; font: 500 14px Fredoka; margin-bottom: 17px; }
