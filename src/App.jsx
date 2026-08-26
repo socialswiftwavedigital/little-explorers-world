@@ -1215,8 +1215,8 @@ function BirthdayParty() {
 
       {/* FAQs */}
       <section className='bp-faq reveal'>
-        <span className='eyebrow'>Got questions?</span>
-        <h2>Frequently Asked <i>Questions</i></h2>
+        <span className='eyebrow' style={{ display: 'block', margin: '0 auto 10px' }}>Got questions?</span>
+        <h2 style={{ textAlign: 'center', fontSize: '34px', margin: '0 0 28px', fontWeight: 500 }}>Frequently Asked <i>Questions</i></h2>
         <div className='bp-faq-list'>
           {bdFaqs.map(([q, a], i) => (
             <div className={`bp-faq-item ${openFaq === i ? 'open' : ''}`} key={i}>
