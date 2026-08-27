@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+﻿import { useEffect, useState, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 import {
   FaArrowRight, FaArrowUp, FaBaby, FaBirthdayCake, FaClock,
@@ -36,11 +36,11 @@ const pageMeta = {
   },
   '/about-us': {
     title: 'About Little Explorers World | Indoor Play Zone Bahria Town Islamabad',
-    desc: 'Little Explorers World is Islamabad\'s favourite indoor kids play zone in Bahria Town Phase 4. Clean, safe, fully supervised — 8 zones for ages 0–10. Open 7 days.',
+    desc: 'Little Explorers World is Islamabad\'s favourite indoor kids play zone in Bahria Town Phase 4. Clean, safe, fully supervised. 8 zones for ages 0–10. Open 7 days.',
   },
   '/play-zones': {
     title: 'Play Zones & Prices | Kids Play Area Bahria Town Islamabad',
-    desc: '8 indoor play zones for children in Islamabad — slides, ball pit, climbing wall, sensory room, kinetic sand, Lego table, pretend play & latcher table. Rs. 1,199–1,999/hr.',
+    desc: '8 indoor play zones for children in Islamabad. slides, ball pit, climbing wall, sensory room, kinetic sand, Lego table, pretend play & latcher table. Rs. 1,199–1,999/hr.',
   },
   '/gallery': {
     title: 'Photos | Little Explorers World Indoor Play Zone Islamabad',
@@ -48,7 +48,7 @@ const pageMeta = {
   },
   '/partner-with-us': {
     title: 'Partner with Us | Little Explorers World Islamabad',
-    desc: 'Partner with Little Explorers World — Islamabad\'s top kids play zone. Schools, brands, event sponsors and community partners welcome. Get in touch today.',
+    desc: 'Partner with Little Explorers World. Islamabad\'s top kids play zone. Schools, brands, event sponsors and community partners welcome. Get in touch today.',
   },
   '/contact-us': {
     title: 'Contact Us | Little Explorers World Bahria Town Islamabad',
@@ -56,7 +56,7 @@ const pageMeta = {
   },
   '/le-cafe': {
     title: 'LE Cafe | Little Explorers World Islamabad',
-    desc: 'Enjoy LE Cafe at Little Explorers World — a premium lounge with coffee station, PlayStation, workstations, board games, selfie board and more in Bahria Town Islamabad.',
+    desc: 'LE Cafe at Little Explorers World, Bahria Town Islamabad. Coffee station, PlayStation, workstations, board games, selfie board and 9 unique corners for parents and families.',
   },
 };
 
@@ -75,13 +75,13 @@ const zonePics = [
 ];
 
 const zones = [
-  ['01', 'Slides & Climb', 'Kids race down bright slides and conquer soft climbing structures — one of the busiest zones at our Islamabad play centre. Burns energy fast, builds balance and kids always want another go.', GiKidSlide, '/assets/zone-slides.webp', 'gold'],
-  ['02', 'Ball Pit', 'Jump into thousands of soft, clean, coloured balls for pure, unfiltered fun. Sanitized daily and fully supervised — a must for every visit to our Bahria Town play zone.', FaBaby, '/assets/zone-ball-pit.webp', 'purple'],
+  ['01', 'Slides & Climb', 'Kids race down bright slides and conquer soft climbing structures. One of the busiest zones in our Islamabad play centre. Burns energy fast, builds balance and kids always want another go.', GiKidSlide, '/assets/zone-slides.webp', 'gold'],
+  ['02', 'Ball Pit', 'Jump into thousands of soft, clean coloured balls for pure unfiltered fun. Sanitized daily and fully supervised. A must for every visit to our Bahria Town play zone.', FaBaby, '/assets/zone-ball-pit.webp', 'purple'],
   ['03', 'Climbing Wall', 'Colourful handholds at different heights for toddlers and older kids. Kids test their limits, build grip and feel genuinely proud when they reach the top.', GiMountainClimbing, '/assets/zone-climbing.webp', 'green'],
-  ['04', 'Pretend Play', 'A kid-sized kitchen, market and salon where children act out real-life roles. Great for language, social skills and imagination — and parents love watching it unfold.', FaPuzzlePiece, '/assets/zone-pretend-play.webp', 'pink'],
-  ['05', 'Sensory Room', 'A quiet, low-light space for children who need a break. Soft textures, calming lights and gentle activities — especially great for younger toddlers and neurodiverse kids.', FaStar, '/assets/zone-sensory.webp', 'aqua'],
-  ['06', 'Lego Table', 'Thousands of colourful LEGO bricks and zero screens. Kids focus, build and problem-solve for hours — parents always say this zone surprises them the most.', MdOutlineToys, '/assets/zone-lego.webp', 'orange'],
-  ['07', 'Kinetic Sand', 'Mess-free sand that moulds, squishes and sculpts — kids can\'t put it down. Builds fine motor skills while keeping little hands completely happy.', FaSocks, '/assets/zone-kinetic-sand.webp', 'pink'],
+  ['04', 'Pretend Play', 'A kid-sized kitchen, market and salon where children act out real-life roles. Great for language, social skills and imagination. Parents love watching it unfold.', FaPuzzlePiece, '/assets/zone-pretend-play.webp', 'pink'],
+  ['05', 'Sensory Room', 'A quiet, low-light space for children who need a break from busy play. Soft textures, calming lights and gentle activities. Especially great for younger toddlers and neurodiverse kids.', FaStar, '/assets/zone-sensory.webp', 'aqua'],
+  ['06', 'Lego Table', 'Thousands of colourful LEGO bricks and zero screens. Kids focus, build and problem-solve for hours. Parents always say this zone surprises them the most.', MdOutlineToys, '/assets/zone-lego.webp', 'orange'],
+  ['07', 'Kinetic Sand', 'Mess-free sand that moulds, squishes and sculpts. Kids cannot put it down. Builds fine motor skills while keeping little hands completely happy.', FaSocks, '/assets/zone-kinetic-sand.webp', 'pink'],
   ['08', 'Latcher Table', 'Bolts, latches, locks and doors to open and figure out. A Montessori-style activity wall that quietly teaches toddlers problem-solving while keeping them totally absorbed.', FaShieldAlt, '/assets/zone-latcher.webp', 'aqua'],
 ];
 
@@ -148,7 +148,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
 function TopBar() {
   return (
     <div className='top-bar'>
-      <span className='top-bar-tagline'>Islamabad&apos;s Favourite Kids Play Zone — Bahria Town Phase 4</span>
+      <span className='top-bar-tagline'>Islamabad&apos;s Favourite Kids Play Zone in Bahria Town Phase 4</span>
       <div className='top-bar-right'>
         <a className='top-bar-phone' href='tel:+923265652798'><FaPhone /> +92 326 5652798</a>
         <div className='top-bar-social'>
@@ -201,7 +201,7 @@ function Footer() {
       <div className='footer-grid'>
         <div className='footer-seo'>
           <A to='/'><img src='/assets/logo.png' alt='Little Explorers World' className='footer-logo' /></A>
-          <p>Islamabad's favourite indoor kids play zone in Bahria Town Phase 4. Safe, colourful and fully supervised play spaces for children aged 0–10 years — including slides, ball pit, climbing wall, sensory room, kinetic sand, Lego table and more. Perfect for birthday parties, school trips and family outings. Open daily 11 AM – 9 PM.</p>
+          <p>Islamabad's favourite indoor kids play zone in Bahria Town Phase 4. Safe, colourful and fully supervised play spaces for children aged 0 to 10 years. Slides, ball pit, climbing wall, sensory room, kinetic sand, Lego table and more. Perfect for birthday parties, school trips and family outings. Open daily 11 AM to 9 PM.</p>
         </div>
         <div>
           <h4>Quick Links</h4>
@@ -249,9 +249,9 @@ function Trail() {
   return (
     <section className='trail-section reveal'>
       <div className='heading'>
-        <span className='eyebrow'>A journey made for curious minds</span>
-        <h2>Your Child's Journey<br />of <i>Discovery</i></h2>
-        <p>Thoughtfully designed spaces that inspire imagination, movement and joy.</p>
+        <span className='eyebrow'>Step inside our play centre</span>
+        <h2>8 Zones, <i>Zero Boredom</i></h2>
+        <p>Each zone is built differently. Some get kids running, some keep them focused, all keep them happy.</p>
       </div>
       <div className='trail'>
         {zones.map(([n, name, text, Icon, img, color], i) => (
@@ -277,7 +277,7 @@ function Pricing() {
       <div className='pricing-header'>
         <span className='eyebrow'>Simple & transparent</span>
         <h2>Play <i>Pricing</i></h2>
-        <p>Open 7 days a week — just show up and play!</p>
+        <p>Open 7 days a week. Just show up and play!</p>
       </div>
 
       <div className='pricing-grid'>
@@ -350,10 +350,10 @@ function Pricing() {
 /* ─── Trust ─── */
 function Trust() {
   const items = [
-    [FaShieldAlt, 'Safe by Design', 'Soft flooring, padded walls, rounded edges and daily equipment checks — every zone built so kids can play hard without parents worrying.'],
-    [MdCleanHands, 'Cleaned After Every Session', 'Toys, surfaces and equipment are sanitized between every play session. We hold ourselves to café-level cleanliness standards — your children deserve nothing less.'],
+    [FaShieldAlt, 'Safe by Design', 'Soft flooring, padded walls, rounded edges and daily equipment checks. Every zone is built so kids can play hard without parents worrying.'],
+    [MdCleanHands, 'Cleaned After Every Session', 'Toys, surfaces and equipment are sanitized between every play session. We hold ourselves to cafe-level cleanliness standards. Your children deserve nothing less.'],
     [FaUsers, 'Friendly, Trained Team', 'Our staff are trained in child safety and always present on the floor. They know what to watch for and how to keep every child safe and happy.'],
-    [FaClock, 'A Space for Parents Too', 'Free Wi-Fi, comfortable seating, phone charging and a coffee station at LE Cafe — great family trips need comfortable parents too.'],
+    [FaClock, 'A Space for Parents Too', 'Free Wi-Fi, comfortable seating, phone charging and a coffee station at LE Cafe. Great family trips need comfortable parents too.'],
   ];
   return (
     <section className='trust reveal'>
@@ -378,10 +378,10 @@ function Testimonials() {
     { name: 'Ayesha K.', text: 'My daughter absolutely loves it here! The staff is so kind and the place is spotlessly clean. We come every weekend without fail!', stars: 5 },
     { name: 'Bilal A.', text: 'Best birthday party venue in Islamabad! Everything was perfectly arranged and the kids had a blast. Highly recommended for families!', stars: 5 },
     { name: 'Sara M.', text: 'Great place for kids to burn energy! The play zones are well thought out and the safety standards are truly impressive.', stars: 5 },
-    { name: 'Hina R.', text: 'We visited with our 3-year-old and she didn\'t want to leave! The sensory room was a highlight — calm, clean and so well designed.', stars: 5 },
-    { name: 'Usman T.', text: 'Finally a proper indoor play area in Islamabad. The kinetic sand zone is amazing — kids were occupied for hours. Totally worth it!', stars: 5 },
+    { name: 'Hina R.', text: 'We visited with our 3-year-old and she didn\'t want to leave! The sensory room was a highlight. calm, clean and so well designed.', stars: 5 },
+    { name: 'Usman T.', text: 'Finally a proper indoor play area in Islamabad. The kinetic sand zone is amazing. kids were occupied for hours. Totally worth it!', stars: 5 },
     { name: 'Fatima Z.', text: 'The climbing wall and ball pit are incredible! Staff are attentive and very helpful. Our son has been asking to come back every day.', stars: 5 },
-    { name: 'Mehwish L.', text: 'Hosted my niece\'s birthday party here — the team handled everything beautifully. Decorations, setup, food area — all spotless and super fun!', stars: 5 },
+    { name: 'Mehwish L.', text: 'Hosted my niece\'s birthday party here. the team handled everything beautifully. Decorations, setup, food area. all spotless and super fun!', stars: 5 },
   ];
   const [isMobile, setIsMobile] = useState(() => window.innerWidth < 768);
   useEffect(() => {
@@ -416,7 +416,7 @@ function Testimonials() {
             <article className='review-card' key={name}>
               <div className='review-stars'>{Array.from({ length: stars }, (_, i) => <FaStar key={i} />)}</div>
               <p>"{text}"</p>
-              <strong>— {name}</strong>
+              <strong>{name}</strong>
             </article>
           ))}
         </div>
@@ -432,7 +432,7 @@ function Testimonials() {
 }
 
 /* ─── Gallery ─── */
-/* Gallery page — all images combined */
+/* Gallery page. all images combined */
 const allPics = [...pics.filter(p => p !== '/assets/gallery-15.webp'), ...zonePics, ...cafePics];
 function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
@@ -460,7 +460,7 @@ function Gallery() {
   );
 }
 
-/* Zone photo strip — 8 zone area photos */
+/* Zone photo strip. 8 zone area photos */
 function ZonePhotos() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const open  = useCallback(i => setLightboxIndex(i), []);
@@ -494,7 +494,7 @@ function ZonePhotos() {
   );
 }
 
-/* Home photo strip — all 15 real landscape photos */
+/* Home photo strip. all 15 real landscape photos */
 function HomePhotos() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const open  = useCallback(i => setLightboxIndex(i), []);
@@ -544,7 +544,7 @@ function Home() {
         <p className='le-little' aria-hidden='true'>
           <span className='lc-purple'>L</span><span className='lc-green'>i</span><span className='lc-orange'>t</span><span className='lc-pink'>t</span><span className='lc-aqua'>l</span><span className='lc-green'>e</span>
         </p>
-        <h1 className='sr-only'>Little Explorers World — Indoor Kids Play Zone Islamabad</h1>
+        <h1 className='sr-only'>Little Explorers World: Indoor Kids Play Zone Islamabad</h1>
 
         <p className='le-world'>
           <span className='le-explorers'>EXPLORERS</span>
@@ -568,7 +568,7 @@ function Home() {
           <h2>
             <span className='sparkle'>✦✦</span> 8 Play Zones, <i>One Visit</i> <span className='sparkle'>✦✦</span>
           </h2>
-          <p>From ball pits to climbing walls, kinetic sand to Lego — every zone is different, and kids love all of them.</p>
+          <p>From ball pits to climbing walls, kinetic sand to Lego. Every zone is different and kids love all of them.</p>
         </div>
         <div className='zones-icon-grid'>
           {zones.map(([num, name, desc, Icon, , color]) => (
@@ -621,15 +621,15 @@ function About() {
         kicker='Indoor play zone in Bahria Town, Islamabad'
         title='Where Kids Play Freely'
         titleJsx={<><span>Where Kids</span><br />Play <i>Freely</i></>}
-        text="Islamabad's favourite kids play centre in Bahria Town Phase 4. Clean, safe and fully supervised — 8 play zones for children aged 0 to 10, open every day from 11 AM to 9 PM."
+        text="Islamabad's favourite kids play centre in Bahria Town Phase 4. Clean, safe and fully supervised. 8 play zones for children aged 0 to 10, open every day from 11 AM to 9 PM."
         img='/assets/zone-pretend-play.webp'
       />
 
       {/* Intro statement */}
       <section className='about-intro reveal'>
-        <span className='eyebrow' style={{ margin: '0 auto 12px', display: 'block' }}>Little Explorers World — Bahria Town Phase 4, Islamabad</span>
+        <span className='eyebrow' style={{ margin: '0 auto 12px', display: 'block' }}>Bahria Town Phase 4, Islamabad</span>
         <h2>Islamabad's Favourite <i>Kids Play Zone</i></h2>
-        <p>Located on the 2nd floor of Alpha Marina, Marina Commercial, Bahria Town Phase 4 — Little Explorers World is Islamabad's go-to indoor play centre for families with children aged 0 to 10. With 8 fully equipped play zones, strict daily cleaning and trained on-floor staff, we give kids a great time and give parents real peace of mind.</p>
+        <p>Located on the 2nd floor of Alpha Marina, Marina Commercial, Bahria Town Phase 4. Little Explorers World is Islamabad's go-to indoor play centre for families with children aged 0 to 10. With 8 fully equipped play zones, strict daily cleaning and trained on-floor staff, we give kids a great time and give parents real peace of mind.</p>
       </section>
 
       {/* Who We Are */}
@@ -637,15 +637,15 @@ function About() {
         <div>
           <span className='eyebrow'>Who We Are</span>
           <h2>Dedicated to <i>Every Child</i></h2>
-          <p>Little Explorers World opened in Bahria Town Phase 4 with one goal: give Islamabad families a play centre they can actually trust. Clean floors, safe equipment, proper staff — the basics done right, every single day.</p>
-          <p>We have 8 play zones covering active play, creative play, sensory play and quiet play — so whether your child is 18 months or 9 years old, there is something here that will hold their attention for a full session and then some.</p>
+          <p>Little Explorers World opened in Bahria Town Phase 4 with one goal: give Islamabad families a play centre they can actually trust. Clean floors, safe equipment, proper staff. the basics done right, every single day.</p>
+          <p>We have 8 play zones covering active play, creative play, sensory play and quiet play. Whether your child is 18 months or 9 years old, there is something here that will hold their attention for a full session and then some.</p>
           <p>Parents tell us they come back every weekend because the place stays clean, staff are actually helpful and their kids are genuinely tired out by the end. That is the standard we hold ourselves to.</p>
           <a className='btn green' style={{ marginTop: 24, display: 'inline-flex' }} href={WA}><FaWhatsapp /> Book a Visit</a>
         </div>
         <div className='values'>
           {[
             [FaShieldAlt, 'Safety by Design', 'Every zone built with soft materials, padded surfaces and age-appropriate equipment.'],
-            [MdCleanHands, 'Clean Every Day', 'Daily deep-cleaning and sanitization — high standards maintained every session.'],
+            [MdCleanHands, 'Clean Every Day', 'Daily deep-cleaning and sanitization. high standards maintained every session.'],
             [FaUsers, 'Everyone Belongs', 'Inclusive spaces for children of all abilities and ages up to 10.'],
           ].map(([Icon, title, text]) => (
             <article key={title}>
@@ -662,12 +662,12 @@ function About() {
         <div className='about-vm-card vision'>
           <span className='eyebrow'>Our Vision</span>
           <h2>A World of <i>Joyful Play</i></h2>
-          <p>We want every child in Islamabad to have access to a proper, clean and safe indoor play environment — not just children from certain areas or backgrounds. That is why we built Little Explorers World in Bahria Town Phase 4 and why we keep our standards high every single day.</p>
+          <p>We want every child in Islamabad to have access to a proper, clean and safe indoor play environment. not just children from certain areas or backgrounds. That is why we built Little Explorers World in Bahria Town Phase 4 and why we keep our standards high every single day.</p>
         </div>
         <div className='about-vm-card mission'>
           <span className='eyebrow'>Our Mission</span>
           <h2>Play That <i>Matters</i></h2>
-          <p>To run the best kids play zone in Islamabad — clean, safe, well-staffed, and genuinely fun for children of every age. No shortcuts on cleanliness, no understaffing on busy days, and no compromise on equipment safety. If a family visits us once, we want them back every weekend.</p>
+          <p>To run the best kids play zone in Islamabad. clean, safe, well-staffed, and genuinely fun for children of every age. No shortcuts on cleanliness, no understaffing on busy days, and no compromise on equipment safety. If a family visits us once, we want them back every weekend.</p>
         </div>
       </section>
 
@@ -679,9 +679,9 @@ function About() {
         </div>
         <div className='about-special-grid'>
           {[
-            [FaShieldAlt, 'Safe Equipment, Daily', 'Every zone is checked before opening — padded floors, rounded edges and equipment inspected every morning.'],
+            [FaShieldAlt, 'Safe Equipment, Daily', 'Every zone is checked before opening. padded floors, rounded edges and equipment inspected every morning.'],
             [FaUsers, 'Open to All Kids', 'Children aged 0–10 from any background are welcome. Our staff are trained to support kids at every stage.'],
-            [FaPuzzlePiece, '8 Zones, Real Play', 'From climbing walls to kinetic sand — every zone is designed for hands-on, screen-free play that kids actually remember.'],
+            [FaPuzzlePiece, '8 Zones, Real Play', 'From climbing walls to kinetic sand. every zone is designed for hands-on, screen-free play that kids actually remember.'],
             [FaClock, 'Parents Enjoy It Too', 'Wi-Fi, coffee, comfortable seating and live CCTV so parents can relax while kids play in full view.'],
           ].map(([Icon, title, text]) => (
             <div className='about-special-card' key={title}>
@@ -701,10 +701,10 @@ function About() {
             <h2>A Letter from <i>Our Founders</i></h2>
             <blockquote>
               <p>Dear Families and Aspiring Partners,</p>
-              <p>We started Little Explorers World with one simple dream — to create a place where every child feels safe, valued, and completely free to be themselves. Having witnessed firsthand how meaningful, purposeful play shapes a child's confidence, creativity and character, we knew Islamabad deserved a space truly designed with children at its heart.</p>
-              <p>Every zone you walk through was built with love, careful thought, and a deep commitment to inclusion. We believe play is not just fun — it is how children learn empathy, build friendships, and discover who they are. From the soft padded floors to the vibrant climbing wall, every corner was chosen with your child's wellbeing in mind.</p>
+              <p>We started Little Explorers World with one simple dream. to create a place where every child feels safe, valued, and completely free to be themselves. Having witnessed firsthand how meaningful, purposeful play shapes a child's confidence, creativity and character, we knew Islamabad deserved a space truly designed with children at its heart.</p>
+              <p>Every zone you walk through was built with love, careful thought, and a deep commitment to inclusion. We believe play is not just fun. it is how children learn empathy, build friendships, and discover who they are. From the soft padded floors to the vibrant climbing wall, every corner was chosen with your child's wellbeing in mind.</p>
               <p>Our mission goes beyond a play area. We want to build a community where families feel at home, where children of all abilities feel welcomed, and where parents can relax knowing their little ones are in the safest of hands.</p>
-              <p>Thank you for trusting us with your most precious gift — your child.</p>
+              <p>Thank you for trusting us with your most precious gift. your child.</p>
               <p style={{marginTop: 16, fontWeight: 600}}>Warm regards,</p>
             </blockquote>
             <div className='about-founders'>
@@ -735,10 +735,10 @@ function Zones() {
   return (
     <>
       <PageHero
-        kicker='8 play zones — one ticket covers all'
+        kicker='8 play zones, one ticket covers all'
         title='8 Zones, One Great Visit'
         titleJsx={<><span>8 Zones,</span><br />One Great <i>Visit</i></>}
-        text='Slides, ball pit, climbing wall, kinetic sand, Lego table, sensory room, pretend play and a latcher table — all under one roof at Bahria Town Phase 4, Islamabad. One ticket, all zones, no add-ons.'
+        text='Slides, ball pit, climbing wall, kinetic sand, Lego table, sensory room, pretend play and a latcher table. All under one roof at Bahria Town Phase 4, Islamabad. One ticket, all zones, no add-ons.'
         img='/assets/zone-slides.webp'
       />
 
@@ -747,7 +747,7 @@ function Zones() {
         <div className='section-head'>
           <span className='eyebrow'>8 zones, one ticket, no limits</span>
           <h2><span className='sparkle'>✦✦</span> What's Inside <i>Our Play Centre</i> <span className='sparkle'>✦✦</span></h2>
-          <p>Each zone is different — some get kids moving, some keep them calm, all of them keep them happy.</p>
+          <p>Each zone is different. some get kids moving, some keep them calm, all of them keep them happy.</p>
         </div>
         <div className='zones-icon-grid zones-8'>
           {zones.map(([num, name, desc, Icon, , color]) => (
@@ -790,7 +790,7 @@ function Zones() {
           <div className='zone-detail-copy'>
             <span className='eyebrow'>Ball Pit &amp; Slides</span>
             <h2>Joyful Movement <i>&amp; Excitement</i></h2>
-            <p>Race down the slides into a sea of soft balls — kids ask to come back to this zone on every visit. Great for burning energy and getting kids genuinely tired out.</p>
+            <p>Race down the slides into a sea of soft balls. kids ask to come back to this zone on every visit. Great for burning energy and getting kids genuinely tired out.</p>
             <a className='btn green' href={WA}><FaWhatsapp /> Plan Your Visit</a>
           </div>
           <div className='zone-detail-img'>
@@ -802,7 +802,7 @@ function Zones() {
           <div className='zone-detail-copy'>
             <span className='eyebrow'>Pretend Play &amp; Lego Table</span>
             <h2>Imagination, Creativity <i>&amp; Social Play</i></h2>
-            <p>Kids run their own market, cook in their own kitchen and build with thousands of LEGO bricks — this zone keeps children occupied for an entire session without any screens.</p>
+            <p>Kids run their own market, cook in their own kitchen and build with thousands of LEGO bricks. this zone keeps children occupied for an entire session without any screens.</p>
             <a className='btn green' href={WA}><FaWhatsapp /> Plan Your Visit</a>
           </div>
           <div className='zone-detail-img'>
@@ -814,7 +814,7 @@ function Zones() {
           <div className='zone-detail-copy'>
             <span className='eyebrow'>Sensory Room &amp; Kinetic Sand</span>
             <h2>Calm Exploration <i>&amp; Tactile Play</i></h2>
-            <p>A quieter zone with soft lighting and tactile play — ideal for younger toddlers and children who need a break from busy zones. Parents often say this one surprises them most.</p>
+            <p>A quieter zone with soft lighting and tactile play. ideal for younger toddlers and children who need a break from busy zones. Parents often say this one surprises them most.</p>
             <a className='btn green' href={WA}><FaWhatsapp /> Plan Your Visit</a>
           </div>
           <div className='zone-detail-img'>
@@ -831,10 +831,10 @@ function Zones() {
         </div>
         <div className='zone-inclusive-grid'>
           {[
-            [FaUsers, 'Ages 0 to 10', 'Every zone is set up for different age groups — toddlers, preschoolers and older kids all have something built for them.', 'pink'],
+            [FaUsers, 'Ages 0 to 10', 'Every zone is set up for different age groups. toddlers, preschoolers and older kids all have something built for them.', 'pink'],
             [FaShieldAlt, 'Padded & Checked Daily', 'Soft floors, padded walls and equipment checked every morning before we open. No shortcuts on safety.', 'gold'],
-            [FaClock, 'Parents Stay Too', 'Comfortable seating, free Wi-Fi and LE Cafe right next to the zones — so parents enjoy the visit as much as the kids.', 'purple'],
-            [FaBaby, 'Open Every Day', 'We are open 7 days a week, 11 AM to 9 PM — no appointments needed, just show up and play.', 'aqua'],
+            [FaClock, 'Parents Stay Too', 'Comfortable seating, free Wi-Fi and LE Cafe right next to the zones. Parents enjoy the visit as much as the kids.', 'purple'],
+            [FaBaby, 'Open Every Day', 'We are open 7 days a week, 11 AM to 9 PM. no appointments needed, just show up and play.', 'aqua'],
           ].map(([Icon, title, text, color]) => (
             <div className={`zone-incl-card zic-${color}`} key={title}>
               <div className='zone-incl-icon'><Icon /></div>
@@ -959,7 +959,7 @@ function Partner() {
               <label>
                 I am Interested in
                 <select>
-                  <option value=''>— I am Interested in</option>
+                  <option value=''>Select an option</option>
                   <option>Community Collaboration</option>
                   <option>Event Sponsorship</option>
                   <option>Brand Partnership</option>
@@ -1016,7 +1016,7 @@ function Contact() {
       <section className='contact reveal'>
         <div>
           <h2>Come say hello</h2>
-          <p style={{ color: '#555', fontSize: '15px', margin: '8px 0 18px', lineHeight: 1.7 }}>Fill in the form and we will get back to you within a few hours. For faster replies, message us directly on WhatsApp — we typically respond within 30 minutes during opening hours.</p>
+          <p style={{ color: '#555', fontSize: '15px', margin: '8px 0 18px', lineHeight: 1.7 }}>Fill in the form and we will get back to you within a few hours. For faster replies, message us directly on WhatsApp. we typically respond within 30 minutes during opening hours.</p>
           <a href='https://maps.google.com/?q=Alpha+Marina+Plaza+42+Bahria+Town+Phase+4+Islamabad' target='_blank' rel='noopener noreferrer' className='contact-address'>
             <FaMapMarkerAlt /> 2nd Floor, Plaza No. 42, Alpha Marina, Marina Commercial, Corniche Road, Bahria Town Phase 4, Islamabad
           </a>
@@ -1145,7 +1145,7 @@ const bdFaqs = [
   ['Can we bring our own cake?', 'Absolutely! You are welcome to bring your own cake. We also offer in-house cakes with our Premium and Grand packages.'],
   ['Is there parking available?', 'Yes, Alpha Marina has ample parking available for guests.'],
   ['Can adults stay during the party?', 'Yes! Parents and guardians are always welcome. We have a comfortable parent lounge area with free Wi-Fi and refreshments.'],
-  ['Do you offer custom themes?', 'Yes — our Grand package includes themed décor of your choice. Contact us on WhatsApp to discuss your preferred theme.'],
+  ['Do you offer custom themes?', 'Yes. our Grand package includes themed décor of your choice. Contact us on WhatsApp to discuss your preferred theme.'],
 ];
 
 const bpPhotos = [
@@ -1190,7 +1190,7 @@ function BirthdayParty() {
           <GiPartyPopper className='bp-balloons' />
           <span className='eyebrow'>Islamabad's favourite kids party venue</span>
           <h1>Birthday Parties<br />in <i>Islamabad</i></h1>
-          <p>Book your child's birthday party at Little Explorers World, Bahria Town Phase 4. We handle the setup, décor, cake and activities — you just show up and celebrate.</p>
+          <p>Book your child's birthday party at Little Explorers World, Bahria Town Phase 4. We handle the setup, décor, cake and activities. you just show up and celebrate.</p>
           <div className='bp-hero-actions'>
             <a className='btn pink' href={waParty}><FaWhatsapp /> Book a Party Now</a>
             <a className='btn' style={{ background: 'var(--purple)' }} href='tel:+923265652798'><FaPhone /> Call Us</a>
@@ -1208,10 +1208,10 @@ function BirthdayParty() {
         <h2>Everything done for <i>you</i></h2>
         <div className='bp-why-grid'>
           {[
-            [GiPartyPopper, 'We Handle Everything', 'Decorations, cake, setup and activities — all sorted by our team. You arrive, we run the party.'],
+            [GiPartyPopper, 'We Handle Everything', 'Decorations, cake, setup and activities. all sorted by our team. You arrive, we run the party.'],
             [FaShieldAlt, 'Safe for All Kids', 'All play zones are padded, staff are trained and we manage the crowd so the birthday child and guests are always safe.'],
-            [FaCamera, 'Great for Photos', 'The venue is colourful and well-lit — parents always leave with hundreds of shots worth keeping.'],
-            [FaGift, '3 Packages Available', 'Starter, Premium and Grand — or contact us on WhatsApp to discuss a custom arrangement for your party size.'],
+            [FaCamera, 'Great for Photos', 'The venue is colourful and well-lit. parents always leave with hundreds of shots worth keeping.'],
+            [FaGift, '3 Packages Available', 'Starter, Premium and Grand. Contact us on WhatsApp to discuss a custom arrangement for your party size.'],
           ].map(([Icon, title, text]) => (
             <article className='bp-why-card' key={title}>
               <Icon />
@@ -1249,7 +1249,7 @@ function BirthdayParty() {
             </div>
           ))}
         </div>
-        <p className='bp-note'>Prices are indicative — final quote shared after consultation. All prices include applicable taxes.</p>
+        <p className='bp-note'>Prices are indicative. final quote shared after consultation. All prices include applicable taxes.</p>
       </section>
 
       {/* How to book */}
@@ -1260,7 +1260,7 @@ function BirthdayParty() {
           {[
             [FaWhatsapp, '01', 'Message Us', 'Send us a WhatsApp message with your preferred date and number of kids.', 'green'],
             [FaCalendarAlt, '02', 'Confirm & Plan', "We'll confirm availability and help you choose the perfect package and theme.", 'purple'],
-            [GiPartyPopper, '03', 'Celebrate!', 'Show up and enjoy — we handle everything else for an unforgettable party!', 'pink'],
+            [GiPartyPopper, '03', 'Celebrate!', 'Show up and enjoy. we handle everything else for an unforgettable party!', 'pink'],
           ].map(([Icon, num, title, text, color]) => (
             <div className={`bp-step bps-${color}`} key={num}>
               <div className='bp-step-num'>{num}</div>
@@ -1297,7 +1297,7 @@ function BirthdayParty() {
       <section className='bp-cta reveal'>
         <GiPartyPopper className='bp-cta-icon' />
         <h2>Ready to Plan the <i>Perfect Party?</i></h2>
-        <p>Get in touch today — availability fills up fast on weekends!</p>
+        <p>Get in touch today. availability fills up fast on weekends!</p>
         <div className='bp-cta-btns'>
           <a className='btn pink' href={waParty}><FaWhatsapp /> Book on WhatsApp</a>
           <a className='btn' style={{ background: 'var(--purple)' }} href='tel:+923265652798'><FaPhone /> +92 326 5652798</a>
@@ -1337,15 +1337,15 @@ function CafeGallery() {
 
 function LeCafe() {
   const cafeAreas = [
-    [FaPaw,         'Kitty Corner',         'A cozy, adorable corner with kitty-themed décor and plush seating — the perfect spot to unwind and recharge.', 'pink'],
-    [FaCamera,      'Feature Wall',         'Stunning Instagram-worthy wall art and vibrant murals — the perfect backdrop for your most memorable family photos.', 'purple'],
+    [FaPaw,         'Kitty Corner',         'A cozy, adorable corner with kitty-themed décor and plush seating. the perfect spot to unwind and recharge.', 'pink'],
+    [FaCamera,      'Feature Wall',         'Stunning Instagram-worthy wall art and vibrant murals. the perfect backdrop for your most memorable family photos.', 'purple'],
     [GiPartyPopper, 'Celebration Corner',   'A dedicated space for birthdays, anniversaries and milestones. We set it up so all you have to do is celebrate.', 'gold'],
-    [FaGamepad,     'PlayStation',          'Console gaming sessions for older kids and teens — level up while the little ones explore the play zones!', 'green'],
-    [FaLaptop,      'Workstations',         'Free Wi-Fi, charging points and comfortable workstations — stay connected while your kids play safely nearby.', 'aqua'],
+    [FaGamepad,     'PlayStation',          'Console gaming sessions for older kids and teens. level up while the little ones explore the play zones!', 'green'],
+    [FaLaptop,      'Workstations',         'Free Wi-Fi, charging points and comfortable workstations. stay connected while your kids play safely nearby.', 'aqua'],
     [FaPuzzlePiece, 'Board Games',          'Classic board games, card games and puzzles for the whole family to enjoy together between play sessions.', 'orange'],
-    [FaMobileAlt,   'Selfie Board',         'Fun photo booth props and vibrant backdrops — capture silly, joyful, unforgettable selfie moments with your little ones.', 'pink'],
+    [FaMobileAlt,   'Selfie Board',         'Fun photo booth props and vibrant backdrops. capture silly, joyful, unforgettable selfie moments with your little ones.', 'pink'],
     [FaTv,          'CCTV Monitor Corner',  "Stay connected to your children's adventure. Our live monitor display lets parents keep a watchful eye on all play zones.", 'purple'],
-    [FaCoffee,      'Coffee Station',       'Premium coffee, teas, fresh juices and light snacks — enjoy a warm cup in a relaxed setting while kids play safely.', 'orange'],
+    [FaCoffee,      'Coffee Station',       'Premium coffee, teas, fresh juices and light snacks. enjoy a warm cup in a relaxed setting while kids play safely.', 'orange'],
   ];
 
   return (
@@ -1354,14 +1354,14 @@ function LeCafe() {
         kicker='Relax. Refresh. Reconnect.'
         title='LE Cafe'
         titleJsx={<><span>LE</span><br /><i>Cafe</i></>}
-        text="LE Cafe is the parent lounge at Little Explorers World — coffee station, PlayStation, workstations, selfie board and 9 unique corners. Sit back, enjoy a coffee and watch your kids play on our live monitor screens."
+        text="LE Cafe is the parent lounge at Little Explorers World. coffee station, PlayStation, workstations, selfie board and 9 unique corners. Sit back, enjoy a coffee and watch your kids play on our live monitor screens."
         img='/assets/cafe-2.webp'
       />
 
       <section className='about-intro reveal'>
         <span className='eyebrow' style={{ margin: '0 auto 12px', display: 'block' }}>Your space to unwind</span>
         <h2>Not a Waiting Room. <i>A Real Space.</i></h2>
-        <p>LE Cafe is built for parents and guardians who are tired of sitting on a plastic chair watching their phone. It has proper coffee, a PlayStation corner, laptop workstations, board games and 9 uniquely designed corners — each one made so you genuinely enjoy your time here, not just wait it out.</p>
+        <p>LE Cafe is built for parents and guardians who are tired of sitting on a plastic chair watching their phone. It has proper coffee, a PlayStation corner, laptop workstations, board games and 9 uniquely designed corners. each one made so you genuinely enjoy your time here, not just wait it out.</p>
       </section>
 
       <section className='zones-section reveal'>
@@ -1385,7 +1385,7 @@ function LeCafe() {
 
       <section className='cta reveal'>
         <h2>Ready to Experience <i>LE Cafe?</i></h2>
-        <p>Visit us at Alpha Marina, Bahria Town Phase 4, Islamabad — and make your family day truly unforgettable.</p>
+        <p>Visit us at Alpha Marina, Bahria Town Phase 4, Islamabad. Make your family day truly unforgettable.</p>
         <div className='actions' style={{ justifyContent: 'center' }}>
           <a className='btn green' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
           <button onClick={() => go('/contact-us')}>Contact Us <FaArrowRight /></button>
