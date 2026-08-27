@@ -186,6 +186,7 @@ nav a:hover::after, nav a.active::after { width: calc(100% - 28px); }
 }
 .btn:hover { transform: translateY(-3px); box-shadow: 0 13px 25px #3e304e33; }
 .book, .green { background: var(--green); }
+header .book { white-space: nowrap; flex-shrink: 0; font-size: 14px; padding: 12px 18px; }
 .pink { background: var(--pink) !important; }
 .pink:hover { background: #d97090 !important; }
 .purple { background: var(--purple) !important; }

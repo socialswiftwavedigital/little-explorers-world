@@ -27,32 +27,32 @@ const links = [
 
 const pageMeta = {
   '/': {
-    title: 'Little Explorers World | Indoor Kids Play Zone Islamabad',
-    desc: 'A colourful indoor playground for kids aged 0–10 in Bahria Town Phase 4, Islamabad. 8 play zones, birthday parties & more.',
+    title: 'Little Explorers World | Kids Indoor Play Zone Bahria Town Islamabad',
+    desc: 'Indoor play zone for kids aged 0–10 in Bahria Town Phase 4, Islamabad. 8 play zones including ball pit, slides, climbing wall, kinetic sand & more. Open daily 11 AM–9 PM.',
   },
   '/birthday-parties': {
-    title: 'Birthday Parties in Islamabad | Little Explorers World',
-    desc: 'Book an unforgettable kids birthday party in Islamabad at Little Explorers World. Fun packages with décor, games, food & cake in Bahria Town Phase 4.',
+    title: 'Kids Birthday Party Venue Islamabad | Little Explorers World',
+    desc: 'Book a kids birthday party in Islamabad at Little Explorers World, Bahria Town Phase 4. We handle décor, cake, games and setup. 3 packages from Rs. 15,000.',
   },
   '/about-us': {
-    title: 'About Us | Little Explorers World Islamabad',
-    desc: 'Learn about Little Explorers World — a safe, clean and colourful indoor playground in Bahria Town Phase 4, Islamabad for children aged 0–10.',
+    title: 'About Little Explorers World | Indoor Play Zone Bahria Town Islamabad',
+    desc: 'Little Explorers World is Islamabad\'s favourite indoor kids play zone in Bahria Town Phase 4. Clean, safe, fully supervised — 8 zones for ages 0–10. Open 7 days.',
   },
   '/play-zones': {
-    title: 'Play Zones & Pricing | Little Explorers World Islamabad',
-    desc: '8 amazing play zones for kids in Islamabad. Slides, ball pit, climbing wall, sensory room, kinetic sand, lego table & more. Rs. 1,199–1,999/hr. Daily 11AM–11PM.',
+    title: 'Play Zones & Prices | Kids Play Area Bahria Town Islamabad',
+    desc: '8 indoor play zones for children in Islamabad — slides, ball pit, climbing wall, sensory room, kinetic sand, Lego table, pretend play & latcher table. Rs. 1,199–1,999/hr.',
   },
   '/gallery': {
-    title: 'Gallery | Little Explorers World Islamabad',
-    desc: 'See photos from our indoor play zones and birthday parties at Little Explorers World, Bahria Town Islamabad.',
+    title: 'Photos | Little Explorers World Indoor Play Zone Islamabad',
+    desc: 'See photos of our 8 play zones, LE Cafe and birthday party setups at Little Explorers World in Bahria Town Phase 4, Islamabad.',
   },
   '/partner-with-us': {
-    title: 'Partner with Us | Little Explorers World',
-    desc: 'Partner with Little Explorers World Islamabad — schools, events, brand collaborations and community activations.',
+    title: 'Partner with Us | Little Explorers World Islamabad',
+    desc: 'Partner with Little Explorers World — Islamabad\'s top kids play zone. Schools, brands, event sponsors and community partners welcome. Get in touch today.',
   },
   '/contact-us': {
-    title: 'Contact Us | Little Explorers World Islamabad',
-    desc: 'Visit Little Explorers World in Bahria Town Phase 4, Islamabad. Open daily 11AM–11PM. Call +92 326 5652798.',
+    title: 'Contact Us | Little Explorers World Bahria Town Islamabad',
+    desc: 'Visit Little Explorers World at Alpha Marina, Bahria Town Phase 4, Islamabad. Open daily 11 AM–9 PM. Call or WhatsApp: +92 326 5652798.',
   },
   '/le-cafe': {
     title: 'LE Cafe | Little Explorers World Islamabad',
@@ -75,14 +75,14 @@ const zonePics = [
 ];
 
 const zones = [
-  ['01', 'Slides & Climb', 'Zoom down colourful slides, scale soft climbing structures and build strength, courage and physical confidence — a favourite for active kids in Islamabad.', GiKidSlide, '/assets/zone-slides.webp', 'gold'],
-  ['02', 'Ball Pit', 'Dive into thousands of soft, clean, multicoloured balls and enjoy endless bouncing fun. Our supervised ball pit in Islamabad is safe, hygienic and refreshed daily.', FaBaby, '/assets/zone-ball-pit.webp', 'purple'],
-  ['03', 'Climbing Wall', 'Challenge grip, balance and determination on our indoor climbing wall. Colourful holds at varying heights make it perfect for toddlers and older kids building real-world motor skills.', GiMountainClimbing, '/assets/zone-climbing.webp', 'green'],
-  ['04', 'Pretend Play', 'A kitchen, market and grooming salon where children role-play real-world scenarios, sparking creativity, language skills and social interaction in a beautifully designed space.', FaPuzzlePiece, '/assets/zone-pretend-play.webp', 'pink'],
-  ['05', 'Sensory Room', 'A calm, low-stimulation retreat designed for children who need a quieter space. Soft lighting, textures and calming activities support sensory exploration, relaxation and emotional regulation.', FaStar, '/assets/zone-sensory.webp', 'aqua'],
-  ['06', 'Lego Table', 'Build, create and imagine with thousands of colourful LEGO bricks at our dedicated Lego table. Great for developing problem-solving, spatial thinking and fine motor skills.', MdOutlineToys, '/assets/zone-lego.webp', 'orange'],
-  ['07', 'Kinetic Sand', 'Scoop, mould, sculpt and squish our mess-free kinetic sand — the satisfying tactile play that kids absolutely love. Ideal for creative expression and sensory development.', FaSocks, '/assets/zone-kinetic-sand.webp', 'pink'],
-  ['08', 'Latcher Table', 'Boost fine motor skills and problem-solving with hands-on latches, bolts, doors and locks. A Montessori-inspired activity perfect for toddlers and early childhood development.', FaShieldAlt, '/assets/zone-latcher.webp', 'aqua'],
+  ['01', 'Slides & Climb', 'Kids race down bright slides and conquer soft climbing structures — one of the busiest zones at our Islamabad play centre. Burns energy fast, builds balance and kids always want another go.', GiKidSlide, '/assets/zone-slides.webp', 'gold'],
+  ['02', 'Ball Pit', 'Jump into thousands of soft, clean, coloured balls for pure, unfiltered fun. Sanitized daily and fully supervised — a must for every visit to our Bahria Town play zone.', FaBaby, '/assets/zone-ball-pit.webp', 'purple'],
+  ['03', 'Climbing Wall', 'Colourful handholds at different heights for toddlers and older kids. Kids test their limits, build grip and feel genuinely proud when they reach the top.', GiMountainClimbing, '/assets/zone-climbing.webp', 'green'],
+  ['04', 'Pretend Play', 'A kid-sized kitchen, market and salon where children act out real-life roles. Great for language, social skills and imagination — and parents love watching it unfold.', FaPuzzlePiece, '/assets/zone-pretend-play.webp', 'pink'],
+  ['05', 'Sensory Room', 'A quiet, low-light space for children who need a break. Soft textures, calming lights and gentle activities — especially great for younger toddlers and neurodiverse kids.', FaStar, '/assets/zone-sensory.webp', 'aqua'],
+  ['06', 'Lego Table', 'Thousands of colourful LEGO bricks and zero screens. Kids focus, build and problem-solve for hours — parents always say this zone surprises them the most.', MdOutlineToys, '/assets/zone-lego.webp', 'orange'],
+  ['07', 'Kinetic Sand', 'Mess-free sand that moulds, squishes and sculpts — kids can\'t put it down. Builds fine motor skills while keeping little hands completely happy.', FaSocks, '/assets/zone-kinetic-sand.webp', 'pink'],
+  ['08', 'Latcher Table', 'Bolts, latches, locks and doors to open and figure out. A Montessori-style activity wall that quietly teaches toddlers problem-solving while keeping them totally absorbed.', FaShieldAlt, '/assets/zone-latcher.webp', 'aqua'],
 ];
 
 const stats = [
@@ -350,10 +350,10 @@ function Pricing() {
 /* ─── Trust ─── */
 function Trust() {
   const items = [
-    [FaShieldAlt, 'Safety First', 'Soft flooring, padded walls and regular safety checks keep your child protected at all times.'],
-    [MdCleanHands, 'Spotless & Sanitized', 'High standards of cleanliness and daily sanitization — every session, every day.'],
-    [FaUsers, 'Trained Staff', 'Our friendly and experienced team is always present to assist your family.'],
-    [FaClock, 'Parent Comfort', 'Relax with free Wi-Fi, comfortable seating and refreshments while kids play.'],
+    [FaShieldAlt, 'Safe by Design', 'Soft flooring, padded walls, rounded edges and daily equipment checks — every zone built so kids can play hard without parents worrying.'],
+    [MdCleanHands, 'Cleaned After Every Session', 'Toys, surfaces and equipment are sanitized between every play session. We hold ourselves to café-level cleanliness standards — your children deserve nothing less.'],
+    [FaUsers, 'Friendly, Trained Team', 'Our staff are trained in child safety and always present on the floor. They know what to watch for and how to keep every child safe and happy.'],
+    [FaClock, 'A Space for Parents Too', 'Free Wi-Fi, comfortable seating, phone charging and a coffee station at LE Cafe — great family trips need comfortable parents too.'],
   ];
   return (
     <section className='trust reveal'>
@@ -551,7 +551,7 @@ function Home() {
           <span className='le-worldtxt'> WORLD</span>
         </p>
 
-        <p className='le-tagline'>A colorful indoor play adventure<br />for kids</p>
+        <p className='le-tagline'>Islamabad's favourite indoor play zone<br />in Bahria Town Phase 4</p>
 
         <div className='actions le-actions'>
           <a className='btn green' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
@@ -564,11 +564,11 @@ function Home() {
       {/* Zones Icon Grid */}
       <section className='zones-section reveal'>
         <div className='section-head'>
-          <span className='eyebrow'>6 amazing play zones</span>
+          <span className='eyebrow'>8 play zones, one ticket</span>
           <h2>
-            <span className='sparkle'>✦✦</span> Endless Fun in <i>Every Zone</i> <span className='sparkle'>✦✦</span>
+            <span className='sparkle'>✦✦</span> 8 Play Zones, <i>One Visit</i> <span className='sparkle'>✦✦</span>
           </h2>
-          <p>Thoughtfully designed spaces that inspire imagination, movement and joy.</p>
+          <p>From ball pits to climbing walls, kinetic sand to Lego — every zone is different, and kids love all of them.</p>
         </div>
         <div className='zones-icon-grid'>
           {zones.map(([num, name, desc, Icon, , color]) => (
@@ -618,18 +618,18 @@ function About() {
   return (
     <>
       <PageHero
-        kicker='Our happy little world'
-        title='Where Play Builds Confidence'
-        titleJsx={<><span>Where</span> Play<br />Builds <i>Confidence</i></>}
-        text='A safe, clean and inclusive indoor play space where children of all abilities can come together to explore, imagine, learn and grow.'
+        kicker='Indoor play zone in Bahria Town, Islamabad'
+        title='Where Kids Play Freely'
+        titleJsx={<><span>Where Kids</span><br />Play <i>Freely</i></>}
+        text="Islamabad's favourite kids play centre in Bahria Town Phase 4. Clean, safe and fully supervised — 8 play zones for children aged 0 to 10, open every day from 11 AM to 9 PM."
         img='/assets/zone-pretend-play.webp'
       />
 
       {/* Intro statement */}
       <section className='about-intro reveal'>
-        <span className='eyebrow' style={{ margin: '0 auto 12px', display: 'block' }}>Little Explorers World Islamabad</span>
-        <h2>Pakistan's Most <i>Loved</i> Indoor Play Space</h2>
-        <p>A safe, clean, and inclusive indoor play space in Islamabad where children of all abilities can come together to explore, imagine, learn, and grow. Our thoughtfully designed environment combines hygiene, security, creativity, and joyful activities to give children the freedom to play with confidence while parents enjoy complete peace of mind.</p>
+        <span className='eyebrow' style={{ margin: '0 auto 12px', display: 'block' }}>Little Explorers World — Bahria Town Phase 4, Islamabad</span>
+        <h2>Islamabad's Favourite <i>Kids Play Zone</i></h2>
+        <p>Located on the 2nd floor of Alpha Marina, Marina Commercial, Bahria Town Phase 4 — Little Explorers World is Islamabad's go-to indoor play centre for families with children aged 0 to 10. With 8 fully equipped play zones, strict daily cleaning and trained on-floor staff, we give kids a great time and give parents real peace of mind.</p>
       </section>
 
       {/* Who We Are */}
@@ -637,9 +637,9 @@ function About() {
         <div>
           <span className='eyebrow'>Who We Are</span>
           <h2>Dedicated to <i>Every Child</i></h2>
-          <p>At Little Explorers, we are dedicated to creating safe, inclusive and inspiring play spaces across Pakistan where children of all abilities feel welcomed, valued and free to be themselves. Our aim is to provide a joyful environment where every child can explore, connect, learn and grow through meaningful play experiences.</p>
-          <p>Our thoughtfully designed space encourages imagination, physical movement, confidence, creativity and positive social interaction. From active play to calm sensory experiences, every area is created to support different stages of childhood development in a safe and engaging way.</p>
-          <p>Located in Bahria Town Islamabad, we welcome children up to age 10 with 8 dedicated play zones, daily deep-cleaning, trained staff, and a welcoming environment that truly feels like a second home for your family.</p>
+          <p>Little Explorers World opened in Bahria Town Phase 4 with one goal: give Islamabad families a play centre they can actually trust. Clean floors, safe equipment, proper staff — the basics done right, every single day.</p>
+          <p>We have 8 play zones covering active play, creative play, sensory play and quiet play — so whether your child is 18 months or 9 years old, there is something here that will hold their attention for a full session and then some.</p>
+          <p>Parents tell us they come back every weekend because the place stays clean, staff are actually helpful and their kids are genuinely tired out by the end. That is the standard we hold ourselves to.</p>
           <a className='btn green' style={{ marginTop: 24, display: 'inline-flex' }} href={WA}><FaWhatsapp /> Book a Visit</a>
         </div>
         <div className='values'>
@@ -662,12 +662,12 @@ function About() {
         <div className='about-vm-card vision'>
           <span className='eyebrow'>Our Vision</span>
           <h2>A World of <i>Joyful Play</i></h2>
-          <p>We envision a world where every child in Pakistan has access to a safe, clean, and joyful play environment that sparks their imagination and nurtures their development. Our play area will be a safe space for children, embracing diversity and inclusion, where laughter and learning come together to create lasting memories.</p>
+          <p>We want every child in Islamabad to have access to a proper, clean and safe indoor play environment — not just children from certain areas or backgrounds. That is why we built Little Explorers World in Bahria Town Phase 4 and why we keep our standards high every single day.</p>
         </div>
         <div className='about-vm-card mission'>
           <span className='eyebrow'>Our Mission</span>
           <h2>Play That <i>Matters</i></h2>
-          <p>Our mission is to evoke change by fostering a play community that prioritises the well-being of all children. We strive to create a hygienic and inclusive space where kids can explore, play, and connect with others. Through education and engagement, we empower parents to understand the importance of play, cultivating a generation that values creativity, kindness, and social interaction.</p>
+          <p>To run the best kids play zone in Islamabad — clean, safe, well-staffed, and genuinely fun for children of every age. No shortcuts on cleanliness, no understaffing on busy days, and no compromise on equipment safety. If a family visits us once, we want them back every weekend.</p>
         </div>
       </section>
 
@@ -679,10 +679,10 @@ function About() {
         </div>
         <div className='about-special-grid'>
           {[
-            [FaShieldAlt, 'Safe & Hygienic', 'Clean, secure and thoughtfully designed spaces where children can play comfortably.'],
-            [FaUsers, 'Inclusive for All', 'A welcoming environment created for children of all abilities and backgrounds.'],
-            [FaPuzzlePiece, 'Play with Purpose', 'Activities that encourage creativity, physical movement, learning and social development.'],
-            [FaClock, 'Parent-Friendly', 'A comfortable and supervised space where parents can relax while their children explore.'],
+            [FaShieldAlt, 'Safe Equipment, Daily', 'Every zone is checked before opening — padded floors, rounded edges and equipment inspected every morning.'],
+            [FaUsers, 'Open to All Kids', 'Children aged 0–10 from any background are welcome. Our staff are trained to support kids at every stage.'],
+            [FaPuzzlePiece, '8 Zones, Real Play', 'From climbing walls to kinetic sand — every zone is designed for hands-on, screen-free play that kids actually remember.'],
+            [FaClock, 'Parents Enjoy It Too', 'Wi-Fi, coffee, comfortable seating and live CCTV so parents can relax while kids play in full view.'],
           ].map(([Icon, title, text]) => (
             <div className='about-special-card' key={title}>
               <div className='about-special-icon'><Icon /></div>
@@ -735,19 +735,19 @@ function Zones() {
   return (
     <>
       <PageHero
-        kicker='Eight zones. Endless possibilities.'
-        title='Endless Fun in Every Zone'
-        titleJsx={<><span>Endless</span> Fun<br />in Every <i>Zone</i></>}
-        text='Step into a world of fun, adventure, and discovery. Our indoor play centre provides a safe and stimulating environment where children can stay active, spark their imagination, build friendships, and create lasting memories through play.'
+        kicker='8 play zones — one ticket covers all'
+        title='8 Zones, One Great Visit'
+        titleJsx={<><span>8 Zones,</span><br />One Great <i>Visit</i></>}
+        text='Slides, ball pit, climbing wall, kinetic sand, Lego table, sensory room, pretend play and a latcher table — all under one roof at Bahria Town Phase 4, Islamabad. One ticket, all zones, no add-ons.'
         img='/assets/zone-slides.webp'
       />
 
       {/* 8 Zones Grid */}
       <section className='zones-section reveal'>
         <div className='section-head'>
-          <span className='eyebrow'>8 amazing play zones</span>
-          <h2><span className='sparkle'>✦✦</span> Explore Every <i>Zone</i> <span className='sparkle'>✦✦</span></h2>
-          <p>Every area thoughtfully designed to support different stages of childhood development.</p>
+          <span className='eyebrow'>8 zones, one ticket, no limits</span>
+          <h2><span className='sparkle'>✦✦</span> What's Inside <i>Our Play Centre</i> <span className='sparkle'>✦✦</span></h2>
+          <p>Each zone is different — some get kids moving, some keep them calm, all of them keep them happy.</p>
         </div>
         <div className='zones-icon-grid zones-8'>
           {zones.map(([num, name, desc, Icon, , color]) => (
@@ -790,7 +790,7 @@ function Zones() {
           <div className='zone-detail-copy'>
             <span className='eyebrow'>Ball Pit &amp; Slides</span>
             <h2>Joyful Movement <i>&amp; Excitement</i></h2>
-            <p>Race down the slides into a sea of soft, colourful balls! This zone builds coordination, balance and brings every child pure joy.</p>
+            <p>Race down the slides into a sea of soft balls — kids ask to come back to this zone on every visit. Great for burning energy and getting kids genuinely tired out.</p>
             <a className='btn green' href={WA}><FaWhatsapp /> Plan Your Visit</a>
           </div>
           <div className='zone-detail-img'>
@@ -802,7 +802,7 @@ function Zones() {
           <div className='zone-detail-copy'>
             <span className='eyebrow'>Pretend Play &amp; Lego Table</span>
             <h2>Imagination, Creativity <i>&amp; Social Play</i></h2>
-            <p>From role-play adventures to building masterpieces, this zone inspires storytelling, teamwork and endless creativity.</p>
+            <p>Kids run their own market, cook in their own kitchen and build with thousands of LEGO bricks — this zone keeps children occupied for an entire session without any screens.</p>
             <a className='btn green' href={WA}><FaWhatsapp /> Plan Your Visit</a>
           </div>
           <div className='zone-detail-img'>
@@ -814,7 +814,7 @@ function Zones() {
           <div className='zone-detail-copy'>
             <span className='eyebrow'>Sensory Room &amp; Kinetic Sand</span>
             <h2>Calm Exploration <i>&amp; Tactile Play</i></h2>
-            <p>Soothing lights, textures and hands-on play help children explore, relax and develop sensory awareness in a safe space.</p>
+            <p>A quieter zone with soft lighting and tactile play — ideal for younger toddlers and children who need a break from busy zones. Parents often say this one surprises them most.</p>
             <a className='btn green' href={WA}><FaWhatsapp /> Plan Your Visit</a>
           </div>
           <div className='zone-detail-img'>
@@ -831,10 +831,10 @@ function Zones() {
         </div>
         <div className='zone-inclusive-grid'>
           {[
-            [FaUsers, 'Inclusive Play', 'Welcoming environment for every child to play and thrive.', 'pink'],
-            [FaShieldAlt, 'Safe Padded Setup', 'Soft, secure equipment for worry-free adventures.', 'gold'],
-            [FaClock, 'Parent-Friendly', 'Relax in comfort while your little ones explore and have fun.', 'purple'],
-            [FaBaby, 'For Every Age', 'Fun, engaging zones perfect for children aged 0–10.', 'aqua'],
+            [FaUsers, 'Ages 0 to 10', 'Every zone is set up for different age groups — toddlers, preschoolers and older kids all have something built for them.', 'pink'],
+            [FaShieldAlt, 'Padded & Checked Daily', 'Soft floors, padded walls and equipment checked every morning before we open. No shortcuts on safety.', 'gold'],
+            [FaClock, 'Parents Stay Too', 'Comfortable seating, free Wi-Fi and LE Cafe right next to the zones — so parents enjoy the visit as much as the kids.', 'purple'],
+            [FaBaby, 'Open Every Day', 'We are open 7 days a week, 11 AM to 9 PM — no appointments needed, just show up and play.', 'aqua'],
           ].map(([Icon, title, text, color]) => (
             <div className={`zone-incl-card zic-${color}`} key={title}>
               <div className='zone-incl-icon'><Icon /></div>
@@ -1007,16 +1007,16 @@ function Contact() {
   return (
     <>
       <PageHero
-        kicker="We'd love to welcome you"
+        kicker='Visit us in Bahria Town Phase 4, Islamabad'
         title='Get In Touch'
         titleJsx={<><span>Get</span> In<br /><i>Touch</i></>}
-        text="At Little Explorers World, we believe every child's learning journey starts with curiosity and connection. Whether you're a parent looking for more information, interested in a play session, or want to book a birthday party — we're here to help."
+        text="Have a question about pricing, birthday packages or group bookings? We're open daily 11 AM to 9 PM and our team responds fast on WhatsApp. Come visit us at Alpha Marina, Bahria Town Phase 4."
         img='/assets/zone-lego.webp'
       />
       <section className='contact reveal'>
         <div>
           <h2>Come say hello</h2>
-          <p style={{ color: '#555', fontSize: '15px', margin: '8px 0 18px', lineHeight: 1.7 }}>We'd love to hear from you! Whether you want to book a play session, plan a birthday party, ask about our zones, or explore partnership opportunities — our friendly team is here to help. Fill in the form and we'll get back to you within a few hours, or reach us directly via phone, WhatsApp or email below.</p>
+          <p style={{ color: '#555', fontSize: '15px', margin: '8px 0 18px', lineHeight: 1.7 }}>Fill in the form and we will get back to you within a few hours. For faster replies, message us directly on WhatsApp — we typically respond within 30 minutes during opening hours.</p>
           <a href='https://maps.google.com/?q=Alpha+Marina+Plaza+42+Bahria+Town+Phase+4+Islamabad' target='_blank' rel='noopener noreferrer' className='contact-address'>
             <FaMapMarkerAlt /> 2nd Floor, Plaza No. 42, Alpha Marina, Marina Commercial, Corniche Road, Bahria Town Phase 4, Islamabad
           </a>
@@ -1190,7 +1190,7 @@ function BirthdayParty() {
           <GiPartyPopper className='bp-balloons' />
           <span className='eyebrow'>Islamabad's favourite kids party venue</span>
           <h1>Birthday Parties<br />in <i>Islamabad</i></h1>
-          <p>Create unforgettable childhood memories at Little Explorers World, Bahria Town Phase 4. Fun-filled packages with décor, cake, games and endless play!</p>
+          <p>Book your child's birthday party at Little Explorers World, Bahria Town Phase 4. We handle the setup, décor, cake and activities — you just show up and celebrate.</p>
           <div className='bp-hero-actions'>
             <a className='btn pink' href={waParty}><FaWhatsapp /> Book a Party Now</a>
             <a className='btn' style={{ background: 'var(--purple)' }} href='tel:+923265652798'><FaPhone /> Call Us</a>
@@ -1208,10 +1208,10 @@ function BirthdayParty() {
         <h2>Everything done for <i>you</i></h2>
         <div className='bp-why-grid'>
           {[
-            [GiPartyPopper, 'Hassle-Free Setup', 'We handle all decorations and arrangements so you can enjoy the day stress-free.'],
-            [FaShieldAlt, 'Safe & Supervised', 'Fully trained staff and childproofed play zones — safety is our top priority.'],
-            [FaCamera, 'Unforgettable Moments', 'Photo-worthy setups and joyful spaces that create lasting memories.'],
-            [FaGift, 'Customisable Packages', 'Choose from 3 packages or talk to us about a bespoke celebration.'],
+            [GiPartyPopper, 'We Handle Everything', 'Decorations, cake, setup and activities — all sorted by our team. You arrive, we run the party.'],
+            [FaShieldAlt, 'Safe for All Kids', 'All play zones are padded, staff are trained and we manage the crowd so the birthday child and guests are always safe.'],
+            [FaCamera, 'Great for Photos', 'The venue is colourful and well-lit — parents always leave with hundreds of shots worth keeping.'],
+            [FaGift, '3 Packages Available', 'Starter, Premium and Grand — or contact us on WhatsApp to discuss a custom arrangement for your party size.'],
           ].map(([Icon, title, text]) => (
             <article className='bp-why-card' key={title}>
               <Icon />
@@ -1354,14 +1354,14 @@ function LeCafe() {
         kicker='Relax. Refresh. Reconnect.'
         title='LE Cafe'
         titleJsx={<><span>LE</span><br /><i>Cafe</i></>}
-        text="LE Cafe is our premium parent lounge and experience area — where you can work, relax, game and enjoy great coffee while your little ones explore our amazing play zones right next door."
+        text="LE Cafe is the parent lounge at Little Explorers World — coffee station, PlayStation, workstations, selfie board and 9 unique corners. Sit back, enjoy a coffee and watch your kids play on our live monitor screens."
         img='/assets/cafe-2.webp'
       />
 
       <section className='about-intro reveal'>
         <span className='eyebrow' style={{ margin: '0 auto 12px', display: 'block' }}>Your space to unwind</span>
-        <h2>More Than a <i>Waiting Area</i></h2>
-        <p>LE Cafe is thoughtfully designed for parents, guardians and older family members who deserve their own premium experience. From artisan coffee to gaming consoles, from comfortable workstations to fun photo spots — every corner of LE Cafe is crafted to make your time with us as enjoyable as it is for your children.</p>
+        <h2>Not a Waiting Room. <i>A Real Space.</i></h2>
+        <p>LE Cafe is built for parents and guardians who are tired of sitting on a plastic chair watching their phone. It has proper coffee, a PlayStation corner, laptop workstations, board games and 9 uniquely designed corners — each one made so you genuinely enjoy your time here, not just wait it out.</p>
       </section>
 
       <section className='zones-section reveal'>
