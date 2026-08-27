@@ -7,6 +7,7 @@ import {
   FaTimes, FaChevronLeft, FaChevronRight, FaHeart, FaCheck,
   FaPhone, FaCalendarAlt, FaGift, FaCamera, FaEnvelope,
   FaHandshake, FaBullhorn, FaMedal, FaBuilding,
+  FaGamepad, FaLaptop, FaCoffee,
 } from 'react-icons/fa';
 import { GiMountainClimbing, GiKidSlide, GiPartyPopper } from 'react-icons/gi';
 import { MdCleanHands, MdClose, MdMenu, MdOutlineToys } from 'react-icons/md';
@@ -19,6 +20,7 @@ const links = [
   ['Play Zones', '/play-zones'],
   ['Birthday Parties', '/birthday-parties'],
   ['Gallery', '/gallery'],
+  ['LE Cafe', '/le-cafe'],
   ['Partner with Us', '/partner-with-us'],
   ['Contact Us', '/contact-us'],
 ];
@@ -52,9 +54,14 @@ const pageMeta = {
     title: 'Contact Us | Little Explorers World Islamabad',
     desc: 'Visit Little Explorers World in Bahria Town Phase 4, Islamabad. Open daily 11AM–11PM. Call +92 326 5652798.',
   },
+  '/le-cafe': {
+    title: 'LE Cafe | Little Explorers World Islamabad',
+    desc: 'Enjoy LE Cafe at Little Explorers World — a premium lounge with coffee station, PlayStation, workstations, board games, selfie board and more in Bahria Town Islamabad.',
+  },
 };
 
 const pics = Array.from({ length: 25 }, (_, i) => `/assets/gallery-${i + 1}.webp`);
+const cafePics = Array.from({ length: 16 }, (_, i) => `/assets/cafe-${i + 1}.webp`);
 
 const zonePics = [
   '/assets/zone-slides.webp',
@@ -1301,6 +1308,93 @@ function BirthdayParty() {
   );
 }
 
+/* ─── LE Cafe ─── */
+function CafeGallery() {
+  const [lightboxIndex, setLightboxIndex] = useState(null);
+  const open  = useCallback(i => setLightboxIndex(i), []);
+  const close = useCallback(() => setLightboxIndex(null), []);
+  const prev  = useCallback(() => setLightboxIndex(i => (i - 1 + cafePics.length) % cafePics.length), []);
+  const next  = useCallback(() => setLightboxIndex(i => (i + 1) % cafePics.length), []);
+
+  return (
+    <section className='gallery reveal'>
+      <span className='eyebrow'>Real moments at LE Cafe</span>
+      <h2>Inside <i>LE Cafe</i></h2>
+      <div>
+        {cafePics.map((p, i) => (
+          <div className='gallery-item' key={p} onClick={() => open(i)}>
+            <img src={p} alt={`LE Cafe photo ${i + 1}`} loading='lazy' />
+            <div className='gallery-overlay'><span>View Photo</span></div>
+          </div>
+        ))}
+      </div>
+      {lightboxIndex !== null && (
+        <Lightbox images={cafePics} index={lightboxIndex} onClose={close} onPrev={prev} onNext={next} />
+      )}
+    </section>
+  );
+}
+
+function LeCafe() {
+  const cafeAreas = [
+    [FaHeart,    'Kitty Corner',         'A cozy, adorable corner with kitty-themed décor and plush seating — the perfect spot to unwind and recharge.', 'pink'],
+    [FaCamera,   'Feature Wall',         'Stunning Instagram-worthy wall art and vibrant murals — the perfect backdrop for your most memorable family photos.', 'purple'],
+    [GiPartyPopper, 'Celebration Corner','A dedicated space for birthdays, anniversaries and milestones. We set it up so all you have to do is celebrate.', 'gold'],
+    [FaGamepad,  'PlayStation',          'Console gaming sessions for older kids and teens — level up while the little ones explore the play zones!', 'green'],
+    [FaLaptop,   'Workstations',         'Free Wi-Fi, charging points and comfortable workstations — stay connected while your kids play safely nearby.', 'aqua'],
+    [FaPuzzlePiece, 'Board Games',       'Classic board games, card games and puzzles for the whole family to enjoy together between play sessions.', 'orange'],
+    [FaStar,     'Selfie Board',         'Fun, themed photo booth props and vibrant backdrops — capture silly, joyful, unforgettable moments with your explorers.', 'pink'],
+    [FaShieldAlt,'CCTV Monitor Corner',  "Stay connected to your children's adventure. Our live monitor display lets parents keep a watchful eye on all zones.", 'purple'],
+    [FaCoffee,   'Coffee Station',       'Premium coffee, teas, fresh juices and light snacks — enjoy a warm cup in a relaxed setting while kids play safely.', 'orange'],
+  ];
+
+  return (
+    <>
+      <PageHero
+        kicker='Relax. Refresh. Reconnect.'
+        title='LE Cafe'
+        titleJsx={<><span>LE</span><br /><i>Cafe</i></>}
+        text="LE Cafe is our premium parent lounge and experience area — where you can work, relax, game and enjoy great coffee while your little ones explore our amazing play zones right next door."
+        img='/assets/cafe-1.webp'
+      />
+
+      <section className='about-intro reveal'>
+        <span className='eyebrow' style={{ margin: '0 auto 12px', display: 'block' }}>Your space to unwind</span>
+        <h2>More Than a <i>Waiting Area</i></h2>
+        <p>LE Cafe is thoughtfully designed for parents, guardians and older family members who deserve their own premium experience. From artisan coffee to gaming consoles, from comfortable workstations to fun photo spots — every corner of LE Cafe is crafted to make your time with us as enjoyable as it is for your children.</p>
+      </section>
+
+      <section className='zones-section reveal'>
+        <div className='section-head'>
+          <span className='eyebrow'>9 unique experience corners</span>
+          <h2><span className='sparkle'>✦✦</span> Explore Every <i>Corner</i> <span className='sparkle'>✦✦</span></h2>
+          <p>Every corner of LE Cafe is designed to give you comfort, fun and connection.</p>
+        </div>
+        <div className='zones-icon-grid cafe-grid'>
+          {cafeAreas.map(([Icon, name, desc, color]) => (
+            <div key={name} className={`zone-icon-card z-${color}`}>
+              <div className='zone-circle'><Icon /></div>
+              <h3>{name}</h3>
+              <p>{desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <CafeGallery />
+
+      <section className='cta reveal'>
+        <h2>Ready to Experience <i>LE Cafe?</i></h2>
+        <p>Visit us at Alpha Marina, Bahria Town Phase 4, Islamabad — and make your family day truly unforgettable.</p>
+        <div className='actions' style={{ justifyContent: 'center' }}>
+          <a className='btn green' href={WA}><FaWhatsapp /> Chat on WhatsApp</a>
+          <button onClick={() => go('/contact-us')}>Contact Us <FaArrowRight /></button>
+        </div>
+      </section>
+    </>
+  );
+}
+
 /* ─── Back to Top ─── */
 function BackToTop() {
   const [visible, setVisible] = useState(false);
@@ -1365,6 +1459,7 @@ export function App() {
     ),
     '/partner-with-us': Partner,
     '/contact-us': Contact,
+    '/le-cafe': LeCafe,
   };
 
   const Page = routes[path] || Home;
@@ -1377,6 +1472,7 @@ export function App() {
     '/gallery': 'bg-yellow',
     '/partner-with-us': 'bg-purple',
     '/contact-us': 'bg-green',
+    '/le-cafe': 'bg-orange',
   };
 
   return (

@@ -1604,7 +1604,7 @@ input:focus, select:focus, textarea:focus {
     transition: max-height .35s cubic-bezier(.4,0,.2,1), opacity .25s ease, transform .25s ease, padding .25s ease;
   }
   nav.open {
-    max-height: 480px;
+    max-height: 540px;
     padding: 18px 22px 22px;
     opacity: 1;
     transform: translateY(0);
@@ -1978,6 +1978,12 @@ main.bg-yellow { background: #fffbee; }
 main.bg-pink   { background: #fff4f8; }
 main.bg-purple { background: #f6f3ff; }
 main.bg-green  { background: #f3fbf1; }
+main.bg-orange { background: #fff7f3; }
+
+/* ─── LE Cafe grid ─── */
+.cafe-grid { grid-template-columns: repeat(3, 1fr) !important; }
+@media (max-width: 1000px) { .cafe-grid { grid-template-columns: repeat(3, 1fr) !important; } }
+@media (max-width: 650px)  { .cafe-grid { grid-template-columns: repeat(2, 1fr) !important; } }
 
 /* ─── Footer: Contact Icons ─── */
 .footer-contact-item {
