@@ -1129,6 +1129,17 @@ h1 i, h2 i, h3 i, h4 i { font-style: normal; }
 .cta h2 { font-size: 34px; margin: 0 0 12px; font-weight: 500; }
 .cta h2 i { color: #ffd166; font-style: normal; }
 .cta p { margin: 0 0 24px; opacity: .9; }
+.cta .actions button {
+  background: #fff;
+  border: none;
+  color: var(--purple);
+  font-weight: 600;
+}
+.cta .actions button:hover {
+  background: #f0ebff;
+  box-shadow: 0 10px 22px rgba(0,0,0,.18);
+  transform: translateY(-3px);
+}
 
 /* ─── Float WhatsApp ─── */
 .float {
