@@ -7,7 +7,7 @@ import {
   FaTimes, FaChevronLeft, FaChevronRight, FaHeart, FaCheck,
   FaPhone, FaCalendarAlt, FaGift, FaCamera, FaEnvelope,
   FaHandshake, FaBullhorn, FaMedal, FaBuilding,
-  FaGamepad, FaLaptop, FaCoffee,
+  FaGamepad, FaLaptop, FaCoffee, FaPaw, FaMobileAlt, FaTv,
 } from 'react-icons/fa';
 import { GiMountainClimbing, GiKidSlide, GiPartyPopper } from 'react-icons/gi';
 import { MdCleanHands, MdClose, MdMenu, MdOutlineToys } from 'react-icons/md';
@@ -1337,15 +1337,15 @@ function CafeGallery() {
 
 function LeCafe() {
   const cafeAreas = [
-    [FaHeart,    'Kitty Corner',         'A cozy, adorable corner with kitty-themed décor and plush seating — the perfect spot to unwind and recharge.', 'pink'],
-    [FaCamera,   'Feature Wall',         'Stunning Instagram-worthy wall art and vibrant murals — the perfect backdrop for your most memorable family photos.', 'purple'],
-    [GiPartyPopper, 'Celebration Corner','A dedicated space for birthdays, anniversaries and milestones. We set it up so all you have to do is celebrate.', 'gold'],
-    [FaGamepad,  'PlayStation',          'Console gaming sessions for older kids and teens — level up while the little ones explore the play zones!', 'green'],
-    [FaLaptop,   'Workstations',         'Free Wi-Fi, charging points and comfortable workstations — stay connected while your kids play safely nearby.', 'aqua'],
-    [FaPuzzlePiece, 'Board Games',       'Classic board games, card games and puzzles for the whole family to enjoy together between play sessions.', 'orange'],
-    [FaStar,     'Selfie Board',         'Fun, themed photo booth props and vibrant backdrops — capture silly, joyful, unforgettable moments with your explorers.', 'pink'],
-    [FaShieldAlt,'CCTV Monitor Corner',  "Stay connected to your children's adventure. Our live monitor display lets parents keep a watchful eye on all zones.", 'purple'],
-    [FaCoffee,   'Coffee Station',       'Premium coffee, teas, fresh juices and light snacks — enjoy a warm cup in a relaxed setting while kids play safely.', 'orange'],
+    [FaPaw,         'Kitty Corner',         'A cozy, adorable corner with kitty-themed décor and plush seating — the perfect spot to unwind and recharge.', 'pink'],
+    [FaCamera,      'Feature Wall',         'Stunning Instagram-worthy wall art and vibrant murals — the perfect backdrop for your most memorable family photos.', 'purple'],
+    [GiPartyPopper, 'Celebration Corner',   'A dedicated space for birthdays, anniversaries and milestones. We set it up so all you have to do is celebrate.', 'gold'],
+    [FaGamepad,     'PlayStation',          'Console gaming sessions for older kids and teens — level up while the little ones explore the play zones!', 'green'],
+    [FaLaptop,      'Workstations',         'Free Wi-Fi, charging points and comfortable workstations — stay connected while your kids play safely nearby.', 'aqua'],
+    [FaPuzzlePiece, 'Board Games',          'Classic board games, card games and puzzles for the whole family to enjoy together between play sessions.', 'orange'],
+    [FaMobileAlt,   'Selfie Board',         'Fun photo booth props and vibrant backdrops — capture silly, joyful, unforgettable selfie moments with your little ones.', 'pink'],
+    [FaTv,          'CCTV Monitor Corner',  "Stay connected to your children's adventure. Our live monitor display lets parents keep a watchful eye on all play zones.", 'purple'],
+    [FaCoffee,      'Coffee Station',       'Premium coffee, teas, fresh juices and light snacks — enjoy a warm cup in a relaxed setting while kids play safely.', 'orange'],
   ];
 
   return (
@@ -1355,7 +1355,7 @@ function LeCafe() {
         title='LE Cafe'
         titleJsx={<><span>LE</span><br /><i>Cafe</i></>}
         text="LE Cafe is our premium parent lounge and experience area — where you can work, relax, game and enjoy great coffee while your little ones explore our amazing play zones right next door."
-        img='/assets/cafe-1.webp'
+        img='/assets/cafe-2.webp'
       />
 
       <section className='about-intro reveal'>
