@@ -697,15 +697,15 @@ function About() {
       <section className='about-owners reveal'>
         <div className='about-owners-inner'>
           <div className='about-owners-text'>
-            <span className='eyebrow'>Message From the Owners</span>
-            <h2>A Letter from <i>Our Founders</i></h2>
+            <span className='eyebrow'>From the founders</span>
+            <h2>A Note from <i>Muhammad & Infaal</i></h2>
             <blockquote>
-              <p>Dear Families and Aspiring Partners,</p>
-              <p>We started Little Explorers World with one simple dream. to create a place where every child feels safe, valued, and completely free to be themselves. Having witnessed firsthand how meaningful, purposeful play shapes a child's confidence, creativity and character, we knew Islamabad deserved a space truly designed with children at its heart.</p>
-              <p>Every zone you walk through was built with love, careful thought, and a deep commitment to inclusion. We believe play is not just fun. it is how children learn empathy, build friendships, and discover who they are. From the soft padded floors to the vibrant climbing wall, every corner was chosen with your child's wellbeing in mind.</p>
-              <p>Our mission goes beyond a play area. We want to build a community where families feel at home, where children of all abilities feel welcomed, and where parents can relax knowing their little ones are in the safest of hands.</p>
-              <p>Thank you for trusting us with your most precious gift. your child.</p>
-              <p style={{marginTop: 16, fontWeight: 600}}>Warm regards,</p>
+              <p>To our families,</p>
+              <p>When we decided to open Little Explorers World in Islamabad, the question we kept asking ourselves was simple: would we be happy bringing our own children here? That question shaped every decision we made, from the flooring we chose to the staff we hired.</p>
+              <p>Bahria Town needed a proper kids play space. Not a temporary setup in a basement, not a single inflatable in the corner of a mall. A real, well-designed place where children could spend two or three hours and parents could actually relax. That is what we built, and that is the standard we hold ourselves to every single day.</p>
+              <p>We clean the place properly between every session. We train our staff to actually engage with children, not just supervise them from a distance. We check equipment every morning before we open. These are not things we advertise loudly, they are just the minimum we believe every family deserves.</p>
+              <p>If you have visited us, thank you for your trust. If you have not yet, we hope to see you soon.</p>
+              <p style={{marginTop: 16, fontWeight: 600}}>Muhammad Usman and Infaal Usman</p>
             </blockquote>
             <div className='about-founders'>
               <div className='founder-card'>
