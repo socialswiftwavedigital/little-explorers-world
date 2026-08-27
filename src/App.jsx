@@ -433,7 +433,7 @@ function Testimonials() {
 
 /* ─── Gallery ─── */
 /* Gallery page — all images combined */
-const allPics = [...pics.filter(p => p !== '/assets/gallery-15.webp'), ...zonePics];
+const allPics = [...pics.filter(p => p !== '/assets/gallery-15.webp'), ...zonePics, ...cafePics];
 function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const open  = useCallback(i => setLightboxIndex(i), []);
