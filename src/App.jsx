@@ -718,9 +718,6 @@ function About() {
               </div>
             </div>
           </div>
-          <div className='about-owners-photo'>
-            <img src='/assets/owners.webp' alt='Muhammad Usman and Infaal Usman, Founders of Little Explorers World' loading='lazy' />
-          </div>
         </div>
       </section>
 
